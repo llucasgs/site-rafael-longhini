@@ -1,0 +1,23 @@
+{
+  "header": {
+    "nav": {
+      "about": "Sobre",
+      "services": "Serviços",
+      "expertise": "Expertise",
+      "experience": "Experiência",
+      "contact": "Contato"
+    },
+    "mobile": {
+      "open": "Abrir menu",
+      "close": "Fechar menu"
+    },
+    "chooseLanguage": "Escolha o idioma"
+  },
+  "hero": {
+    "badge": "Soluções Industriais Personalizadas",
+    "title": "Transformo a sua ideia em realidade.",
+    "description": "Projeto e desenvolvimento de novos produtos, engenharia reversa, prototipagem 3D, automação industrial e máquinas especiais para demandas industriais reais.",
+    "primaryButton": "Solicitar orçamento",
+    "secondaryButton": "Conhecer soluções"
+  }
+}
