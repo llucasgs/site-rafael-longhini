@@ -1,5 +1,6 @@
 {
   "header": {
+    "logoAriaLabel": "Voltar para o início",
     "nav": {
       "about": "Sobre",
       "services": "Serviços",
@@ -7,11 +8,29 @@
       "experience": "Experiência",
       "contact": "Contato"
     },
+    "navAria": {
+      "goTo": "Ir para a seção {{section}}"
+    },
     "mobile": {
       "open": "Abrir menu",
       "close": "Fechar menu"
     },
-    "chooseLanguage": "Escolha o idioma"
+    "chooseLanguage": "Escolha o idioma",
+    "languages": {
+      "pt-BR": "Português",
+      "en-US": "Inglês",
+      "es-ES": "Espanhol",
+      "de-DE": "Alemão",
+      "fr-FR": "Francês",
+      "it-IT": "Italiano",
+      "ja-JP": "Japonês",
+      "ko-KR": "Coreano",
+      "ru-RU": "Russo",
+      "zh-CN": "Mandarim",
+      "ar-SA": "Árabe",
+      "he-IL": "Hebraico",
+      "hi-IN": "Hindi"
+    }
   },
   "hero": {
     "badge": "Soluções Industriais Personalizadas",
