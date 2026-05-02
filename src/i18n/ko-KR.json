@@ -87,5 +87,51 @@
         "description": "Montagem de setores, organização de processos, treinamento de equipes e apoio técnico para crescimento industrial sustentável."
       }
     }
+  },
+  "expertise": {
+    "sectionAriaLabel": "Seção de expertise técnica e metodológica",
+    "eyebrow": "Expertise",
+    "title": "Base técnica, metodologia e visão de fábrica aplicada à prática",
+    "description": "Experiência construída no chão de fábrica, aliando engenharia, melhoria contínua, qualidade, segurança e produtividade para transformar projeto em resultado concreto.",
+    "groups": {
+      "methods": {
+        "title": "Metodologias e melhoria contínua"
+      },
+      "standards": {
+        "title": "Normas, qualidade e segurança"
+      },
+      "technical": {
+        "title": "Capacidades técnicas e industriais"
+      }
+    },
+    "methods": {
+      "kaizen": "Kaizen",
+      "5s": "5S",
+      "pdca": "PDCA",
+      "lean": "Lean Manufacturing",
+      "4m": "4M",
+      "ishikawa": "Ishikawa",
+      "5w2h": "5W2H",
+      "swot": "Matriz SWOT"
+    },
+    "standards": {
+      "iso9001": "ISO 9001",
+      "iso14000": "ISO 14000",
+      "ohsas18000": "OHSAS 18000",
+      "nr08": "NR-08",
+      "nr10": "NR-10",
+      "nr12": "NR-12",
+      "nr17": "NR-17"
+    },
+    "technical": {
+      "cadcam": "Projetos CAD/CAM",
+      "solidworks": "SolidWorks",
+      "autocad": "AutoCAD",
+      "tooling": "Ferramentaria",
+      "specialMachines": "Máquinas especiais",
+      "industrialAutomation": "Automação industrial",
+      "reverseEngineering": "Engenharia reversa",
+      "teamTraining": "Treinamento de equipes"
+    }
   }
 }
