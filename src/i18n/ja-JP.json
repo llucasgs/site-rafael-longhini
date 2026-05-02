@@ -55,5 +55,37 @@
       "tag3": "Engenharia Reversa",
       "tag4": "Impressão 3D"
     }
+  },
+  "services": {
+    "sectionAriaLabel": "Seção de serviços da Longhini Desenvolvimento Industrial",
+    "eyebrow": "Serviços",
+    "title": "Soluções industriais para transformar conceito em produção",
+    "description": "Atuação técnica e estratégica para desenvolver produtos, processos, ferramentas e soluções industriais sob medida, com foco em eficiência, viabilidade e resultado real no chão de fábrica.",
+    "items": {
+      "productDevelopment": {
+        "title": "Desenvolvimento de produtos",
+        "description": "Projeto técnico de novos produtos, dispositivos e soluções personalizadas para demandas industriais específicas."
+      },
+      "reverseEngineering": {
+        "title": "Engenharia reversa",
+        "description": "Recriação, adaptação e desenvolvimento de componentes e máquinas especiais quando não há solução nacional disponível."
+      },
+      "prototyping": {
+        "title": "Prototipagem 3D",
+        "description": "Validação de ideias, testes funcionais e aceleração do desenvolvimento com impressão 3D em resina e filamento."
+      },
+      "tooling": {
+        "title": "Ferramentas, moldes e dispositivos",
+        "description": "Desenvolvimento de moldes plásticos, ferramentas de corte, repuxo e dispositivos dedicados para produção seriada."
+      },
+      "automation": {
+        "title": "Automação e melhorias industriais",
+        "description": "Retrofitting, automação industrial e implantação de melhorias para aumentar produtividade e reduzir desperdícios."
+      },
+      "industrialManagement": {
+        "title": "Estruturação produtiva e gestão",
+        "description": "Montagem de setores, organização de processos, treinamento de equipes e apoio técnico para crescimento industrial sustentável."
+      }
+    }
   }
 }
