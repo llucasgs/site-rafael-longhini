@@ -33,10 +33,27 @@
     }
   },
   "hero": {
+    "sectionAriaLabel": "Seção principal de apresentação da Longhini Desenvolvimento Industrial",
     "badge": "Soluções Industriais Personalizadas",
-    "title": "Transformo a sua ideia em realidade.",
-    "description": "Projeto e desenvolvimento de novos produtos, engenharia reversa, prototipagem 3D, automação industrial e máquinas especiais para demandas industriais reais.",
+    "titleLine1": "Projeto e desenvolvimento",
+    "titleLine2": "de novos produtos",
+    "titleHighlight": "com visão industrial real",
+    "description": "Transformamos ideias em produtos, dispositivos, moldes, ferramentas e máquinas especiais com engenharia prática, inovação tecnológica e foco em resultado.",
     "primaryButton": "Solicitar orçamento",
-    "secondaryButton": "Conhecer soluções"
+    "secondaryButton": "Conhecer soluções",
+    "stats": {
+      "experience": "20+ anos de experiência",
+      "innovation": "Inovação e engenharia reversa",
+      "prototyping": "Prototipagem e impressão 3D"
+    },
+    "card": {
+      "eyebrow": "Diretor Técnico",
+      "title": "Rafael Longhini Lopes",
+      "subtitle": "Engenharia mecânica, desenvolvimento de produto, ferramentaria, automação industrial e soluções sob medida.",
+      "tag1": "SolidWorks",
+      "tag2": "AutoCAD",
+      "tag3": "Engenharia Reversa",
+      "tag4": "Impressão 3D"
+    }
   }
 }
