@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   BadgeCheck,
@@ -50,11 +50,44 @@ function TechTag({ children }: { children: React.ReactNode }) {
 export function Hero() {
   const { t } = useLanguage();
 
+  const miniCards = [
+    {
+      label: t("hero.card.miniCards.cadcam"),
+      icon: <Cpu className="mb-3 text-sky-300" size={20} aria-hidden="true" />,
+    },
+    {
+      label: t("hero.card.miniCards.molds"),
+      icon: (
+        <Boxes className="mb-3 text-orange-300" size={20} aria-hidden="true" />
+      ),
+    },
+    {
+      label: t("hero.card.miniCards.prototypes"),
+      icon: (
+        <FlaskConical
+          className="mb-3 text-sky-300"
+          size={20}
+          aria-hidden="true"
+        />
+      ),
+    },
+    {
+      label: t("hero.card.miniCards.production"),
+      icon: (
+        <Factory
+          className="mb-3 text-orange-300"
+          size={20}
+          aria-hidden="true"
+        />
+      ),
+    },
+  ];
+
   return (
     <section
       id="about"
       aria-label={t("hero.sectionAriaLabel")}
-      className="relative overflow-hidden pb-20 pt-36 md:pb-24 md:pt-40 lg:pb-28 lg:pt-44"
+      className="relative overflow-hidden pb-10 pt-36 md:pb-14 md:pt-40 lg:pb-18 lg:pt-44"
     >
       <div
         aria-hidden="true"
@@ -62,11 +95,11 @@ export function Hero() {
       >
         <div
           className="
-      absolute inset-0
-      bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)]
-      bg-[size:48px_48px]
-      [mask-image:radial-gradient(circle_at_center,black,transparent_75%)]
-    "
+            absolute inset-0
+            bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)]
+            bg-[size:48px_48px]
+            [mask-image:radial-gradient(circle_at_center,black,transparent_75%)]
+          "
         />
 
         <div className="absolute left-[-8rem] top-[8rem] h-56 w-56 rounded-full bg-orange-500/10 blur-3xl md:h-72 md:w-72" />
@@ -80,30 +113,36 @@ export function Hero() {
             <div className="flex flex-col items-start">
               <span
                 className="
-                  mb-5 inline-flex items-center gap-2 rounded-full
-                  border border-orange-400/20 bg-orange-400/10
-                  px-4 py-2 text-[0.72rem] font-bold uppercase
-                  tracking-[0.22em] text-orange-300
+                  relative mb-5 inline-flex items-center gap-2 overflow-hidden rounded-full
+                   px-4 py-2
+                  text-[0.72rem] font-bold uppercase tracking-[0.22em]
+                  text-orange-300
                 "
               >
-                <Factory size={15} aria-hidden="true" />
-                {t("hero.badge")}
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-0 rounded-full border border-orange-400/15 bg-orange-500/10 animate-pulse"
+                />
+
+                <Factory
+                  size={15}
+                  aria-hidden="true"
+                  className="relative z-10"
+                />
+
+                <span className="relative z-10">{t("hero.badge")}</span>
               </span>
 
               <h1
                 className="
                   max-w-4xl text-balance text-4xl font-black leading-[1.02]
-                  tracking-[-0.04em] text-white
+                  tracking-[-0.04em] text-white/95
                   sm:text-5xl
                   lg:text-6xl
                   xl:text-[4.5rem]
                 "
               >
-                <span className="block">{t("hero.titleLine1")}</span>
-                <span className="block">{t("hero.titleLine2")}</span>
-                <span className="mt-2 block bg-gradient-to-r from-orange-400 via-orange-300 to-sky-400 bg-clip-text text-transparent">
-                  {t("hero.titleHighlight")}
-                </span>
+                {t("hero.title")}
               </h1>
 
               <p
@@ -122,23 +161,23 @@ export function Hero() {
               </ul>
 
               <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-                <Link
-                  href={site.links.linkedin}
+                <a
+                  href={site.links.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
                     inline-flex items-center justify-center gap-2 rounded-full
-                    bg-orange-500 px-6 py-3.5 text-sm font-bold text-white
-                    shadow-[0_10px_30px_rgba(249,115,22,0.28)]
+                    border border-orange-400/35 bg-white/[0.04] px-6 py-3.5
+                    text-sm font-bold text-slate-100 backdrop-blur-sm
                     transition-all duration-300
-                    hover:translate-y-[-2px] hover:bg-orange-400
+                    hover:translate-y-[-2px] hover:bg-orange-400/10
                     focus:outline-none focus-visible:ring-2
                     focus-visible:ring-orange-300/70
                   "
                 >
                   {t("hero.primaryButton")}
                   <ArrowRight size={16} />
-                </Link>
+                </a>
 
                 <button
                   type="button"
@@ -187,32 +226,53 @@ export function Hero() {
                   aria-hidden="true"
                 />
 
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.28em] text-orange-300">
-                      {t("hero.card.eyebrow")}
-                    </span>
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="flex items-center gap-4">
+                    <div
+                      className="
+    relative h-28 w-24 shrink-0
+    sm:h-32 sm:w-28
+  "
+                    >
+                      <Image
+                        src="/Sections/Section1/longhiniPicture.webp"
+                        alt={t("hero.personImageAlt")}
+                        fill
+                        priority
+                        className="
+                        object-contain object-bottom
+                        [mask-image:linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)]
+                        [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)]
+                      "
+                      />
+                    </div>
 
-                    <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-white sm:text-[1.9rem]">
-                      {t("hero.card.title")}
-                    </h2>
+                    <div>
+                      <span className="text-[0.7rem] font-bold uppercase tracking-[0.28em] text-orange-300">
+                        {t("hero.card.eyebrow")}
+                      </span>
 
-                    <p className="mt-3 max-w-xl text-sm leading-6 text-slate-300 sm:text-[0.98rem]">
-                      {t("hero.card.subtitle")}
-                    </p>
+                      <h2 className="text-2xl font-extrabold tracking-tight text-white/95 sm:text-[1.9rem]">
+                        {t("hero.card.title")}
+                      </h2>
+                    </div>
                   </div>
 
                   <div
                     className="
-                      hidden h-14 w-14 shrink-0 items-center justify-center rounded-2xl
-                      border border-white/10 bg-black/20 text-sky-300
-                      sm:flex
-                    "
+                    hidden h-14 w-14 shrink-0 items-center justify-center rounded-2xl
+                    border border-white/10 bg-black/20 text-sky-300
+                    sm:flex
+                  "
                     aria-hidden="true"
                   >
                     <Cog size={26} />
                   </div>
                 </div>
+
+                <p className="mt-5 max-w-xl text-sm leading-6 text-slate-300 sm:text-[0.98rem]">
+                  {t("hero.card.subtitle")}
+                </p>
 
                 <div className="mt-6 flex flex-wrap gap-2.5">
                   <TechTag>{t("hero.card.tag1")}</TechTag>
@@ -221,54 +281,22 @@ export function Hero() {
                   <TechTag>{t("hero.card.tag4")}</TechTag>
                 </div>
 
-                <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                  <div
-                    className="
+                <div className="mt-7 grid grid-cols-2 gap-3">
+                  {miniCards.map((item) => (
+                    <div
+                      key={item.label}
+                      className="
                       rounded-2xl border border-white/10 bg-black/20 p-4
                       transition-all duration-300 hover:border-orange-400/25
                     "
-                  >
-                    <Cpu className="mb-3 text-sky-300" size={20} />
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-                      CAD/CAM
-                    </p>
-                  </div>
+                    >
+                      {item.icon}
 
-                  <div
-                    className="
-                      rounded-2xl border border-white/10 bg-black/20 p-4
-                      transition-all duration-300 hover:border-orange-400/25
-                    "
-                  >
-                    <Boxes className="mb-3 text-orange-300" size={20} />
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-                      Moldes
-                    </p>
-                  </div>
-
-                  <div
-                    className="
-                      rounded-2xl border border-white/10 bg-black/20 p-4
-                      transition-all duration-300 hover:border-orange-400/25
-                    "
-                  >
-                    <FlaskConical className="mb-3 text-sky-300" size={20} />
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-                      Protótipos
-                    </p>
-                  </div>
-
-                  <div
-                    className="
-                      rounded-2xl border border-white/10 bg-black/20 p-4
-                      transition-all duration-300 hover:border-orange-400/25
-                    "
-                  >
-                    <Factory className="mb-3 text-orange-300" size={20} />
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-                      Produção
-                    </p>
-                  </div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                        {item.label}
+                      </p>
+                    </div>
+                  ))}
                 </div>
 
                 <div
@@ -281,25 +309,26 @@ export function Hero() {
                   <div className="flex items-center justify-between gap-3">
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">
-                        Empresa
+                        {t("hero.card.companyLabel")}
                       </p>
+
                       <p className="mt-2 text-sm font-semibold text-white">
-                        {site.name}
+                        {t("hero.card.companyName")}
                       </p>
+
                       <p className="mt-1 text-sm text-slate-400">
-                        {site.location}
+                        {t("hero.card.companyLocation")}
                       </p>
                     </div>
 
-                    <div
-                      className="
-                        flex h-12 w-12 items-center justify-center rounded-full
-                        border border-sky-400/20 bg-sky-400/10 text-sky-300
-                        shadow-[0_0_30px_rgba(56,189,248,0.16)]
-                      "
-                      aria-hidden="true"
-                    >
-                      LD
+                    <div className="flex h-12 w-12 items-center justify-center">
+                      <Image
+                        src="/Header/longhiniLogo.svg"
+                        alt={t("hero.companyLogoAlt")}
+                        width={36}
+                        height={36}
+                        className="h-9 w-auto object-contain"
+                      />
                     </div>
                   </div>
                 </div>

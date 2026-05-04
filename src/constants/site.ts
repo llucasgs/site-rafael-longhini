@@ -10,6 +10,7 @@ export const site = {
     "Soluções industriais personalizadas com projetos mecânicos, engenharia reversa, prototipagem 3D, automação industrial, ferramentas de produção e máquinas especiais.",
 
   links: {
+    whatsapp: "https://wa.me/5511980609919",
     linkedin: "https://www.linkedin.com/in/rafael-longhini-lopes-69256751",
   },
 } as const;

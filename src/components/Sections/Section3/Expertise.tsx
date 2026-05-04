@@ -129,7 +129,7 @@ export function Expertise() {
     <section
       id="expertise"
       aria-label={t("expertise.sectionAriaLabel")}
-      className="relative overflow-hidden py-20 md:py-24 lg:py-28"
+      className="relative overflow-hidden py-10 md:py-14 lg:py-18"
     >
       <div
         aria-hidden="true"
