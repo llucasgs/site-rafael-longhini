@@ -1,6 +1,18 @@
 {
   "header": {
     "logoAriaLabel": "Voltar para o início",
+
+    "brand": {
+      "logoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+      "name": "LONGHINI",
+      "subtitle": "Desenvolvimento Industrial"
+    },
+
+    "aria": {
+      "mainNavigation": "Navegação principal",
+      "mobileNavigation": "Navegação mobile"
+    },
+
     "nav": {
       "about": "Sobre",
       "services": "Serviços",
@@ -8,14 +20,22 @@
       "experience": "Experiência",
       "contact": "Contato"
     },
+
     "navAria": {
       "goTo": "Ir para a seção {{section}}"
     },
+
     "mobile": {
       "open": "Abrir menu",
       "close": "Fechar menu"
     },
+
     "chooseLanguage": "Escolha o idioma",
+
+    "flags": {
+      "alt": "Bandeira — {{language}}"
+    },
+
     "languages": {
       "pt-BR": "Português",
       "en-US": "Inglês",

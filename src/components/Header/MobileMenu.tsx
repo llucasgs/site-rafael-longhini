@@ -92,7 +92,7 @@ export function MobileMenu() {
           }
         `}
       >
-        <nav aria-label="Navegação mobile">
+        <nav aria-label={t("header.aria.mobileNavigation")}>
           <ul className="flex flex-col">
             {navItems.map((item) => {
               const label = t(item.labelKey);

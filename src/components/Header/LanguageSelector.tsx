@@ -172,7 +172,7 @@ export function LanguageSelector() {
             >
               <Image
                 src={item.flag}
-                alt={`Bandeira — ${languageName}`}
+                alt={t("header.flags.alt", { language: languageName })}
                 width={24}
                 height={16}
                 className="

@@ -15,7 +15,7 @@ export function NavMenu() {
   const { t } = useLanguage();
 
   return (
-    <nav aria-label="Navegação principal">
+    <nav aria-label={t("header.aria.mainNavigation")}>
       <ul className="hidden items-center gap-2 lg:flex">
         {navItems.map((item) => {
           const label = t(item.labelKey);

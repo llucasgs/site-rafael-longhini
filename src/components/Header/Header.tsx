@@ -60,7 +60,7 @@ export function Header() {
           >
             <Image
               src="/Header/longhiniLogo.svg"
-              alt="Logotipo da Longhini Desenvolvimento Industrial"
+              alt={t("header.brand.logoAlt")}
               width={36}
               height={36}
               priority
@@ -69,11 +69,11 @@ export function Header() {
 
             <span className="flex flex-col leading-none">
               <span className="text-xs font-extrabold tracking-[0.18em] text-white sm:text-sm">
-                LONGHINI
+                {t("header.brand.name")}
               </span>
 
               <span className="mt-1 hidden text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-slate-400 sm:block">
-                Desenvolvimento Industrial
+                {t("header.brand.subtitle")}
               </span>
             </span>
           </Link>
