@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 3D source files
+public/Models/3DPrinter/printer-metalrough.glb
+public/Models/3DPrinter/scene.gltf
+public/Models/3DPrinter/scene.bin
+public/Models/3DPrinter/textures/

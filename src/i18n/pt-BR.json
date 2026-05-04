@@ -85,6 +85,17 @@
       }
     }
   },
+  "industrialShowcase": {
+    "sectionAriaLabel": "Seção interativa com modelo 3D de impressora 3D industrial",
+    "badge": "Visualização 3D",
+    "title": "Prototipagem, precisão e tecnologia aplicadas ao desenvolvimento industrial",
+    "description": "A prototipagem 3D permite validar ideias, testar soluções e acelerar decisões técnicas antes da fabricação final.",
+    "cards": {
+      "precision": "Precisão técnica no desenvolvimento",
+      "prototype": "Validação rápida de protótipos"
+    },
+    "credit": "Modelo 3D baseado em “3D Printer - Bambu Lab A1 Mini” por neilvfx, licenciado sob CC-BY-4.0."
+  },
   "services": {
     "sectionAriaLabel": "Seção de serviços da Longhini Desenvolvimento Industrial",
     "eyebrow": "Serviços",

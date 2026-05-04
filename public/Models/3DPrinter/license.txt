@@ -1,0 +1,11 @@
+Model Information:
+* title:	3D Printer - Bambu Lab A1 Mini
+* source:	https://sketchfab.com/3d-models/3d-printer-bambu-lab-a1-mini-407fb64c44be4e1888db246b447f811b
+* author:	neilvfx (https://sketchfab.com/neilvfx)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "3D Printer - Bambu Lab A1 Mini" (https://sketchfab.com/3d-models/3d-printer-bambu-lab-a1-mini-407fb64c44be4e1888db246b447f811b) by neilvfx (https://sketchfab.com/neilvfx) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
