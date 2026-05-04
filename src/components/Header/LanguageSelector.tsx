@@ -1,25 +1,82 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Check, Languages } from "lucide-react";
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Language } from "@/types/i18n";
 
-const languages: { code: Language; sigla: string }[] = [
-  { code: "pt-BR", sigla: "PT" },
-  { code: "en-US", sigla: "EN" },
-  { code: "es-ES", sigla: "ES" },
-  { code: "de-DE", sigla: "DE" },
-  { code: "fr-FR", sigla: "FR" },
-  { code: "it-IT", sigla: "IT" },
-  { code: "ja-JP", sigla: "JA" },
-  { code: "ko-KR", sigla: "KO" },
-  { code: "ru-RU", sigla: "RU" },
-  { code: "zh-CN", sigla: "ZH" },
-  { code: "ar-SA", sigla: "AR" },
-  { code: "he-IL", sigla: "HE" },
-  { code: "hi-IN", sigla: "HI" },
+const languages: {
+  code: Language;
+  sigla: string;
+  flag: string;
+}[] = [
+  {
+    code: "pt-BR",
+    sigla: "PT",
+    flag: "/Header/Flags/pt-BR-flag.webp",
+  },
+  {
+    code: "en-US",
+    sigla: "EN",
+    flag: "/Header/Flags/en-US-flag.webp",
+  },
+  {
+    code: "es-ES",
+    sigla: "ES",
+    flag: "/Header/Flags/es-ES-flag.webp",
+  },
+  {
+    code: "de-DE",
+    sigla: "DE",
+    flag: "/Header/Flags/de-DE-flag.webp",
+  },
+  {
+    code: "fr-FR",
+    sigla: "FR",
+    flag: "/Header/Flags/fr-FR-flag.webp",
+  },
+  {
+    code: "it-IT",
+    sigla: "IT",
+    flag: "/Header/Flags/it-IT-flag.webp",
+  },
+  {
+    code: "ja-JP",
+    sigla: "JA",
+    flag: "/Header/Flags/ja-JP-flag.webp",
+  },
+  {
+    code: "ko-KR",
+    sigla: "KO",
+    flag: "/Header/Flags/ko-KR-flag.webp",
+  },
+  {
+    code: "ru-RU",
+    sigla: "RU",
+    flag: "/Header/Flags/ru-RU-flag.webp",
+  },
+  {
+    code: "zh-CN",
+    sigla: "ZH",
+    flag: "/Header/Flags/zh-CN-flag.webp",
+  },
+  {
+    code: "ar-SA",
+    sigla: "AR",
+    flag: "/Header/Flags/ar-SA-flag.webp",
+  },
+  {
+    code: "he-IL",
+    sigla: "HE",
+    flag: "/Header/Flags/he-IL-flag.webp",
+  },
+  {
+    code: "hi-IN",
+    sigla: "HI",
+    flag: "/Header/Flags/hi-IN-flag.webp",
+  },
 ];
 
 export function LanguageSelector() {
@@ -75,6 +132,7 @@ export function LanguageSelector() {
         "
       >
         <Languages size={17} aria-hidden="true" />
+
         <span>{current?.sigla ?? "PT"}</span>
       </button>
 
@@ -92,6 +150,7 @@ export function LanguageSelector() {
       >
         {sortedLanguages.map((item) => {
           const active = item.code === language;
+          const languageName = t(`header.languages.${item.code}`);
 
           return (
             <button
@@ -111,10 +170,19 @@ export function LanguageSelector() {
                 }
               `}
             >
-              <span className="w-7 text-xs font-bold">{item.sigla}</span>
-              <span className="flex-1">
-                {t(`header.languages.${item.code}`)}
-              </span>
+              <Image
+                src={item.flag}
+                alt={`Bandeira — ${languageName}`}
+                width={24}
+                height={16}
+                className="
+                  h-4 w-4 shrink-0 rounded
+                  object-cover
+                "
+              />
+
+              <span className="flex-1">{languageName}</span>
+
               {active && <Check size={16} aria-hidden="true" />}
             </button>
           );

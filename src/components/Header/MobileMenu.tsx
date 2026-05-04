@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -10,6 +11,11 @@ import { navItems } from "./NavMenu";
 export function MobileMenu() {
   const { t } = useLanguage();
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -53,15 +59,23 @@ export function MobileMenu() {
         {open ? <X size={20} /> : <Menu size={20} />}
       </button>
 
-      <div
-        aria-hidden="true"
-        onClick={() => setOpen(false)}
-        className={`
-          fixed inset-0 top-0 z-40 bg-black/70 backdrop-blur-sm
-          transition-opacity duration-300 lg:hidden
-          ${open ? "opacity-100" : "pointer-events-none opacity-0"}
-        `}
-      />
+      {mounted &&
+        createPortal(
+          <div
+            aria-hidden="true"
+            onClick={() => setOpen(false)}
+            className={`
+              fixed inset-0 z-40 bg-black/60 backdrop-blur-[3px]
+              transition-opacity duration-300 lg:hidden
+              ${
+                open
+                  ? "opacity-100 pointer-events-auto"
+                  : "opacity-0 pointer-events-none"
+              }
+            `}
+          />,
+          document.body,
+        )}
 
       <aside
         role="dialog"

@@ -1,11 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { Container } from "@/components/ui/Container";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { site } from "@/constants/site";
 
 import { LanguageSelector } from "./LanguageSelector";
 import { MobileMenu } from "./MobileMenu";
@@ -30,12 +30,12 @@ export function Header() {
   return (
     <header
       className={`
-        fixed left-1/2 top-4 z-50 w-[calc(100%-2rem)]
+        fixed left-1/2 top-4 z-50 w-full
         -translate-x-1/2 transition-all duration-300
         ${scrolled ? "max-w-6xl" : "max-w-7xl"}
       `}
     >
-      <Container className="px-0">
+      <Container>
         <div
           className={`
             flex h-18 items-center justify-between rounded-full
@@ -58,24 +58,20 @@ export function Header() {
               focus-visible:ring-orange-400/70
             "
           >
-            <span
-              aria-hidden="true"
-              className="
-                flex h-11 w-11 items-center justify-center rounded-full
-                border border-orange-400/30 bg-orange-400/10
-                text-sm font-black text-orange-300
-                shadow-[0_0_28px_rgba(249,115,22,0.18)]
-                transition-all duration-300
-                group-hover:border-orange-400/60 group-hover:bg-orange-400/15
-              "
-            >
-              L
-            </span>
+            <Image
+              src="/Header/longhiniLogo.svg"
+              alt="Logotipo da Longhini Desenvolvimento Industrial"
+              width={36}
+              height={36}
+              priority
+              className="h-7 w-auto object-contain sm:h-9"
+            />
 
             <span className="flex flex-col leading-none">
-              <span className="text-sm font-extrabold tracking-[0.18em] text-white">
+              <span className="text-xs font-extrabold tracking-[0.18em] text-white sm:text-sm">
                 LONGHINI
               </span>
+
               <span className="mt-1 hidden text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-slate-400 sm:block">
                 Desenvolvimento Industrial
               </span>

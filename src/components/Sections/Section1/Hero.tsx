@@ -72,7 +72,6 @@ export function Hero() {
         <div className="absolute left-[-8rem] top-[8rem] h-56 w-56 rounded-full bg-orange-500/10 blur-3xl md:h-72 md:w-72" />
         <div className="absolute right-[-6rem] top-[10rem] h-56 w-56 rounded-full bg-sky-500/10 blur-3xl md:h-72 md:w-72" />
         <div className="absolute bottom-[2rem] left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-blue-600/10 blur-3xl" />
-        <div className="absolute inset-x-0 top-[7rem] mx-auto hidden h-px max-w-6xl bg-gradient-to-r from-transparent via-white/10 to-transparent lg:block" />
       </div>
 
       <Container className="relative z-10">
