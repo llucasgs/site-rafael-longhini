@@ -1,25 +1,44 @@
 type SectionTitleProps = {
-  children: React.ReactNode;
-  eyebrow?: string;
+  title: string;
+  description?: string;
+  className?: string;
 };
 
-export function SectionTitle({ children, eyebrow }: SectionTitleProps) {
+export function SectionTitle({
+  title,
+  description,
+  className,
+}: SectionTitleProps) {
   return (
-    <div className="mx-auto mb-12 flex max-w-3xl flex-col items-center text-center">
-      {eyebrow && (
-        <span className="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-orange-400">
-          {eyebrow}
-        </span>
-      )}
-
-      <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-        {children}
+    <div
+      className={`
+        mx-auto mb-12 flex max-w-3xl flex-col items-center text-center
+        md:mb-14
+        ${className ?? ""}
+      `}
+    >
+      <h2
+        className="
+          text-3xl font-black uppercase tracking-[0.12em]
+          text-orange-400
+          md:text-4xl
+        "
+      >
+        {title}
       </h2>
 
       <div
         aria-hidden="true"
-        className="mt-5 h-px w-24 bg-gradient-to-r from-transparent via-sky-400 to-transparent"
+        className="
+          my-5 h-px w-32
+          bg-gradient-to-r from-transparent via-orange-400 to-transparent
+          shadow-[0_0_18px_rgba(251,146,60,0.45)]
+        "
       />
+
+      {description && (
+        <p className="text-base leading-8 text-slate-300">{description}</p>
+      )}
     </div>
   );
 }
