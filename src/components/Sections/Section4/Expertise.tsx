@@ -141,20 +141,10 @@ export function Expertise() {
 
       <Container className="relative z-10">
         <ScrollReveal>
-          <SectionTitle eyebrow={t("expertise.eyebrow")}>
-            {t("expertise.title")}
-          </SectionTitle>
-        </ScrollReveal>
-
-        <ScrollReveal delay="sm">
-          <p
-            className="
-              mx-auto mb-12 max-w-3xl text-center text-base leading-8
-              text-slate-300 md:mb-14
-            "
-          >
-            {t("expertise.description")}
-          </p>
+          <SectionTitle
+            title={t("expertise.title")}
+            description={t("expertise.description")}
+          />
         </ScrollReveal>
 
         <div className="grid grid-cols-1 gap-5 xl:grid-cols-3">
