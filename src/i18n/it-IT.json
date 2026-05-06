@@ -120,31 +120,26 @@
       }
     }
   },
-  "industrialShowcase": {
-    "sectionAriaLabel": "Seção interativa com modelo 3D de impressora 3D industrial",
-    "badge": "Visualização 3D",
-    "title": "Prototipagem, precisão e tecnologia aplicadas ao desenvolvimento industrial",
-    "description": "A prototipagem 3D permite validar ideias, testar soluções e acelerar decisões técnicas antes da fabricação final.",
-    "cards": {
-      "precision": "Precisão técnica no desenvolvimento",
-      "prototype": "Validação rápida de protótipos"
-    },
-    "credit": "Modelo 3D baseado em “3D Printer - Bambu Lab A1 Mini” por neilvfx, licenciado sob CC-BY-4.0."
-  },
   "expertise": {
-    "sectionAriaLabel": "Seção de expertise técnica e metodológica",
-    "eyebrow": "Expertise",
-    "title": "Base técnica, metodologia e visão de fábrica aplicada à prática",
+    "sectionAriaLabel": "Seção de expertise técnica, metodológica e industrial",
+    "title": "EXPERTISE",
     "description": "Experiência construída no chão de fábrica, aliando engenharia, melhoria contínua, qualidade, segurança e produtividade para transformar projeto em resultado concreto.",
+    "modelAriaLabel": "Modelo 3D interativo de uma impressora 3D industrial",
+    "card": {
+      "toggleAria": "Alternar detalhes de {{item}}"
+    },
     "groups": {
       "methods": {
-        "title": "Metodologias e melhoria contínua"
+        "title": "Metodologias e melhoria contínua",
+        "description": "Aplicação de métodos de análise, organização e melhoria contínua para tornar processos industriais mais eficientes, previsíveis e produtivos."
       },
       "standards": {
-        "title": "Normas, qualidade e segurança"
+        "title": "Normas, qualidade e segurança",
+        "description": "Conhecimento aplicado em sistemas de qualidade, segurança operacional e requisitos técnicos para ambientes produtivos mais confiáveis."
       },
       "technical": {
-        "title": "Capacidades técnicas e industriais"
+        "title": "Capacidades técnicas e industriais",
+        "description": "Domínio de ferramentas, projetos, máquinas, dispositivos e soluções técnicas voltadas à execução prática no ambiente industrial."
       }
     },
     "methods": {
@@ -175,6 +170,20 @@
       "industrialAutomation": "Automação industrial",
       "reverseEngineering": "Engenharia reversa",
       "teamTraining": "Treinamento de equipes"
+    },
+    "summaryCards": {
+      "continuousImprovement": {
+        "title": "Melhoria contínua",
+        "description": "Estruturação de processos com foco em produtividade, organização e redução de desperdícios."
+      },
+      "technicalExecution": {
+        "title": "Execução técnica",
+        "description": "Integração entre projeto, ferramentaria, prototipagem, dispositivos e produção industrial."
+      },
+      "factoryVision": {
+        "title": "Visão de fábrica",
+        "description": "Experiência prática em chão de fábrica aplicada a decisões técnicas mais viáveis e eficientes."
+      }
     }
   }
 }
