@@ -1,145 +1,145 @@
 {
   "header": {
-    "logoAriaLabel": "Voltar para o início",
+    "logoAriaLabel": "शुरुआत पर वापस जाएँ",
 
     "brand": {
-      "logoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+      "logoAlt": "Longhini औद्योगिक विकास का लोगो",
       "name": "LONGHINI",
-      "subtitle": "Desenvolvimento Industrial"
+      "subtitle": "औद्योगिक विकास"
     },
 
     "aria": {
-      "mainNavigation": "Navegação principal",
-      "mobileNavigation": "Navegação mobile"
+      "mainNavigation": "मुख्य नेविगेशन",
+      "mobileNavigation": "मोबाइल नेविगेशन"
     },
 
     "nav": {
-      "about": "Sobre",
-      "services": "Serviços",
-      "expertise": "Expertise",
-      "experience": "Experiência",
-      "contact": "Contato"
+      "about": "परिचय",
+      "services": "सेवाएँ",
+      "expertise": "विशेषज्ञता",
+      "experience": "अनुभव",
+      "contact": "संपर्क"
     },
 
     "navAria": {
-      "goTo": "Ir para a seção {{section}}"
+      "goTo": "{{section}} अनुभाग पर जाएँ"
     },
 
     "mobile": {
-      "open": "Abrir menu",
-      "close": "Fechar menu"
+      "open": "मेनू खोलें",
+      "close": "मेनू बंद करें"
     },
 
-    "chooseLanguage": "Escolha o idioma",
+    "chooseLanguage": "भाषा चुनें",
 
     "flags": {
-      "alt": "Bandeira — {{language}}"
+      "alt": "ध्वज — {{language}}"
     },
 
     "languages": {
-      "pt-BR": "Português",
-      "en-US": "Inglês",
-      "es-ES": "Espanhol",
-      "de-DE": "Alemão",
-      "fr-FR": "Francês",
-      "it-IT": "Italiano",
-      "ja-JP": "Japonês",
-      "ko-KR": "Coreano",
-      "ru-RU": "Russo",
-      "zh-CN": "Mandarim",
-      "ar-SA": "Árabe",
-      "he-IL": "Hebraico",
-      "hi-IN": "Hindi"
+      "pt-BR": "पुर्तगाली",
+      "en-US": "अंग्रेज़ी",
+      "es-ES": "स्पेनिश",
+      "de-DE": "जर्मन",
+      "fr-FR": "फ़्रेंच",
+      "it-IT": "इतालवी",
+      "ja-JP": "जापानी",
+      "ko-KR": "कोरियाई",
+      "ru-RU": "रूसी",
+      "zh-CN": "मंदारिन",
+      "ar-SA": "अरबी",
+      "he-IL": "हिब्रू",
+      "hi-IN": "हिंदी"
     }
   },
   "hero": {
-    "sectionAriaLabel": "Seção principal de apresentação da Longhini Desenvolvimento Industrial",
-    "badge": "Soluções Industriais Personalizadas",
-    "title": "Projeto e Desenvolvimento de Produtos",
-    "description": "Transformamos ideias em produtos, dispositivos, moldes, ferramentas e máquinas especiais com engenharia prática, inovação tecnológica e foco em resultado.",
-    "primaryButton": "Solicitar Orçamento",
-    "secondaryButton": "Conhecer Soluções",
-    "personImageAlt": "Foto de Rafael Longhini Lopes",
-    "companyLogoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+    "sectionAriaLabel": "Longhini औद्योगिक विकास का मुख्य प्रस्तुति अनुभाग",
+    "badge": "कस्टम औद्योगिक समाधान",
+    "title": "उत्पादों का डिज़ाइन और विकास",
+    "description": "हम व्यावहारिक इंजीनियरिंग, तकनीकी नवाचार और परिणामों पर केंद्रित दृष्टिकोण के साथ विचारों को उत्पादों, उपकरणों, मोल्ड, टूल्स और विशेष मशीनों में बदलते हैं।",
+    "primaryButton": "कोटेशन का अनुरोध करें",
+    "secondaryButton": "समाधान देखें",
+    "personImageAlt": "Rafael Longhini Lopes की तस्वीर",
+    "companyLogoAlt": "Longhini औद्योगिक विकास का लोगो",
     "stats": {
-      "experience": "20+ anos de experiência",
-      "innovation": "Inovação e engenharia reversa",
-      "prototyping": "Prototipagem e impressão 3D"
+      "experience": "20+ वर्षों का अनुभव",
+      "innovation": "नवाचार और रिवर्स इंजीनियरिंग",
+      "prototyping": "प्रोटोटाइपिंग और 3D प्रिंटिंग"
     },
     "card": {
-      "eyebrow": "Diretor Técnico",
+      "eyebrow": "तकनीकी निदेशक",
       "title": "Rafael Longhini Lopes",
-      "subtitle": "Engenharia mecânica, desenvolvimento de produto, ferramentaria, automação industrial e soluções sob medida.",
+      "subtitle": "मैकेनिकल इंजीनियरिंग, उत्पाद विकास, टूलिंग, औद्योगिक ऑटोमेशन और कस्टम समाधान।",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
-      "tag3": "Engenharia Reversa",
-      "tag4": "Impressão 3D",
-      "companyLabel": "Empresa",
-      "companyName": "LONGHINI - DESENVOLVIMENTO INDUSTRIAL",
-      "companyLocation": "São Paulo, São Paulo, Brasil",
+      "tag3": "रिवर्स इंजीनियरिंग",
+      "tag4": "3D प्रिंटिंग",
+      "companyLabel": "कंपनी",
+      "companyName": "LONGHINI - औद्योगिक विकास",
+      "companyLocation": "साओ पाउलो, साओ पाउलो, ब्राज़ील",
       "miniCards": {
         "cadcam": "CAD/CAM",
-        "molds": "Moldes",
-        "prototypes": "Protótipos",
-        "production": "Produção"
+        "molds": "मोल्ड",
+        "prototypes": "प्रोटोटाइप",
+        "production": "उत्पादन"
       }
     }
   },
   "services": {
-    "sectionAriaLabel": "Seção de serviços da Longhini Desenvolvimento Industrial",
-    "title": "SERVIÇOS",
-    "description": "Atuação técnica e estratégica para desenvolver produtos, processos, ferramentas e soluções industriais sob medida, com foco em eficiência, viabilidade e resultado real no chão de fábrica.",
-    "imageAlt": "Impressora 3D industrial imprimindo uma peça com iluminação laranja em ambiente de produção",
+    "sectionAriaLabel": "Longhini औद्योगिक विकास की सेवाओं का अनुभाग",
+    "title": "सेवाएँ",
+    "description": "उत्पादों, प्रक्रियाओं, टूल्स और कस्टम औद्योगिक समाधानों के विकास के लिए तकनीकी और रणनीतिक कार्य, जिसमें दक्षता, व्यवहार्यता और फैक्टरी फ्लोर पर वास्तविक परिणामों पर ध्यान दिया जाता है।",
+    "imageAlt": "उत्पादन वातावरण में नारंगी रोशनी के साथ एक औद्योगिक 3D प्रिंटर एक पार्ट प्रिंट कर रहा है",
     "card": {
-      "toggleAria": "Alternar detalhes do serviço {{service}}"
+      "toggleAria": "{{service}} सेवा के विवरण दिखाएँ या छिपाएँ"
     },
     "items": {
       "productDevelopment": {
-        "title": "Desenvolvimento de produtos",
-        "description": "Projeto técnico de novos produtos, dispositivos e soluções personalizadas para demandas industriais específicas."
+        "title": "उत्पाद विकास",
+        "description": "विशिष्ट औद्योगिक आवश्यकताओं के लिए नए उत्पादों, उपकरणों और कस्टम समाधानों का तकनीकी डिज़ाइन।"
       },
       "reverseEngineering": {
-        "title": "Engenharia reversa",
-        "description": "Recriação, adaptação e desenvolvimento de componentes e máquinas especiais quando não há solução nacional disponível."
+        "title": "रिवर्स इंजीनियरिंग",
+        "description": "जब कोई स्थानीय समाधान उपलब्ध न हो, तब घटकों और विशेष मशीनों का पुनर्निर्माण, अनुकूलन और विकास।"
       },
       "prototyping": {
-        "title": "Prototipagem 3D",
-        "description": "Validação de ideias, testes funcionais e aceleração do desenvolvimento com impressão 3D em resina e filamento."
+        "title": "3D प्रोटोटाइपिंग",
+        "description": "रेज़िन और फिलामेंट 3D प्रिंटिंग के साथ विचारों का सत्यापन, कार्यात्मक परीक्षण और विकास की गति बढ़ाना।"
       },
       "tooling": {
-        "title": "Ferramentas, moldes e dispositivos",
-        "description": "Desenvolvimento de moldes plásticos, ferramentas de corte, repuxo e dispositivos dedicados para produção seriada."
+        "title": "टूल्स, मोल्ड और उपकरण",
+        "description": "सीरियल उत्पादन के लिए प्लास्टिक मोल्ड, कटिंग टूल्स, डीप ड्रॉइंग टूल्स और समर्पित उपकरणों का विकास।"
       },
       "automation": {
-        "title": "Automação e melhorias industriais",
-        "description": "Retrofitting, automação industrial e implantação de melhorias para aumentar produtividade e reduzir desperdícios."
+        "title": "ऑटोमेशन और औद्योगिक सुधार",
+        "description": "उत्पादकता बढ़ाने और अपव्यय कम करने के लिए रेट्रोफिटिंग, औद्योगिक ऑटोमेशन और सुधारों का कार्यान्वयन।"
       },
       "industrialManagement": {
-        "title": "Estruturação produtiva e gestão",
-        "description": "Montagem de setores, organização de processos, treinamento de equipes e apoio técnico para crescimento industrial sustentável."
+        "title": "उत्पादन संरचना और प्रबंधन",
+        "description": "विभागों की स्थापना, प्रक्रियाओं का संगठन, टीमों का प्रशिक्षण और सतत औद्योगिक विकास के लिए तकनीकी समर्थन।"
       }
     }
   },
   "expertise": {
-    "sectionAriaLabel": "Seção de expertise técnica, metodológica e industrial",
-    "title": "EXPERTISE",
-    "description": "Experiência construída no chão de fábrica, aliando engenharia, melhoria contínua, qualidade, segurança e produtividade para transformar projeto em resultado concreto.",
-    "modelAriaLabel": "Modelo 3D interativo de uma impressora 3D industrial",
+    "sectionAriaLabel": "तकनीकी, पद्धतिगत और औद्योगिक विशेषज्ञता का अनुभाग",
+    "title": "विशेषज्ञता",
+    "description": "फैक्टरी फ्लोर पर निर्मित अनुभव, जो इंजीनियरिंग, निरंतर सुधार, गुणवत्ता, सुरक्षा और उत्पादकता को जोड़कर परियोजनाओं को ठोस परिणामों में बदलता है।",
+    "modelAriaLabel": "औद्योगिक 3D प्रिंटर का इंटरैक्टिव 3D मॉडल",
     "card": {
-      "toggleAria": "Alternar detalhes de {{item}}"
+      "toggleAria": "{{item}} के विवरण दिखाएँ या छिपाएँ"
     },
     "groups": {
       "methods": {
-        "title": "Metodologias e melhoria contínua",
-        "description": "Aplicação de métodos de análise, organização e melhoria contínua para tornar processos industriais mais eficientes, previsíveis e produtivos."
+        "title": "पद्धतियाँ और निरंतर सुधार",
+        "description": "औद्योगिक प्रक्रियाओं को अधिक कुशल, पूर्वानुमेय और उत्पादक बनाने के लिए विश्लेषण, संगठन और निरंतर सुधार की पद्धतियों का उपयोग।"
       },
       "standards": {
-        "title": "Normas, qualidade e segurança",
-        "description": "Conhecimento aplicado em sistemas de qualidade, segurança operacional e requisitos técnicos para ambientes produtivos mais confiáveis."
+        "title": "मानक, गुणवत्ता और सुरक्षा",
+        "description": "अधिक विश्वसनीय उत्पादन वातावरण के लिए गुणवत्ता प्रणालियों, परिचालन सुरक्षा और तकनीकी आवश्यकताओं में लागू ज्ञान।"
       },
       "technical": {
-        "title": "Capacidades técnicas e industriais",
-        "description": "Domínio de ferramentas, projetos, máquinas, dispositivos e soluções técnicas voltadas à execução prática no ambiente industrial."
+        "title": "तकनीकी और औद्योगिक क्षमताएँ",
+        "description": "औद्योगिक वातावरण में व्यावहारिक निष्पादन के लिए टूल्स, परियोजनाओं, मशीनों, उपकरणों और तकनीकी समाधानों में दक्षता।"
       }
     },
     "methods": {
@@ -150,7 +150,7 @@
       "4m": "4M",
       "ishikawa": "Ishikawa",
       "5w2h": "5W2H",
-      "swot": "Matriz SWOT"
+      "swot": "SWOT मैट्रिक्स"
     },
     "standards": {
       "iso9001": "ISO 9001",
@@ -162,27 +162,27 @@
       "nr17": "NR-17"
     },
     "technical": {
-      "cadcam": "Projetos CAD/CAM",
+      "cadcam": "CAD/CAM परियोजनाएँ",
       "solidworks": "SolidWorks",
       "autocad": "AutoCAD",
-      "tooling": "Ferramentaria",
-      "specialMachines": "Máquinas especiais",
-      "industrialAutomation": "Automação industrial",
-      "reverseEngineering": "Engenharia reversa",
-      "teamTraining": "Treinamento de equipes"
+      "tooling": "टूलिंग",
+      "specialMachines": "विशेष मशीनें",
+      "industrialAutomation": "औद्योगिक ऑटोमेशन",
+      "reverseEngineering": "रिवर्स इंजीनियरिंग",
+      "teamTraining": "टीम प्रशिक्षण"
     },
     "summaryCards": {
       "continuousImprovement": {
-        "title": "Melhoria contínua",
-        "description": "Estruturação de processos com foco em produtividade, organização e redução de desperdícios."
+        "title": "निरंतर सुधार",
+        "description": "उत्पादकता, संगठन और अपव्यय में कमी पर केंद्रित प्रक्रियाओं की संरचना।"
       },
       "technicalExecution": {
-        "title": "Execução técnica",
-        "description": "Integração entre projeto, ferramentaria, prototipagem, dispositivos e produção industrial."
+        "title": "तकनीकी निष्पादन",
+        "description": "डिज़ाइन, टूलिंग, प्रोटोटाइपिंग, उपकरणों और औद्योगिक उत्पादन के बीच एकीकरण।"
       },
       "factoryVision": {
-        "title": "Visão de fábrica",
-        "description": "Experiência prática em chão de fábrica aplicada a decisões técnicas mais viáveis e eficientes."
+        "title": "फैक्टरी दृष्टिकोण",
+        "description": "फैक्टरी फ्लोर का व्यावहारिक अनुभव, जिसे अधिक व्यवहार्य और कुशल तकनीकी निर्णयों में लागू किया जाता है।"
       }
     }
   }

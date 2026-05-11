@@ -1,145 +1,145 @@
 {
   "header": {
-    "logoAriaLabel": "Voltar para o início",
+    "logoAriaLabel": "Вернуться в начало",
 
     "brand": {
-      "logoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+      "logoAlt": "Логотип Longhini Промышленная Разработка",
       "name": "LONGHINI",
-      "subtitle": "Desenvolvimento Industrial"
+      "subtitle": "Промышленная Разработка"
     },
 
     "aria": {
-      "mainNavigation": "Navegação principal",
-      "mobileNavigation": "Navegação mobile"
+      "mainNavigation": "Основная навигация",
+      "mobileNavigation": "Мобильная навигация"
     },
 
     "nav": {
-      "about": "Sobre",
-      "services": "Serviços",
-      "expertise": "Expertise",
-      "experience": "Experiência",
-      "contact": "Contato"
+      "about": "О нас",
+      "services": "Услуги",
+      "expertise": "Экспертиза",
+      "experience": "Опыт",
+      "contact": "Контакт"
     },
 
     "navAria": {
-      "goTo": "Ir para a seção {{section}}"
+      "goTo": "Перейти к разделу {{section}}"
     },
 
     "mobile": {
-      "open": "Abrir menu",
-      "close": "Fechar menu"
+      "open": "Открыть меню",
+      "close": "Закрыть меню"
     },
 
-    "chooseLanguage": "Escolha o idioma",
+    "chooseLanguage": "Выбрать язык",
 
     "flags": {
-      "alt": "Bandeira — {{language}}"
+      "alt": "Флаг — {{language}}"
     },
 
     "languages": {
-      "pt-BR": "Português",
-      "en-US": "Inglês",
-      "es-ES": "Espanhol",
-      "de-DE": "Alemão",
-      "fr-FR": "Francês",
-      "it-IT": "Italiano",
-      "ja-JP": "Japonês",
-      "ko-KR": "Coreano",
-      "ru-RU": "Russo",
-      "zh-CN": "Mandarim",
-      "ar-SA": "Árabe",
-      "he-IL": "Hebraico",
-      "hi-IN": "Hindi"
+      "pt-BR": "Португальский",
+      "en-US": "Английский",
+      "es-ES": "Испанский",
+      "de-DE": "Немецкий",
+      "fr-FR": "Французский",
+      "it-IT": "Итальянский",
+      "ja-JP": "Японский",
+      "ko-KR": "Корейский",
+      "ru-RU": "Русский",
+      "zh-CN": "Мандаринский китайский",
+      "ar-SA": "Арабский",
+      "he-IL": "Иврит",
+      "hi-IN": "Хинди"
     }
   },
   "hero": {
-    "sectionAriaLabel": "Seção principal de apresentação da Longhini Desenvolvimento Industrial",
-    "badge": "Soluções Industriais Personalizadas",
-    "title": "Projeto e Desenvolvimento de Produtos",
-    "description": "Transformamos ideias em produtos, dispositivos, moldes, ferramentas e máquinas especiais com engenharia prática, inovação tecnológica e foco em resultado.",
-    "primaryButton": "Solicitar Orçamento",
-    "secondaryButton": "Conhecer Soluções",
-    "personImageAlt": "Foto de Rafael Longhini Lopes",
-    "companyLogoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+    "sectionAriaLabel": "Главный раздел презентации Longhini Промышленная Разработка",
+    "badge": "Индивидуальные промышленные решения",
+    "title": "Проектирование и разработка продуктов",
+    "description": "Мы превращаем идеи в продукты, устройства, пресс-формы, инструменты и специальные машины с помощью практической инженерии, технологических инноваций и ориентации на результат.",
+    "primaryButton": "Запросить расчет",
+    "secondaryButton": "Посмотреть решения",
+    "personImageAlt": "Фото Rafael Longhini Lopes",
+    "companyLogoAlt": "Логотип Longhini Промышленная Разработка",
     "stats": {
-      "experience": "20+ anos de experiência",
-      "innovation": "Inovação e engenharia reversa",
-      "prototyping": "Prototipagem e impressão 3D"
+      "experience": "Более 20 лет опыта",
+      "innovation": "Инновации и реверс-инжиниринг",
+      "prototyping": "Прототипирование и 3D-печать"
     },
     "card": {
-      "eyebrow": "Diretor Técnico",
+      "eyebrow": "Технический директор",
       "title": "Rafael Longhini Lopes",
-      "subtitle": "Engenharia mecânica, desenvolvimento de produto, ferramentaria, automação industrial e soluções sob medida.",
+      "subtitle": "Машиностроение, разработка продуктов, инструментальное производство, промышленная автоматизация и индивидуальные решения.",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
-      "tag3": "Engenharia Reversa",
-      "tag4": "Impressão 3D",
-      "companyLabel": "Empresa",
-      "companyName": "LONGHINI - DESENVOLVIMENTO INDUSTRIAL",
-      "companyLocation": "São Paulo, São Paulo, Brasil",
+      "tag3": "Реверс-инжиниринг",
+      "tag4": "3D-печать",
+      "companyLabel": "Компания",
+      "companyName": "LONGHINI - ПРОМЫШЛЕННАЯ РАЗРАБОТКА",
+      "companyLocation": "Сан-Паулу, Сан-Паулу, Бразилия",
       "miniCards": {
         "cadcam": "CAD/CAM",
-        "molds": "Moldes",
-        "prototypes": "Protótipos",
-        "production": "Produção"
+        "molds": "Пресс-формы",
+        "prototypes": "Прототипы",
+        "production": "Производство"
       }
     }
   },
   "services": {
-    "sectionAriaLabel": "Seção de serviços da Longhini Desenvolvimento Industrial",
-    "title": "SERVIÇOS",
-    "description": "Atuação técnica e estratégica para desenvolver produtos, processos, ferramentas e soluções industriais sob medida, com foco em eficiência, viabilidade e resultado real no chão de fábrica.",
-    "imageAlt": "Impressora 3D industrial imprimindo uma peça com iluminação laranja em ambiente de produção",
+    "sectionAriaLabel": "Раздел услуг Longhini Промышленная Разработка",
+    "title": "УСЛУГИ",
+    "description": "Техническая и стратегическая работа по разработке индивидуальных продуктов, процессов, инструментов и промышленных решений с фокусом на эффективность, реализуемость и реальные результаты в производственной среде.",
+    "imageAlt": "Промышленный 3D-принтер печатает деталь при оранжевом освещении в производственной среде",
     "card": {
-      "toggleAria": "Alternar detalhes do serviço {{service}}"
+      "toggleAria": "Показать или скрыть детали услуги {{service}}"
     },
     "items": {
       "productDevelopment": {
-        "title": "Desenvolvimento de produtos",
-        "description": "Projeto técnico de novos produtos, dispositivos e soluções personalizadas para demandas industriais específicas."
+        "title": "Разработка продуктов",
+        "description": "Техническое проектирование новых продуктов, устройств и индивидуальных решений для конкретных промышленных задач."
       },
       "reverseEngineering": {
-        "title": "Engenharia reversa",
-        "description": "Recriação, adaptação e desenvolvimento de componentes e máquinas especiais quando não há solução nacional disponível."
+        "title": "Реверс-инжиниринг",
+        "description": "Воссоздание, адаптация и разработка компонентов и специальных машин, когда готовое локальное решение недоступно."
       },
       "prototyping": {
-        "title": "Prototipagem 3D",
-        "description": "Validação de ideias, testes funcionais e aceleração do desenvolvimento com impressão 3D em resina e filamento."
+        "title": "3D-прототипирование",
+        "description": "Проверка идей, функциональные испытания и ускорение разработки с использованием 3D-печати смолой и филаментом."
       },
       "tooling": {
-        "title": "Ferramentas, moldes e dispositivos",
-        "description": "Desenvolvimento de moldes plásticos, ferramentas de corte, repuxo e dispositivos dedicados para produção seriada."
+        "title": "Инструменты, пресс-формы и устройства",
+        "description": "Разработка пластиковых пресс-форм, режущего инструмента, штамповки и специализированных устройств для серийного производства."
       },
       "automation": {
-        "title": "Automação e melhorias industriais",
-        "description": "Retrofitting, automação industrial e implantação de melhorias para aumentar produtividade e reduzir desperdícios."
+        "title": "Автоматизация и промышленные улучшения",
+        "description": "Ретрофит, промышленная автоматизация и внедрение улучшений для повышения производительности и сокращения потерь."
       },
       "industrialManagement": {
-        "title": "Estruturação produtiva e gestão",
-        "description": "Montagem de setores, organização de processos, treinamento de equipes e apoio técnico para crescimento industrial sustentável."
+        "title": "Производственная структура и управление",
+        "description": "Создание участков, организация процессов, обучение команд и техническая поддержка для устойчивого промышленного роста."
       }
     }
   },
   "expertise": {
-    "sectionAriaLabel": "Seção de expertise técnica, metodológica e industrial",
-    "title": "EXPERTISE",
-    "description": "Experiência construída no chão de fábrica, aliando engenharia, melhoria contínua, qualidade, segurança e produtividade para transformar projeto em resultado concreto.",
-    "modelAriaLabel": "Modelo 3D interativo de uma impressora 3D industrial",
+    "sectionAriaLabel": "Раздел технической, методологической и промышленной экспертизы",
+    "title": "ЭКСПЕРТИЗА",
+    "description": "Опыт, сформированный в производственной среде, объединяющий инженерию, непрерывное улучшение, качество, безопасность и производительность для превращения проектов в конкретные результаты.",
+    "modelAriaLabel": "Интерактивная 3D-модель промышленного 3D-принтера",
     "card": {
-      "toggleAria": "Alternar detalhes de {{item}}"
+      "toggleAria": "Показать или скрыть детали {{item}}"
     },
     "groups": {
       "methods": {
-        "title": "Metodologias e melhoria contínua",
-        "description": "Aplicação de métodos de análise, organização e melhoria contínua para tornar processos industriais mais eficientes, previsíveis e produtivos."
+        "title": "Методологии и непрерывное улучшение",
+        "description": "Применение методов анализа, организации и непрерывного улучшения, чтобы сделать промышленные процессы более эффективными, предсказуемыми и продуктивными."
       },
       "standards": {
-        "title": "Normas, qualidade e segurança",
-        "description": "Conhecimento aplicado em sistemas de qualidade, segurança operacional e requisitos técnicos para ambientes produtivos mais confiáveis."
+        "title": "Стандарты, качество и безопасность",
+        "description": "Прикладные знания в системах качества, операционной безопасности и технических требованиях для более надежной производственной среды."
       },
       "technical": {
-        "title": "Capacidades técnicas e industriais",
-        "description": "Domínio de ferramentas, projetos, máquinas, dispositivos e soluções técnicas voltadas à execução prática no ambiente industrial."
+        "title": "Технические и промышленные возможности",
+        "description": "Владение инструментами, проектами, машинами, устройствами и техническими решениями, ориентированными на практическое выполнение в промышленной среде."
       }
     },
     "methods": {
@@ -150,7 +150,7 @@
       "4m": "4M",
       "ishikawa": "Ishikawa",
       "5w2h": "5W2H",
-      "swot": "Matriz SWOT"
+      "swot": "SWOT-матрица"
     },
     "standards": {
       "iso9001": "ISO 9001",
@@ -162,27 +162,27 @@
       "nr17": "NR-17"
     },
     "technical": {
-      "cadcam": "Projetos CAD/CAM",
+      "cadcam": "Проекты CAD/CAM",
       "solidworks": "SolidWorks",
       "autocad": "AutoCAD",
-      "tooling": "Ferramentaria",
-      "specialMachines": "Máquinas especiais",
-      "industrialAutomation": "Automação industrial",
-      "reverseEngineering": "Engenharia reversa",
-      "teamTraining": "Treinamento de equipes"
+      "tooling": "Инструментальное производство",
+      "specialMachines": "Специальные машины",
+      "industrialAutomation": "Промышленная автоматизация",
+      "reverseEngineering": "Реверс-инжиниринг",
+      "teamTraining": "Обучение команд"
     },
     "summaryCards": {
       "continuousImprovement": {
-        "title": "Melhoria contínua",
-        "description": "Estruturação de processos com foco em produtividade, organização e redução de desperdícios."
+        "title": "Непрерывное улучшение",
+        "description": "Структурирование процессов с фокусом на производительность, организацию и сокращение потерь."
       },
       "technicalExecution": {
-        "title": "Execução técnica",
-        "description": "Integração entre projeto, ferramentaria, prototipagem, dispositivos e produção industrial."
+        "title": "Техническое выполнение",
+        "description": "Интеграция проектирования, инструментального производства, прототипирования, устройств и промышленного производства."
       },
       "factoryVision": {
-        "title": "Visão de fábrica",
-        "description": "Experiência prática em chão de fábrica aplicada a decisões técnicas mais viáveis e eficientes."
+        "title": "Производственное видение",
+        "description": "Практический опыт производственной среды, примененный к более реализуемым и эффективным техническим решениям."
       }
     }
   }

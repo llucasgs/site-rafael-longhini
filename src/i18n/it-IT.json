@@ -1,145 +1,145 @@
 {
   "header": {
-    "logoAriaLabel": "Voltar para o início",
+    "logoAriaLabel": "Torna all’inizio",
 
     "brand": {
-      "logoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+      "logoAlt": "Logo di Longhini Sviluppo Industriale",
       "name": "LONGHINI",
-      "subtitle": "Desenvolvimento Industrial"
+      "subtitle": "Sviluppo Industriale"
     },
 
     "aria": {
-      "mainNavigation": "Navegação principal",
-      "mobileNavigation": "Navegação mobile"
+      "mainNavigation": "Navigazione principale",
+      "mobileNavigation": "Navigazione mobile"
     },
 
     "nav": {
-      "about": "Sobre",
-      "services": "Serviços",
+      "about": "Chi siamo",
+      "services": "Servizi",
       "expertise": "Expertise",
-      "experience": "Experiência",
-      "contact": "Contato"
+      "experience": "Esperienza",
+      "contact": "Contatto"
     },
 
     "navAria": {
-      "goTo": "Ir para a seção {{section}}"
+      "goTo": "Vai alla sezione {{section}}"
     },
 
     "mobile": {
-      "open": "Abrir menu",
-      "close": "Fechar menu"
+      "open": "Apri menu",
+      "close": "Chiudi menu"
     },
 
-    "chooseLanguage": "Escolha o idioma",
+    "chooseLanguage": "Scegli la lingua",
 
     "flags": {
-      "alt": "Bandeira — {{language}}"
+      "alt": "Bandiera — {{language}}"
     },
 
     "languages": {
-      "pt-BR": "Português",
-      "en-US": "Inglês",
-      "es-ES": "Espanhol",
-      "de-DE": "Alemão",
-      "fr-FR": "Francês",
+      "pt-BR": "Portoghese",
+      "en-US": "Inglese",
+      "es-ES": "Spagnolo",
+      "de-DE": "Tedesco",
+      "fr-FR": "Francese",
       "it-IT": "Italiano",
-      "ja-JP": "Japonês",
+      "ja-JP": "Giapponese",
       "ko-KR": "Coreano",
       "ru-RU": "Russo",
-      "zh-CN": "Mandarim",
-      "ar-SA": "Árabe",
-      "he-IL": "Hebraico",
+      "zh-CN": "Mandarino",
+      "ar-SA": "Arabo",
+      "he-IL": "Ebraico",
       "hi-IN": "Hindi"
     }
   },
   "hero": {
-    "sectionAriaLabel": "Seção principal de apresentação da Longhini Desenvolvimento Industrial",
-    "badge": "Soluções Industriais Personalizadas",
-    "title": "Projeto e Desenvolvimento de Produtos",
-    "description": "Transformamos ideias em produtos, dispositivos, moldes, ferramentas e máquinas especiais com engenharia prática, inovação tecnológica e foco em resultado.",
-    "primaryButton": "Solicitar Orçamento",
-    "secondaryButton": "Conhecer Soluções",
-    "personImageAlt": "Foto de Rafael Longhini Lopes",
-    "companyLogoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+    "sectionAriaLabel": "Sezione principale di presentazione di Longhini Sviluppo Industriale",
+    "badge": "Soluzioni Industriali Personalizzate",
+    "title": "Progettazione e Sviluppo di Prodotti",
+    "description": "Trasformiamo idee in prodotti, dispositivi, stampi, utensili e macchine speciali con ingegneria pratica, innovazione tecnologica e attenzione ai risultati.",
+    "primaryButton": "Richiedi un preventivo",
+    "secondaryButton": "Scopri le soluzioni",
+    "personImageAlt": "Foto di Rafael Longhini Lopes",
+    "companyLogoAlt": "Logo di Longhini Sviluppo Industriale",
     "stats": {
-      "experience": "20+ anos de experiência",
-      "innovation": "Inovação e engenharia reversa",
-      "prototyping": "Prototipagem e impressão 3D"
+      "experience": "Oltre 20 anni di esperienza",
+      "innovation": "Innovazione e reverse engineering",
+      "prototyping": "Prototipazione e stampa 3D"
     },
     "card": {
-      "eyebrow": "Diretor Técnico",
+      "eyebrow": "Direttore Tecnico",
       "title": "Rafael Longhini Lopes",
-      "subtitle": "Engenharia mecânica, desenvolvimento de produto, ferramentaria, automação industrial e soluções sob medida.",
+      "subtitle": "Ingegneria meccanica, sviluppo prodotto, attrezzeria, automazione industriale e soluzioni su misura.",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
-      "tag3": "Engenharia Reversa",
-      "tag4": "Impressão 3D",
-      "companyLabel": "Empresa",
-      "companyName": "LONGHINI - DESENVOLVIMENTO INDUSTRIAL",
-      "companyLocation": "São Paulo, São Paulo, Brasil",
+      "tag3": "Reverse Engineering",
+      "tag4": "Stampa 3D",
+      "companyLabel": "Azienda",
+      "companyName": "LONGHINI - SVILUPPO INDUSTRIALE",
+      "companyLocation": "São Paulo, São Paulo, Brasile",
       "miniCards": {
         "cadcam": "CAD/CAM",
-        "molds": "Moldes",
-        "prototypes": "Protótipos",
-        "production": "Produção"
+        "molds": "Stampi",
+        "prototypes": "Prototipi",
+        "production": "Produzione"
       }
     }
   },
   "services": {
-    "sectionAriaLabel": "Seção de serviços da Longhini Desenvolvimento Industrial",
-    "title": "SERVIÇOS",
-    "description": "Atuação técnica e estratégica para desenvolver produtos, processos, ferramentas e soluções industriais sob medida, com foco em eficiência, viabilidade e resultado real no chão de fábrica.",
-    "imageAlt": "Impressora 3D industrial imprimindo uma peça com iluminação laranja em ambiente de produção",
+    "sectionAriaLabel": "Sezione dei servizi di Longhini Sviluppo Industriale",
+    "title": "SERVIZI",
+    "description": "Attività tecnica e strategica per sviluppare prodotti, processi, utensili e soluzioni industriali su misura, con attenzione a efficienza, fattibilità e risultati concreti in produzione.",
+    "imageAlt": "Stampante 3D industriale che stampa un pezzo con illuminazione arancione in un ambiente produttivo",
     "card": {
-      "toggleAria": "Alternar detalhes do serviço {{service}}"
+      "toggleAria": "Mostra o nascondi i dettagli del servizio {{service}}"
     },
     "items": {
       "productDevelopment": {
-        "title": "Desenvolvimento de produtos",
-        "description": "Projeto técnico de novos produtos, dispositivos e soluções personalizadas para demandas industriais específicas."
+        "title": "Sviluppo di prodotti",
+        "description": "Progettazione tecnica di nuovi prodotti, dispositivi e soluzioni personalizzate per specifiche esigenze industriali."
       },
       "reverseEngineering": {
-        "title": "Engenharia reversa",
-        "description": "Recriação, adaptação e desenvolvimento de componentes e máquinas especiais quando não há solução nacional disponível."
+        "title": "Reverse engineering",
+        "description": "Ricreazione, adattamento e sviluppo di componenti e macchine speciali quando non esiste una soluzione nazionale disponibile."
       },
       "prototyping": {
-        "title": "Prototipagem 3D",
-        "description": "Validação de ideias, testes funcionais e aceleração do desenvolvimento com impressão 3D em resina e filamento."
+        "title": "Prototipazione 3D",
+        "description": "Validazione di idee, test funzionali e accelerazione dello sviluppo con stampa 3D in resina e filamento."
       },
       "tooling": {
-        "title": "Ferramentas, moldes e dispositivos",
-        "description": "Desenvolvimento de moldes plásticos, ferramentas de corte, repuxo e dispositivos dedicados para produção seriada."
+        "title": "Utensili, stampi e dispositivi",
+        "description": "Sviluppo di stampi plastici, utensili da taglio, imbutitura e dispositivi dedicati alla produzione in serie."
       },
       "automation": {
-        "title": "Automação e melhorias industriais",
-        "description": "Retrofitting, automação industrial e implantação de melhorias para aumentar produtividade e reduzir desperdícios."
+        "title": "Automazione e miglioramenti industriali",
+        "description": "Retrofitting, automazione industriale e implementazione di miglioramenti per aumentare la produttività e ridurre gli sprechi."
       },
       "industrialManagement": {
-        "title": "Estruturação produtiva e gestão",
-        "description": "Montagem de setores, organização de processos, treinamento de equipes e apoio técnico para crescimento industrial sustentável."
+        "title": "Strutturazione produttiva e gestione",
+        "description": "Creazione di reparti, organizzazione dei processi, formazione dei team e supporto tecnico per una crescita industriale sostenibile."
       }
     }
   },
   "expertise": {
-    "sectionAriaLabel": "Seção de expertise técnica, metodológica e industrial",
+    "sectionAriaLabel": "Sezione di expertise tecnica, metodologica e industriale",
     "title": "EXPERTISE",
-    "description": "Experiência construída no chão de fábrica, aliando engenharia, melhoria contínua, qualidade, segurança e produtividade para transformar projeto em resultado concreto.",
-    "modelAriaLabel": "Modelo 3D interativo de uma impressora 3D industrial",
+    "description": "Esperienza maturata sul campo in produzione, unendo ingegneria, miglioramento continuo, qualità, sicurezza e produttività per trasformare i progetti in risultati concreti.",
+    "modelAriaLabel": "Modello 3D interattivo di una stampante 3D industriale",
     "card": {
-      "toggleAria": "Alternar detalhes de {{item}}"
+      "toggleAria": "Mostra o nascondi i dettagli di {{item}}"
     },
     "groups": {
       "methods": {
-        "title": "Metodologias e melhoria contínua",
-        "description": "Aplicação de métodos de análise, organização e melhoria contínua para tornar processos industriais mais eficientes, previsíveis e produtivos."
+        "title": "Metodologie e miglioramento continuo",
+        "description": "Applicazione di metodi di analisi, organizzazione e miglioramento continuo per rendere i processi industriali più efficienti, prevedibili e produttivi."
       },
       "standards": {
-        "title": "Normas, qualidade e segurança",
-        "description": "Conhecimento aplicado em sistemas de qualidade, segurança operacional e requisitos técnicos para ambientes produtivos mais confiáveis."
+        "title": "Norme, qualità e sicurezza",
+        "description": "Conoscenza applicata di sistemi qualità, sicurezza operativa e requisiti tecnici per ambienti produttivi più affidabili."
       },
       "technical": {
-        "title": "Capacidades técnicas e industriais",
-        "description": "Domínio de ferramentas, projetos, máquinas, dispositivos e soluções técnicas voltadas à execução prática no ambiente industrial."
+        "title": "Competenze tecniche e industriali",
+        "description": "Padronanza di strumenti, progetti, macchine, dispositivi e soluzioni tecniche orientate all’esecuzione pratica in ambiente industriale."
       }
     },
     "methods": {
@@ -150,7 +150,7 @@
       "4m": "4M",
       "ishikawa": "Ishikawa",
       "5w2h": "5W2H",
-      "swot": "Matriz SWOT"
+      "swot": "Matrice SWOT"
     },
     "standards": {
       "iso9001": "ISO 9001",
@@ -162,27 +162,27 @@
       "nr17": "NR-17"
     },
     "technical": {
-      "cadcam": "Projetos CAD/CAM",
+      "cadcam": "Progetti CAD/CAM",
       "solidworks": "SolidWorks",
       "autocad": "AutoCAD",
-      "tooling": "Ferramentaria",
-      "specialMachines": "Máquinas especiais",
-      "industrialAutomation": "Automação industrial",
-      "reverseEngineering": "Engenharia reversa",
-      "teamTraining": "Treinamento de equipes"
+      "tooling": "Attrezzeria",
+      "specialMachines": "Macchine speciali",
+      "industrialAutomation": "Automazione industriale",
+      "reverseEngineering": "Reverse engineering",
+      "teamTraining": "Formazione dei team"
     },
     "summaryCards": {
       "continuousImprovement": {
-        "title": "Melhoria contínua",
-        "description": "Estruturação de processos com foco em produtividade, organização e redução de desperdícios."
+        "title": "Miglioramento continuo",
+        "description": "Strutturazione dei processi con attenzione a produttività, organizzazione e riduzione degli sprechi."
       },
       "technicalExecution": {
-        "title": "Execução técnica",
-        "description": "Integração entre projeto, ferramentaria, prototipagem, dispositivos e produção industrial."
+        "title": "Esecuzione tecnica",
+        "description": "Integrazione tra progettazione, attrezzeria, prototipazione, dispositivi e produzione industriale."
       },
       "factoryVision": {
-        "title": "Visão de fábrica",
-        "description": "Experiência prática em chão de fábrica aplicada a decisões técnicas mais viáveis e eficientes."
+        "title": "Visione di fabbrica",
+        "description": "Esperienza pratica in produzione applicata a decisioni tecniche più fattibili ed efficienti."
       }
     }
   }

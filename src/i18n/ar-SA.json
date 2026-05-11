@@ -1,145 +1,145 @@
 {
   "header": {
-    "logoAriaLabel": "Voltar para o início",
+    "logoAriaLabel": "العودة إلى البداية",
 
     "brand": {
-      "logoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+      "logoAlt": "شعار Longhini للتطوير الصناعي",
       "name": "LONGHINI",
-      "subtitle": "Desenvolvimento Industrial"
+      "subtitle": "التطوير الصناعي"
     },
 
     "aria": {
-      "mainNavigation": "Navegação principal",
-      "mobileNavigation": "Navegação mobile"
+      "mainNavigation": "التنقل الرئيسي",
+      "mobileNavigation": "التنقل عبر الهاتف"
     },
 
     "nav": {
-      "about": "Sobre",
-      "services": "Serviços",
-      "expertise": "Expertise",
-      "experience": "Experiência",
-      "contact": "Contato"
+      "about": "نبذة",
+      "services": "الخدمات",
+      "expertise": "الخبرة",
+      "experience": "التجربة",
+      "contact": "تواصل"
     },
 
     "navAria": {
-      "goTo": "Ir para a seção {{section}}"
+      "goTo": "الانتقال إلى قسم {{section}}"
     },
 
     "mobile": {
-      "open": "Abrir menu",
-      "close": "Fechar menu"
+      "open": "فتح القائمة",
+      "close": "إغلاق القائمة"
     },
 
-    "chooseLanguage": "Escolha o idioma",
+    "chooseLanguage": "اختر اللغة",
 
     "flags": {
-      "alt": "Bandeira — {{language}}"
+      "alt": "العلم — {{language}}"
     },
 
     "languages": {
-      "pt-BR": "Português",
-      "en-US": "Inglês",
-      "es-ES": "Espanhol",
-      "de-DE": "Alemão",
-      "fr-FR": "Francês",
-      "it-IT": "Italiano",
-      "ja-JP": "Japonês",
-      "ko-KR": "Coreano",
-      "ru-RU": "Russo",
-      "zh-CN": "Mandarim",
-      "ar-SA": "Árabe",
-      "he-IL": "Hebraico",
-      "hi-IN": "Hindi"
+      "pt-BR": "البرتغالية",
+      "en-US": "الإنجليزية",
+      "es-ES": "الإسبانية",
+      "de-DE": "الألمانية",
+      "fr-FR": "الفرنسية",
+      "it-IT": "الإيطالية",
+      "ja-JP": "اليابانية",
+      "ko-KR": "الكورية",
+      "ru-RU": "الروسية",
+      "zh-CN": "الصينية المندرينية",
+      "ar-SA": "العربية",
+      "he-IL": "العبرية",
+      "hi-IN": "الهندية"
     }
   },
   "hero": {
-    "sectionAriaLabel": "Seção principal de apresentação da Longhini Desenvolvimento Industrial",
-    "badge": "Soluções Industriais Personalizadas",
-    "title": "Projeto e Desenvolvimento de Produtos",
-    "description": "Transformamos ideias em produtos, dispositivos, moldes, ferramentas e máquinas especiais com engenharia prática, inovação tecnológica e foco em resultado.",
-    "primaryButton": "Solicitar Orçamento",
-    "secondaryButton": "Conhecer Soluções",
-    "personImageAlt": "Foto de Rafael Longhini Lopes",
-    "companyLogoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+    "sectionAriaLabel": "القسم الرئيسي لعرض Longhini للتطوير الصناعي",
+    "badge": "حلول صناعية مخصصة",
+    "title": "تصميم وتطوير المنتجات",
+    "description": "نحوّل الأفكار إلى منتجات وأجهزة وقوالب وأدوات وآلات خاصة من خلال هندسة عملية وابتكار تقني وتركيز على النتائج.",
+    "primaryButton": "طلب عرض سعر",
+    "secondaryButton": "استكشاف الحلول",
+    "personImageAlt": "صورة Rafael Longhini Lopes",
+    "companyLogoAlt": "شعار Longhini للتطوير الصناعي",
     "stats": {
-      "experience": "20+ anos de experiência",
-      "innovation": "Inovação e engenharia reversa",
-      "prototyping": "Prototipagem e impressão 3D"
+      "experience": "أكثر من 20 عامًا من الخبرة",
+      "innovation": "الابتكار والهندسة العكسية",
+      "prototyping": "النمذجة الأولية والطباعة ثلاثية الأبعاد"
     },
     "card": {
-      "eyebrow": "Diretor Técnico",
+      "eyebrow": "المدير التقني",
       "title": "Rafael Longhini Lopes",
-      "subtitle": "Engenharia mecânica, desenvolvimento de produto, ferramentaria, automação industrial e soluções sob medida.",
+      "subtitle": "الهندسة الميكانيكية، تطوير المنتجات، تصنيع الأدوات، الأتمتة الصناعية والحلول المصممة حسب الطلب.",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
-      "tag3": "Engenharia Reversa",
-      "tag4": "Impressão 3D",
-      "companyLabel": "Empresa",
-      "companyName": "LONGHINI - DESENVOLVIMENTO INDUSTRIAL",
-      "companyLocation": "São Paulo, São Paulo, Brasil",
+      "tag3": "الهندسة العكسية",
+      "tag4": "الطباعة ثلاثية الأبعاد",
+      "companyLabel": "الشركة",
+      "companyName": "LONGHINI - التطوير الصناعي",
+      "companyLocation": "ساو باولو، ساو باولو، البرازيل",
       "miniCards": {
         "cadcam": "CAD/CAM",
-        "molds": "Moldes",
-        "prototypes": "Protótipos",
-        "production": "Produção"
+        "molds": "القوالب",
+        "prototypes": "النماذج الأولية",
+        "production": "الإنتاج"
       }
     }
   },
   "services": {
-    "sectionAriaLabel": "Seção de serviços da Longhini Desenvolvimento Industrial",
-    "title": "SERVIÇOS",
-    "description": "Atuação técnica e estratégica para desenvolver produtos, processos, ferramentas e soluções industriais sob medida, com foco em eficiência, viabilidade e resultado real no chão de fábrica.",
-    "imageAlt": "Impressora 3D industrial imprimindo uma peça com iluminação laranja em ambiente de produção",
+    "sectionAriaLabel": "قسم خدمات Longhini للتطوير الصناعي",
+    "title": "الخدمات",
+    "description": "عمل تقني واستراتيجي لتطوير المنتجات والعمليات والأدوات والحلول الصناعية المخصصة، مع التركيز على الكفاءة والجدوى والنتائج العملية داخل بيئة المصنع.",
+    "imageAlt": "طابعة ثلاثية الأبعاد صناعية تطبع قطعة بإضاءة برتقالية داخل بيئة إنتاج",
     "card": {
-      "toggleAria": "Alternar detalhes do serviço {{service}}"
+      "toggleAria": "تبديل تفاصيل خدمة {{service}}"
     },
     "items": {
       "productDevelopment": {
-        "title": "Desenvolvimento de produtos",
-        "description": "Projeto técnico de novos produtos, dispositivos e soluções personalizadas para demandas industriais específicas."
+        "title": "تطوير المنتجات",
+        "description": "تصميم تقني لمنتجات وأجهزة وحلول مخصصة جديدة لتلبية متطلبات صناعية محددة."
       },
       "reverseEngineering": {
-        "title": "Engenharia reversa",
-        "description": "Recriação, adaptação e desenvolvimento de componentes e máquinas especiais quando não há solução nacional disponível."
+        "title": "الهندسة العكسية",
+        "description": "إعادة إنشاء المكونات والآلات الخاصة وتكييفها وتطويرها عندما لا يكون هناك حل محلي متاح."
       },
       "prototyping": {
-        "title": "Prototipagem 3D",
-        "description": "Validação de ideias, testes funcionais e aceleração do desenvolvimento com impressão 3D em resina e filamento."
+        "title": "النمذجة الأولية ثلاثية الأبعاد",
+        "description": "التحقق من الأفكار، إجراء الاختبارات الوظيفية وتسريع التطوير باستخدام الطباعة ثلاثية الأبعاد بالراتنج والخيوط."
       },
       "tooling": {
-        "title": "Ferramentas, moldes e dispositivos",
-        "description": "Desenvolvimento de moldes plásticos, ferramentas de corte, repuxo e dispositivos dedicados para produção seriada."
+        "title": "الأدوات والقوالب والأجهزة",
+        "description": "تطوير قوالب البلاستيك وأدوات القطع والسحب العميق والأجهزة المخصصة للإنتاج المتسلسل."
       },
       "automation": {
-        "title": "Automação e melhorias industriais",
-        "description": "Retrofitting, automação industrial e implantação de melhorias para aumentar produtividade e reduzir desperdícios."
+        "title": "الأتمتة والتحسينات الصناعية",
+        "description": "التحديث التقني، الأتمتة الصناعية وتنفيذ التحسينات لزيادة الإنتاجية وتقليل الهدر."
       },
       "industrialManagement": {
-        "title": "Estruturação produtiva e gestão",
-        "description": "Montagem de setores, organização de processos, treinamento de equipes e apoio técnico para crescimento industrial sustentável."
+        "title": "هيكلة الإنتاج والإدارة",
+        "description": "إنشاء الأقسام، تنظيم العمليات، تدريب الفرق وتقديم الدعم التقني للنمو الصناعي المستدام."
       }
     }
   },
   "expertise": {
-    "sectionAriaLabel": "Seção de expertise técnica, metodológica e industrial",
-    "title": "EXPERTISE",
-    "description": "Experiência construída no chão de fábrica, aliando engenharia, melhoria contínua, qualidade, segurança e produtividade para transformar projeto em resultado concreto.",
-    "modelAriaLabel": "Modelo 3D interativo de uma impressora 3D industrial",
+    "sectionAriaLabel": "قسم الخبرة التقنية والمنهجية والصناعية",
+    "title": "الخبرة",
+    "description": "خبرة بُنيت داخل بيئة المصنع، تجمع بين الهندسة والتحسين المستمر والجودة والسلامة والإنتاجية لتحويل المشاريع إلى نتائج ملموسة.",
+    "modelAriaLabel": "نموذج ثلاثي الأبعاد تفاعلي لطابعة ثلاثية الأبعاد صناعية",
     "card": {
-      "toggleAria": "Alternar detalhes de {{item}}"
+      "toggleAria": "تبديل تفاصيل {{item}}"
     },
     "groups": {
       "methods": {
-        "title": "Metodologias e melhoria contínua",
-        "description": "Aplicação de métodos de análise, organização e melhoria contínua para tornar processos industriais mais eficientes, previsíveis e produtivos."
+        "title": "المنهجيات والتحسين المستمر",
+        "description": "تطبيق أساليب التحليل والتنظيم والتحسين المستمر لجعل العمليات الصناعية أكثر كفاءة وقابلية للتنبؤ وإنتاجية."
       },
       "standards": {
-        "title": "Normas, qualidade e segurança",
-        "description": "Conhecimento aplicado em sistemas de qualidade, segurança operacional e requisitos técnicos para ambientes produtivos mais confiáveis."
+        "title": "المعايير والجودة والسلامة",
+        "description": "معرفة تطبيقية في أنظمة الجودة والسلامة التشغيلية والمتطلبات التقنية لبيئات إنتاج أكثر موثوقية."
       },
       "technical": {
-        "title": "Capacidades técnicas e industriais",
-        "description": "Domínio de ferramentas, projetos, máquinas, dispositivos e soluções técnicas voltadas à execução prática no ambiente industrial."
+        "title": "القدرات التقنية والصناعية",
+        "description": "إتقان الأدوات والمشاريع والآلات والأجهزة والحلول التقنية الموجهة للتنفيذ العملي في البيئة الصناعية."
       }
     },
     "methods": {
@@ -150,7 +150,7 @@
       "4m": "4M",
       "ishikawa": "Ishikawa",
       "5w2h": "5W2H",
-      "swot": "Matriz SWOT"
+      "swot": "مصفوفة SWOT"
     },
     "standards": {
       "iso9001": "ISO 9001",
@@ -162,27 +162,27 @@
       "nr17": "NR-17"
     },
     "technical": {
-      "cadcam": "Projetos CAD/CAM",
+      "cadcam": "مشاريع CAD/CAM",
       "solidworks": "SolidWorks",
       "autocad": "AutoCAD",
-      "tooling": "Ferramentaria",
-      "specialMachines": "Máquinas especiais",
-      "industrialAutomation": "Automação industrial",
-      "reverseEngineering": "Engenharia reversa",
-      "teamTraining": "Treinamento de equipes"
+      "tooling": "تصنيع الأدوات",
+      "specialMachines": "آلات خاصة",
+      "industrialAutomation": "الأتمتة الصناعية",
+      "reverseEngineering": "الهندسة العكسية",
+      "teamTraining": "تدريب الفرق"
     },
     "summaryCards": {
       "continuousImprovement": {
-        "title": "Melhoria contínua",
-        "description": "Estruturação de processos com foco em produtividade, organização e redução de desperdícios."
+        "title": "التحسين المستمر",
+        "description": "هيكلة العمليات مع التركيز على الإنتاجية والتنظيم وتقليل الهدر."
       },
       "technicalExecution": {
-        "title": "Execução técnica",
-        "description": "Integração entre projeto, ferramentaria, prototipagem, dispositivos e produção industrial."
+        "title": "التنفيذ التقني",
+        "description": "التكامل بين التصميم وتصنيع الأدوات والنمذجة الأولية والأجهزة والإنتاج الصناعي."
       },
       "factoryVision": {
-        "title": "Visão de fábrica",
-        "description": "Experiência prática em chão de fábrica aplicada a decisões técnicas mais viáveis e eficientes."
+        "title": "رؤية المصنع",
+        "description": "خبرة عملية داخل بيئة المصنع تُطبق على قرارات تقنية أكثر جدوى وكفاءة."
       }
     }
   }

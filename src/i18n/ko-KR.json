@@ -1,145 +1,145 @@
 {
   "header": {
-    "logoAriaLabel": "Voltar para o início",
+    "logoAriaLabel": "처음으로 돌아가기",
 
     "brand": {
-      "logoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+      "logoAlt": "Longhini 산업 개발 로고",
       "name": "LONGHINI",
-      "subtitle": "Desenvolvimento Industrial"
+      "subtitle": "산업 개발"
     },
 
     "aria": {
-      "mainNavigation": "Navegação principal",
-      "mobileNavigation": "Navegação mobile"
+      "mainNavigation": "기본 내비게이션",
+      "mobileNavigation": "모바일 내비게이션"
     },
 
     "nav": {
-      "about": "Sobre",
-      "services": "Serviços",
-      "expertise": "Expertise",
-      "experience": "Experiência",
-      "contact": "Contato"
+      "about": "소개",
+      "services": "서비스",
+      "expertise": "전문성",
+      "experience": "경험",
+      "contact": "문의"
     },
 
     "navAria": {
-      "goTo": "Ir para a seção {{section}}"
+      "goTo": "{{section}} 섹션으로 이동"
     },
 
     "mobile": {
-      "open": "Abrir menu",
-      "close": "Fechar menu"
+      "open": "메뉴 열기",
+      "close": "메뉴 닫기"
     },
 
-    "chooseLanguage": "Escolha o idioma",
+    "chooseLanguage": "언어 선택",
 
     "flags": {
-      "alt": "Bandeira — {{language}}"
+      "alt": "국기 — {{language}}"
     },
 
     "languages": {
-      "pt-BR": "Português",
-      "en-US": "Inglês",
-      "es-ES": "Espanhol",
-      "de-DE": "Alemão",
-      "fr-FR": "Francês",
-      "it-IT": "Italiano",
-      "ja-JP": "Japonês",
-      "ko-KR": "Coreano",
-      "ru-RU": "Russo",
-      "zh-CN": "Mandarim",
-      "ar-SA": "Árabe",
-      "he-IL": "Hebraico",
-      "hi-IN": "Hindi"
+      "pt-BR": "포르투갈어",
+      "en-US": "영어",
+      "es-ES": "스페인어",
+      "de-DE": "독일어",
+      "fr-FR": "프랑스어",
+      "it-IT": "이탈리아어",
+      "ja-JP": "일본어",
+      "ko-KR": "한국어",
+      "ru-RU": "러시아어",
+      "zh-CN": "중국어 표준어",
+      "ar-SA": "아랍어",
+      "he-IL": "히브리어",
+      "hi-IN": "힌디어"
     }
   },
   "hero": {
-    "sectionAriaLabel": "Seção principal de apresentação da Longhini Desenvolvimento Industrial",
-    "badge": "Soluções Industriais Personalizadas",
-    "title": "Projeto e Desenvolvimento de Produtos",
-    "description": "Transformamos ideias em produtos, dispositivos, moldes, ferramentas e máquinas especiais com engenharia prática, inovação tecnológica e foco em resultado.",
-    "primaryButton": "Solicitar Orçamento",
-    "secondaryButton": "Conhecer Soluções",
-    "personImageAlt": "Foto de Rafael Longhini Lopes",
-    "companyLogoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+    "sectionAriaLabel": "Longhini 산업 개발을 소개하는 메인 섹션",
+    "badge": "맞춤형 산업 솔루션",
+    "title": "제품 설계 및 개발",
+    "description": "실용적인 엔지니어링, 기술 혁신, 결과 중심 접근을 통해 아이디어를 제품, 장치, 금형, 공구, 특수 기계로 구현합니다.",
+    "primaryButton": "견적 요청",
+    "secondaryButton": "솔루션 보기",
+    "personImageAlt": "Rafael Longhini Lopes의 사진",
+    "companyLogoAlt": "Longhini 산업 개발 로고",
     "stats": {
-      "experience": "20+ anos de experiência",
-      "innovation": "Inovação e engenharia reversa",
-      "prototyping": "Prototipagem e impressão 3D"
+      "experience": "20년 이상의 경험",
+      "innovation": "혁신과 리버스 엔지니어링",
+      "prototyping": "프로토타이핑 및 3D 프린팅"
     },
     "card": {
-      "eyebrow": "Diretor Técnico",
+      "eyebrow": "기술 이사",
       "title": "Rafael Longhini Lopes",
-      "subtitle": "Engenharia mecânica, desenvolvimento de produto, ferramentaria, automação industrial e soluções sob medida.",
+      "subtitle": "기계공학, 제품 개발, 툴링, 산업 자동화 및 맞춤형 솔루션.",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
-      "tag3": "Engenharia Reversa",
-      "tag4": "Impressão 3D",
-      "companyLabel": "Empresa",
-      "companyName": "LONGHINI - DESENVOLVIMENTO INDUSTRIAL",
-      "companyLocation": "São Paulo, São Paulo, Brasil",
+      "tag3": "리버스 엔지니어링",
+      "tag4": "3D 프린팅",
+      "companyLabel": "회사",
+      "companyName": "LONGHINI - 산업 개발",
+      "companyLocation": "상파울루, 상파울루, 브라질",
       "miniCards": {
         "cadcam": "CAD/CAM",
-        "molds": "Moldes",
-        "prototypes": "Protótipos",
-        "production": "Produção"
+        "molds": "금형",
+        "prototypes": "프로토타입",
+        "production": "생산"
       }
     }
   },
   "services": {
-    "sectionAriaLabel": "Seção de serviços da Longhini Desenvolvimento Industrial",
-    "title": "SERVIÇOS",
-    "description": "Atuação técnica e estratégica para desenvolver produtos, processos, ferramentas e soluções industriais sob medida, com foco em eficiência, viabilidade e resultado real no chão de fábrica.",
-    "imageAlt": "Impressora 3D industrial imprimindo uma peça com iluminação laranja em ambiente de produção",
+    "sectionAriaLabel": "Longhini 산업 개발의 서비스 섹션",
+    "title": "서비스",
+    "description": "효율성, 실행 가능성, 제조 현장의 실제 성과에 중점을 두고 제품, 공정, 공구 및 맞춤형 산업 솔루션을 개발하기 위한 기술적·전략적 업무를 수행합니다.",
+    "imageAlt": "생산 환경에서 주황색 조명 아래 부품을 출력하는 산업용 3D 프린터",
     "card": {
-      "toggleAria": "Alternar detalhes do serviço {{service}}"
+      "toggleAria": "{{service}} 서비스 세부 정보 전환"
     },
     "items": {
       "productDevelopment": {
-        "title": "Desenvolvimento de produtos",
-        "description": "Projeto técnico de novos produtos, dispositivos e soluções personalizadas para demandas industriais específicas."
+        "title": "제품 개발",
+        "description": "특정 산업 요구에 맞춘 신제품, 장치 및 맞춤형 솔루션의 기술 설계."
       },
       "reverseEngineering": {
-        "title": "Engenharia reversa",
-        "description": "Recriação, adaptação e desenvolvimento de componentes e máquinas especiais quando não há solução nacional disponível."
+        "title": "리버스 엔지니어링",
+        "description": "사용 가능한 국내 솔루션이 없을 때 부품과 특수 기계를 재현, 조정 및 개발합니다."
       },
       "prototyping": {
-        "title": "Prototipagem 3D",
-        "description": "Validação de ideias, testes funcionais e aceleração do desenvolvimento com impressão 3D em resina e filamento."
+        "title": "3D 프로토타이핑",
+        "description": "레진 및 필라멘트 3D 프린팅을 통해 아이디어 검증, 기능 테스트 및 개발 속도 향상을 지원합니다."
       },
       "tooling": {
-        "title": "Ferramentas, moldes e dispositivos",
-        "description": "Desenvolvimento de moldes plásticos, ferramentas de corte, repuxo e dispositivos dedicados para produção seriada."
+        "title": "공구, 금형 및 장치",
+        "description": "양산을 위한 플라스틱 금형, 절삭 공구, 딥 드로잉 공구 및 전용 장치를 개발합니다."
       },
       "automation": {
-        "title": "Automação e melhorias industriais",
-        "description": "Retrofitting, automação industrial e implantação de melhorias para aumentar produtividade e reduzir desperdícios."
+        "title": "자동화 및 산업 개선",
+        "description": "생산성을 높이고 낭비를 줄이기 위한 레트로핏, 산업 자동화 및 개선 사항을 구현합니다."
       },
       "industrialManagement": {
-        "title": "Estruturação produtiva e gestão",
-        "description": "Montagem de setores, organização de processos, treinamento de equipes e apoio técnico para crescimento industrial sustentável."
+        "title": "생산 구조화 및 관리",
+        "description": "부서 구축, 공정 정리, 팀 교육 및 지속 가능한 산업 성장을 위한 기술 지원."
       }
     }
   },
   "expertise": {
-    "sectionAriaLabel": "Seção de expertise técnica, metodológica e industrial",
-    "title": "EXPERTISE",
-    "description": "Experiência construída no chão de fábrica, aliando engenharia, melhoria contínua, qualidade, segurança e produtividade para transformar projeto em resultado concreto.",
-    "modelAriaLabel": "Modelo 3D interativo de uma impressora 3D industrial",
+    "sectionAriaLabel": "기술, 방법론 및 산업 전문성 섹션",
+    "title": "전문성",
+    "description": "제조 현장에서 쌓은 경험을 바탕으로 엔지니어링, 지속적 개선, 품질, 안전, 생산성을 결합하여 프로젝트를 구체적인 결과로 전환합니다.",
+    "modelAriaLabel": "산업용 3D 프린터의 인터랙티브 3D 모델",
     "card": {
-      "toggleAria": "Alternar detalhes de {{item}}"
+      "toggleAria": "{{item}} 세부 정보 전환"
     },
     "groups": {
       "methods": {
-        "title": "Metodologias e melhoria contínua",
-        "description": "Aplicação de métodos de análise, organização e melhoria contínua para tornar processos industriais mais eficientes, previsíveis e produtivos."
+        "title": "방법론과 지속적 개선",
+        "description": "분석, 조직화 및 지속적 개선 방법론을 적용하여 산업 공정을 더 효율적이고 예측 가능하며 생산적으로 만듭니다."
       },
       "standards": {
-        "title": "Normas, qualidade e segurança",
-        "description": "Conhecimento aplicado em sistemas de qualidade, segurança operacional e requisitos técnicos para ambientes produtivos mais confiáveis."
+        "title": "표준, 품질 및 안전",
+        "description": "더 신뢰할 수 있는 생산 환경을 위해 품질 시스템, 운영 안전 및 기술 요구 사항에 대한 실무 지식을 적용합니다."
       },
       "technical": {
-        "title": "Capacidades técnicas e industriais",
-        "description": "Domínio de ferramentas, projetos, máquinas, dispositivos e soluções técnicas voltadas à execução prática no ambiente industrial."
+        "title": "기술 및 산업 역량",
+        "description": "산업 환경에서 실질적으로 실행하기 위한 도구, 프로젝트, 기계, 장치 및 기술 솔루션에 대한 역량."
       }
     },
     "methods": {
@@ -150,7 +150,7 @@
       "4m": "4M",
       "ishikawa": "Ishikawa",
       "5w2h": "5W2H",
-      "swot": "Matriz SWOT"
+      "swot": "SWOT 매트릭스"
     },
     "standards": {
       "iso9001": "ISO 9001",
@@ -162,27 +162,27 @@
       "nr17": "NR-17"
     },
     "technical": {
-      "cadcam": "Projetos CAD/CAM",
+      "cadcam": "CAD/CAM 프로젝트",
       "solidworks": "SolidWorks",
       "autocad": "AutoCAD",
-      "tooling": "Ferramentaria",
-      "specialMachines": "Máquinas especiais",
-      "industrialAutomation": "Automação industrial",
-      "reverseEngineering": "Engenharia reversa",
-      "teamTraining": "Treinamento de equipes"
+      "tooling": "툴링",
+      "specialMachines": "특수 기계",
+      "industrialAutomation": "산업 자동화",
+      "reverseEngineering": "리버스 엔지니어링",
+      "teamTraining": "팀 교육"
     },
     "summaryCards": {
       "continuousImprovement": {
-        "title": "Melhoria contínua",
-        "description": "Estruturação de processos com foco em produtividade, organização e redução de desperdícios."
+        "title": "지속적 개선",
+        "description": "생산성, 조직화 및 낭비 감소에 중점을 둔 공정 구조화."
       },
       "technicalExecution": {
-        "title": "Execução técnica",
-        "description": "Integração entre projeto, ferramentaria, prototipagem, dispositivos e produção industrial."
+        "title": "기술 실행",
+        "description": "설계, 툴링, 프로토타이핑, 장치 및 산업 생산 간의 통합."
       },
       "factoryVision": {
-        "title": "Visão de fábrica",
-        "description": "Experiência prática em chão de fábrica aplicada a decisões técnicas mais viáveis e eficientes."
+        "title": "공장 관점",
+        "description": "제조 현장의 실무 경험을 더 실행 가능하고 효율적인 기술 의사결정에 적용합니다."
       }
     }
   }
