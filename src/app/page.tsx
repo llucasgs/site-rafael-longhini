@@ -1,3 +1,4 @@
+import { FloatingButtons } from "@/components/FloatingButtons/FloatingButtons";
 import { Header } from "@/components/Header/Header";
 import { Hero } from "@/components/Sections/Section1/Hero";
 import { Services } from "@/components/Sections/Section2/Services";
@@ -17,6 +18,7 @@ export default function Home() {
         <section id="experience" className="min-h-screen" />
         <section id="contact" className="min-h-screen" />
       </main>
+      <FloatingButtons />
     </>
   );
 }

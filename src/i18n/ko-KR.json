@@ -1,4 +1,8 @@
 {
+  "floatingButtons": {
+    "scrollTopAriaLabel": "맨 위로 이동",
+    "whatsappAriaLabel": "WhatsApp으로 문의하기"
+  },
   "header": {
     "logoAriaLabel": "처음으로 돌아가기",
     "brand": {

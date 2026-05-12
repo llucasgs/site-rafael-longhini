@@ -1,4 +1,8 @@
 {
+  "floatingButtons": {
+    "scrollTopAriaLabel": "Volver arriba",
+    "whatsappAriaLabel": "Contactar por WhatsApp"
+  },
   "header": {
     "logoAriaLabel": "Volver al inicio",
     "brand": {

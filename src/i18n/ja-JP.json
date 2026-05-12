@@ -1,4 +1,8 @@
 {
+  "floatingButtons": {
+    "scrollTopAriaLabel": "ページ上部へ戻る",
+    "whatsappAriaLabel": "WhatsAppで問い合わせる"
+  },
   "header": {
     "logoAriaLabel": "先頭に戻る",
     "brand": {
