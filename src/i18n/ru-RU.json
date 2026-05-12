@@ -1,18 +1,15 @@
 {
   "header": {
     "logoAriaLabel": "Вернуться в начало",
-
     "brand": {
       "logoAlt": "Логотип Longhini Промышленная Разработка",
       "name": "LONGHINI",
       "subtitle": "Промышленная Разработка"
     },
-
     "aria": {
       "mainNavigation": "Основная навигация",
       "mobileNavigation": "Мобильная навигация"
     },
-
     "nav": {
       "about": "О нас",
       "services": "Услуги",
@@ -20,22 +17,17 @@
       "experience": "Опыт",
       "contact": "Контакт"
     },
-
     "navAria": {
       "goTo": "Перейти к разделу {{section}}"
     },
-
     "mobile": {
       "open": "Открыть меню",
       "close": "Закрыть меню"
     },
-
     "chooseLanguage": "Выбрать язык",
-
     "flags": {
       "alt": "Флаг — {{language}}"
     },
-
     "languages": {
       "pt-BR": "Португальский",
       "en-US": "Английский",
@@ -184,6 +176,23 @@
         "title": "Производственное видение",
         "description": "Практический опыт производственной среды, примененный к более реализуемым и эффективным техническим решениям."
       }
+    }
+  },
+  "customers": {
+    "sectionAriaLabel": "Раздел компаний, для которых Longhini Industrial Development уже разработала проекты",
+    "title": "КЛИЕНТЫ",
+    "description": "Проекты, разработанные для известных брендов в разных промышленных сегментах, объединяющие инженерию, техническое исполнение и практические результаты.",
+    "logos": {
+      "colgate": "Логотип Colgate",
+      "tramontina": "Логотип Tramontina",
+      "bridgestone": "Логотип Bridgestone",
+      "vigor": "Логотип Vigor",
+      "valeo": "Логотип Valeo",
+      "dormerPramet": "Логотип Dormer Pramet",
+      "wheaton": "Логотип Wheaton",
+      "noar": "Логотип Noar",
+      "farmacap": "Логотип Farmacap",
+      "arteresEstojos": "Логотип Arteres Estojos"
     }
   }
 }

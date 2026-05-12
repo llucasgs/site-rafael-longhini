@@ -1,18 +1,15 @@
 {
   "header": {
     "logoAriaLabel": "처음으로 돌아가기",
-
     "brand": {
       "logoAlt": "Longhini 산업 개발 로고",
       "name": "LONGHINI",
       "subtitle": "산업 개발"
     },
-
     "aria": {
       "mainNavigation": "기본 내비게이션",
       "mobileNavigation": "모바일 내비게이션"
     },
-
     "nav": {
       "about": "소개",
       "services": "서비스",
@@ -20,22 +17,17 @@
       "experience": "경험",
       "contact": "문의"
     },
-
     "navAria": {
       "goTo": "{{section}} 섹션으로 이동"
     },
-
     "mobile": {
       "open": "메뉴 열기",
       "close": "메뉴 닫기"
     },
-
     "chooseLanguage": "언어 선택",
-
     "flags": {
       "alt": "국기 — {{language}}"
     },
-
     "languages": {
       "pt-BR": "포르투갈어",
       "en-US": "영어",
@@ -184,6 +176,23 @@
         "title": "공장 관점",
         "description": "제조 현장의 실무 경험을 더 실행 가능하고 효율적인 기술 의사결정에 적용합니다."
       }
+    }
+  },
+  "customers": {
+    "sectionAriaLabel": "Longhini Industrial Development가 이미 프로젝트를 개발한 기업 섹션",
+    "title": "고객",
+    "description": "다양한 산업 분야의 인지도 있는 브랜드를 위해 개발된 프로젝트로, 엔지니어링, 기술 실행, 실질적 결과를 연결합니다.",
+    "logos": {
+      "colgate": "Colgate 로고",
+      "tramontina": "Tramontina 로고",
+      "bridgestone": "Bridgestone 로고",
+      "vigor": "Vigor 로고",
+      "valeo": "Valeo 로고",
+      "dormerPramet": "Dormer Pramet 로고",
+      "wheaton": "Wheaton 로고",
+      "noar": "Noar 로고",
+      "farmacap": "Farmacap 로고",
+      "arteresEstojos": "Arteres Estojos 로고"
     }
   }
 }

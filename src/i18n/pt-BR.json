@@ -185,5 +185,23 @@
         "description": "Experiência prática em chão de fábrica aplicada a decisões técnicas mais viáveis e eficientes."
       }
     }
+  },
+
+  "customers": {
+    "sectionAriaLabel": "Seção de empresas para as quais a Longhini Desenvolvimento Industrial já desenvolveu projetos",
+    "title": "CLIENTES",
+    "description": "Projetos desenvolvidos para marcas reconhecidas em diferentes segmentos industriais, conectando engenharia, execução técnica e resultado prático.",
+    "logos": {
+      "colgate": "Logotipo da Colgate",
+      "tramontina": "Logotipo da Tramontina",
+      "bridgestone": "Logotipo da Bridgestone",
+      "vigor": "Logotipo da Vigor",
+      "valeo": "Logotipo da Valeo",
+      "dormerPramet": "Logotipo da Dormer Pramet",
+      "wheaton": "Logotipo da Wheaton",
+      "noar": "Logotipo da Noar",
+      "farmacap": "Logotipo da Farmacap",
+      "arteresEstojos": "Logotipo da Arteres Estojos"
+    }
   }
 }

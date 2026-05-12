@@ -1,18 +1,15 @@
 {
   "header": {
     "logoAriaLabel": "शुरुआत पर वापस जाएँ",
-
     "brand": {
       "logoAlt": "Longhini औद्योगिक विकास का लोगो",
       "name": "LONGHINI",
       "subtitle": "औद्योगिक विकास"
     },
-
     "aria": {
       "mainNavigation": "मुख्य नेविगेशन",
       "mobileNavigation": "मोबाइल नेविगेशन"
     },
-
     "nav": {
       "about": "परिचय",
       "services": "सेवाएँ",
@@ -20,22 +17,17 @@
       "experience": "अनुभव",
       "contact": "संपर्क"
     },
-
     "navAria": {
       "goTo": "{{section}} अनुभाग पर जाएँ"
     },
-
     "mobile": {
       "open": "मेनू खोलें",
       "close": "मेनू बंद करें"
     },
-
     "chooseLanguage": "भाषा चुनें",
-
     "flags": {
       "alt": "ध्वज — {{language}}"
     },
-
     "languages": {
       "pt-BR": "पुर्तगाली",
       "en-US": "अंग्रेज़ी",
@@ -184,6 +176,23 @@
         "title": "फैक्टरी दृष्टिकोण",
         "description": "फैक्टरी फ्लोर का व्यावहारिक अनुभव, जिसे अधिक व्यवहार्य और कुशल तकनीकी निर्णयों में लागू किया जाता है।"
       }
+    }
+  },
+  "customers": {
+    "sectionAriaLabel": "उन कंपनियों का सेक्शन जिनके लिए Longhini Industrial Development पहले ही प्रोजेक्ट विकसित कर चुका है",
+    "title": "ग्राहक",
+    "description": "विभिन्न औद्योगिक क्षेत्रों में मान्यता प्राप्त ब्रांडों के लिए विकसित प्रोजेक्ट, जो इंजीनियरिंग, तकनीकी निष्पादन और व्यावहारिक परिणामों को जोड़ते हैं।",
+    "logos": {
+      "colgate": "Colgate लोगो",
+      "tramontina": "Tramontina लोगो",
+      "bridgestone": "Bridgestone लोगो",
+      "vigor": "Vigor लोगो",
+      "valeo": "Valeo लोगो",
+      "dormerPramet": "Dormer Pramet लोगो",
+      "wheaton": "Wheaton लोगो",
+      "noar": "Noar लोगो",
+      "farmacap": "Farmacap लोगो",
+      "arteresEstojos": "Arteres Estojos लोगो"
     }
   }
 }

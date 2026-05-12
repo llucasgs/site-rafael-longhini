@@ -1,18 +1,15 @@
 {
   "header": {
     "logoAriaLabel": "先頭に戻る",
-
     "brand": {
       "logoAlt": "Longhini 産業開発のロゴ",
       "name": "LONGHINI",
       "subtitle": "産業開発"
     },
-
     "aria": {
       "mainNavigation": "メインナビゲーション",
       "mobileNavigation": "モバイルナビゲーション"
     },
-
     "nav": {
       "about": "概要",
       "services": "サービス",
@@ -20,22 +17,17 @@
       "experience": "実績",
       "contact": "お問い合わせ"
     },
-
     "navAria": {
       "goTo": "{{section}} セクションへ移動"
     },
-
     "mobile": {
       "open": "メニューを開く",
       "close": "メニューを閉じる"
     },
-
     "chooseLanguage": "言語を選択",
-
     "flags": {
       "alt": "国旗 — {{language}}"
     },
-
     "languages": {
       "pt-BR": "ポルトガル語",
       "en-US": "英語",
@@ -184,6 +176,23 @@
         "title": "工場視点",
         "description": "製造現場での実践経験を、より実現可能で効率的な技術判断に活かします。"
       }
+    }
+  },
+  "customers": {
+    "sectionAriaLabel": "Longhini Industrial Development がすでにプロジェクトを開発した企業のセクション",
+    "title": "顧客",
+    "description": "さまざまな産業分野の認知されたブランド向けに開発されたプロジェクトです。エンジニアリング、技術実行、実用的な成果を結びつけます。",
+    "logos": {
+      "colgate": "Colgate のロゴ",
+      "tramontina": "Tramontina のロゴ",
+      "bridgestone": "Bridgestone のロゴ",
+      "vigor": "Vigor のロゴ",
+      "valeo": "Valeo のロゴ",
+      "dormerPramet": "Dormer Pramet のロゴ",
+      "wheaton": "Wheaton のロゴ",
+      "noar": "Noar のロゴ",
+      "farmacap": "Farmacap のロゴ",
+      "arteresEstojos": "Arteres Estojos のロゴ"
     }
   }
 }

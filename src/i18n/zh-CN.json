@@ -1,18 +1,15 @@
 {
   "header": {
     "logoAriaLabel": "返回顶部",
-
     "brand": {
       "logoAlt": "Longhini 工业开发标志",
       "name": "LONGHINI",
       "subtitle": "工业开发"
     },
-
     "aria": {
       "mainNavigation": "主导航",
       "mobileNavigation": "移动端导航"
     },
-
     "nav": {
       "about": "关于",
       "services": "服务",
@@ -20,22 +17,17 @@
       "experience": "经验",
       "contact": "联系"
     },
-
     "navAria": {
       "goTo": "前往 {{section}} 区域"
     },
-
     "mobile": {
       "open": "打开菜单",
       "close": "关闭菜单"
     },
-
     "chooseLanguage": "选择语言",
-
     "flags": {
       "alt": "旗帜 — {{language}}"
     },
-
     "languages": {
       "pt-BR": "葡萄牙语",
       "en-US": "英语",
@@ -184,6 +176,23 @@
         "title": "工厂视角",
         "description": "将生产现场的实践经验应用于更可行、更高效的技术决策。"
       }
+    }
+  },
+  "customers": {
+    "sectionAriaLabel": "Longhini Industrial Development 已为其开发项目的企业部分",
+    "title": "客户",
+    "description": "为不同行业领域的知名品牌开发的项目，将工程设计、技术执行和实际成果连接起来。",
+    "logos": {
+      "colgate": "Colgate 标志",
+      "tramontina": "Tramontina 标志",
+      "bridgestone": "Bridgestone 标志",
+      "vigor": "Vigor 标志",
+      "valeo": "Valeo 标志",
+      "dormerPramet": "Dormer Pramet 标志",
+      "wheaton": "Wheaton 标志",
+      "noar": "Noar 标志",
+      "farmacap": "Farmacap 标志",
+      "arteresEstojos": "Arteres Estojos 标志"
     }
   }
 }

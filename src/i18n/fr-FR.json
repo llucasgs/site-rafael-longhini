@@ -1,18 +1,15 @@
 {
   "header": {
     "logoAriaLabel": "Revenir à l’accueil",
-
     "brand": {
       "logoAlt": "Logo de Longhini Développement Industriel",
       "name": "LONGHINI",
       "subtitle": "Développement Industriel"
     },
-
     "aria": {
       "mainNavigation": "Navigation principale",
       "mobileNavigation": "Navigation mobile"
     },
-
     "nav": {
       "about": "À propos",
       "services": "Services",
@@ -20,22 +17,17 @@
       "experience": "Expérience",
       "contact": "Contact"
     },
-
     "navAria": {
       "goTo": "Aller à la section {{section}}"
     },
-
     "mobile": {
       "open": "Ouvrir le menu",
       "close": "Fermer le menu"
     },
-
     "chooseLanguage": "Choisir la langue",
-
     "flags": {
       "alt": "Drapeau — {{language}}"
     },
-
     "languages": {
       "pt-BR": "Portugais",
       "en-US": "Anglais",
@@ -184,6 +176,23 @@
         "title": "Vision d’usine",
         "description": "Expérience pratique du terrain industriel appliquée à des décisions techniques plus viables et plus efficaces."
       }
+    }
+  },
+  "customers": {
+    "sectionAriaLabel": "Section des entreprises pour lesquelles Longhini Développement Industriel a déjà développé des projets",
+    "title": "CLIENTS",
+    "description": "Projets développés pour des marques reconnues dans différents segments industriels, reliant ingénierie, exécution technique et résultats concrets.",
+    "logos": {
+      "colgate": "Logo de Colgate",
+      "tramontina": "Logo de Tramontina",
+      "bridgestone": "Logo de Bridgestone",
+      "vigor": "Logo de Vigor",
+      "valeo": "Logo de Valeo",
+      "dormerPramet": "Logo de Dormer Pramet",
+      "wheaton": "Logo de Wheaton",
+      "noar": "Logo de Noar",
+      "farmacap": "Logo de Farmacap",
+      "arteresEstojos": "Logo de Arteres Estojos"
     }
   }
 }

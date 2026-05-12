@@ -1,18 +1,15 @@
 {
   "header": {
     "logoAriaLabel": "Zur Startseite zurückkehren",
-
     "brand": {
       "logoAlt": "Logo von Longhini Industrielle Entwicklung",
       "name": "LONGHINI",
       "subtitle": "Industrielle Entwicklung"
     },
-
     "aria": {
       "mainNavigation": "Hauptnavigation",
       "mobileNavigation": "Mobile Navigation"
     },
-
     "nav": {
       "about": "Über uns",
       "services": "Leistungen",
@@ -20,22 +17,17 @@
       "experience": "Erfahrung",
       "contact": "Kontakt"
     },
-
     "navAria": {
       "goTo": "Zur Sektion {{section}} gehen"
     },
-
     "mobile": {
       "open": "Menü öffnen",
       "close": "Menü schließen"
     },
-
     "chooseLanguage": "Sprache auswählen",
-
     "flags": {
       "alt": "Flagge — {{language}}"
     },
-
     "languages": {
       "pt-BR": "Portugiesisch",
       "en-US": "Englisch",
@@ -184,6 +176,23 @@
         "title": "Fertigungsperspektive",
         "description": "Praktische Erfahrung aus der Produktion, angewendet auf technisch machbarere und effizientere Entscheidungen."
       }
+    }
+  },
+  "customers": {
+    "sectionAriaLabel": "Bereich mit Unternehmen, für die Longhini Industrielle Entwicklung bereits Projekte entwickelt hat",
+    "title": "KUNDEN",
+    "description": "Projekte für anerkannte Marken aus verschiedenen Industriesegmenten, die Engineering, technische Umsetzung und praktische Ergebnisse verbinden.",
+    "logos": {
+      "colgate": "Colgate-Logo",
+      "tramontina": "Tramontina-Logo",
+      "bridgestone": "Bridgestone-Logo",
+      "vigor": "Vigor-Logo",
+      "valeo": "Valeo-Logo",
+      "dormerPramet": "Dormer Pramet-Logo",
+      "wheaton": "Wheaton-Logo",
+      "noar": "Noar-Logo",
+      "farmacap": "Farmacap-Logo",
+      "arteresEstojos": "Arteres Estojos-Logo"
     }
   }
 }

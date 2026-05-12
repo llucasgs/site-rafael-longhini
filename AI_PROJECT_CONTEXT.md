@@ -9,7 +9,7 @@ Anexe este arquivo no Claude/ChatGPT e use um prompt como:
 ```text
 Voce e um desenvolvedor senior especialista em Next.js, React, TypeScript, Tailwind CSS, SEO, acessibilidade e performance.
 
-Analise o contexto do projeto antes de sugerir alteracoes. Respeite a arquitetura existente, preserve o comportamento atual e seja cuidadoso com Next.js 16, pois este projeto informa que ha mudancas de API/convensoes em relacao a versoes anteriores.
+Analise o contexto do projeto antes de sugerir alteracoes. Respeite a arquitetura existente, preserve o comportamento atual e seja cuidadoso com Next.js 16, pois este projeto informa que ha mudancas de API/convencoes em relacao a versoes anteriores.
 
 Objetivo: [descreva aqui a tarefa].
 ```
@@ -66,6 +66,18 @@ Objetivo: [descreva aqui a tarefa].
 }
 ```
 
+## Dependencias de desenvolvimento relevantes
+
+```json
+{
+  "@gltf-transform/cli": "^4.3.0",
+  "@tailwindcss/postcss": "^4",
+  "eslint": "^9",
+  "eslint-config-next": "16.2.4",
+  "typescript": "^5"
+}
+```
+
 ## Instrucao importante do projeto
 
 O arquivo `AGENTS.md` contem:
@@ -84,29 +96,12 @@ Interpretacao pratica: antes de mudancas profundas em APIs do Next.js, validar c
 
 ```text
  M src/app/page.tsx
- D src/components/Sections/Section2/IndustrialShowcase.tsx
- D src/components/Sections/Section3/Services.tsx
- M src/components/ui/SectionTitle.tsx
- M src/i18n/ar-SA.json
- M src/i18n/de-DE.json
- M src/i18n/en-US.json
- M src/i18n/es-ES.json
- M src/i18n/fr-FR.json
- M src/i18n/he-IL.json
- M src/i18n/hi-IN.json
- M src/i18n/it-IT.json
- M src/i18n/ja-JP.json
- M src/i18n/ko-KR.json
  M src/i18n/pt-BR.json
- M src/i18n/ru-RU.json
- M src/i18n/zh-CN.json
-?? AI_PROJECT_CONTEXT.md
-?? public/Sections/Section2/
-?? src/components/Sections/Section2/Services.tsx
-?? src/components/Sections/Section3/IndustrialShowcase.tsx
+?? public/Sections/Section4/
+?? src/components/Sections/Section4/
 ```
 
-Leitura: houve reorganizacao de secoes. `Services` esta em `Section2` e `IndustrialShowcase` esta em `Section3`. Os caminhos antigos aparecem como deletados. Tambem ha novo asset visual em `public/Sections/Section2/3Dprinter.webp` e todos os arquivos de traducao foram modificados.
+Leitura: a pagina principal foi alterada para incluir a nova secao `Customers`. O arquivo `pt-BR.json` recebeu chaves de clientes. A pasta `public/Sections/Section4/` contem novos logos SVG de clientes e `src/components/Sections/Section4/` contem a nova secao.
 
 ## Estrutura relevante
 
@@ -128,9 +123,9 @@ src/
       Section2/
         Services.tsx
       Section3/
-        IndustrialShowcase.tsx
-      Section4/
         Expertise.tsx
+      Section4/
+        Customers.tsx
     Three/
       PrinterCanvas.tsx
       PrinterModel.tsx
@@ -170,7 +165,18 @@ public/
       longhiniPicture.webp
       longhiniPicture.png
     Section2/
-      3Dprinter.webp
+      3Dprinter.png
+    Section4/
+      logo01Colgate.svg
+      logo02Tramontina.svg
+      logo03Bridgestone.svg
+      logo04VigorAlimentos.svg
+      logo05Valeo.svg
+      logo06DormerPramet.svg
+      logo07Wheaton.svg
+      logo08Noar.svg
+      logo09Farmacap.svg
+      logo010Arteres-Estojos.svg
   Models/
     3DPrinter/
       printer-optimized.glb
@@ -186,6 +192,7 @@ public/
 | `package-lock.json` | Muito extenso; usar apenas quando precisar reproduzir instalacao exata |
 | Imagens `.webp`, `.png` | Binarios; foram descritos por caminho |
 | Modelo `.glb` | Binario 3D; foi descrito por caminho |
+| Logos `.svg` | Assets de cliente; foram listados por caminho |
 
 ## Arquitetura da pagina
 
@@ -195,8 +202,8 @@ public/
 import { Header } from "@/components/Header/Header";
 import { Hero } from "@/components/Sections/Section1/Hero";
 import { Services } from "@/components/Sections/Section2/Services";
-import { IndustrialShowcase } from "@/components/Sections/Section3/IndustrialShowcase";
-import { Expertise } from "@/components/Sections/Section4/Expertise";
+import { Expertise } from "@/components/Sections/Section3/Expertise";
+import { Customers } from "@/components/Sections/Section4/Customers";
 
 export default function Home() {
   return (
@@ -206,8 +213,8 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
-        <IndustrialShowcase />
         <Expertise />
+        <Customers />
         <section id="experience" className="min-h-screen" />
         <section id="contact" className="min-h-screen" />
       </main>
@@ -216,7 +223,7 @@ export default function Home() {
 }
 ```
 
-As secoes `experience` e `contact` ainda parecem placeholders.
+As secoes `experience` e `contact` ainda parecem placeholders vazios.
 
 ## Layout global e SEO
 
@@ -226,8 +233,9 @@ As secoes `experience` e `contact` ainda parecem placeholders.
 - Envolve a aplicacao com `LanguageProvider`.
 - Define metadados basicos de SEO.
 - Define `html lang="pt-BR"` inicialmente.
+- Define Open Graph e Twitter card, mas ainda sem `metadataBase`, URL canonica ou imagem OG explicita.
 
-Ponto de atencao: leituras no terminal exibiram textos acentuados como `SoluÃ§Ãµes`. Isso pode ser apenas encoding do terminal, mas vale validar os arquivos em UTF-8 antes de mexer em conteudo textual.
+Ponto de atencao: leituras no terminal exibem textos acentuados como `SoluÃ§Ãµes`. Isso pode ser apenas encoding do terminal, mas vale validar os arquivos reais em UTF-8 antes de alterar conteudo textual.
 
 ## Estilo global
 
@@ -270,7 +278,7 @@ export type Language =
   | "zh-CN";
 ```
 
-Todos os arquivos `src/i18n/*.json` aparecem como modificados no estado atual.
+Ponto de atencao importante: no estado atual, a chave `customers` foi encontrada apenas em `src/i18n/pt-BR.json`. Como o `LanguageContext` cai para `pt-BR` quando uma chave nao existe no idioma ativo, a secao `Customers` funciona nos demais idiomas, mas exibira textos em portugues ate que as traducoes sejam adicionadas aos outros JSONs.
 
 ## Header
 
@@ -295,7 +303,13 @@ const navItems = [
 ];
 ```
 
-Ponto de atencao: existe uma secao com `id="industrial-showcase"`, mas ela nao aparece no menu. O menu pula de `services` para `expertise`.
+Pontos de atencao:
+
+| Ponto | Impacto | Recomendacao |
+| --- | --- | --- |
+| `about` no menu | Nao ha uma secao com `id="about"` visivel em `page.tsx` | Confirmar se o `Hero` possui esse id internamente; se nao possuir, ajustar |
+| `customers` fora do menu | A nova secao existe, mas nao aparece na navegacao | Decidir se deve entrar como "Clientes" |
+| `experience` e `contact` | Existem como placeholders vazios | Implementar conteudo real ou remover temporariamente do menu |
 
 ## Hero
 
@@ -321,18 +335,19 @@ Conteudo conceitual:
 
 ## Services
 
-`src/components/Sections/Section2/Services.tsx` foi atualizado e agora:
+`src/components/Sections/Section2/Services.tsx`:
 
 - E um client component.
-- Usa `Image` do Next.js como imagem decorativa de fundo.
-- Usa o asset `/Sections/Section2/3Dprinter.webp`.
+- Usa `Image` do Next.js.
+- Usa o asset `/Sections/Section2/3Dprinter.png`.
 - Renderiza 6 cards de servicos em formato accordion.
 - Cada card tem estado proprio (`isOpen`).
 - Usa `useId()` para criar `aria-controls`.
 - Usa `aria-expanded`, `aria-controls` e `aria-label` no botao do card.
 - Usa `ChevronDown` rotacionado quando aberto.
 - Esconde/exibe a descricao com grid rows (`grid-rows-[0fr]` / `grid-rows-[1fr]`).
-- Usa `SectionTitle` com a nova API `title` e `description`.
+- Usa `SectionTitle` com a API `title` e `description`.
+- A imagem possui `alt={t("services.imageAlt")}`, portanto esta sendo tratada como conteudo informativo, nao como imagem puramente decorativa.
 
 Servicos:
 
@@ -345,7 +360,7 @@ Servicos:
 | Automacao e melhorias industriais | `services.items.automation` |
 | Estruturacao produtiva e gestao | `services.items.industrialManagement` |
 
-Novas/atuais chaves relevantes em `services`:
+Chaves relevantes em `services`:
 
 ```json
 {
@@ -361,17 +376,39 @@ Novas/atuais chaves relevantes em `services`:
 }
 ```
 
-Observacao: no componente atual, a imagem de fundo recebe `alt=""` por ser decorativa. A chave `services.imageAlt` existe no JSON, mas nao esta sendo usada no componente.
+## Expertise e modelo 3D
 
-## Industrial Showcase 3D
+`src/components/Sections/Section3/Expertise.tsx`:
 
-`src/components/Sections/Section3/IndustrialShowcase.tsx`:
-
-- Client component.
+- E um client component.
+- Combina a secao de expertise com o modelo 3D interativo.
 - Usa `dynamic()` com `ssr: false` para carregar `PrinterCanvas`.
 - Usa `IntersectionObserver` para renderizar o canvas apenas quando a secao se aproxima.
 - Isso ajuda performance, pois evita iniciar Three.js no carregamento inicial.
-- A secao tem `id="industrial-showcase"`.
+- A secao tem `id="expertise"`.
+- Usa tres grupos de conhecimento:
+  - Metodologias e melhoria continua.
+  - Normas, qualidade e seguranca.
+  - Capacidades tecnicas e industriais.
+- Usa cards em formato accordion com pills.
+- Usa tres cards de resumo tambem em accordion.
+- Todos os textos visiveis dessa secao estao usando `t(...)` no estado atual observado.
+
+Grupos de expertise:
+
+| Grupo | Chave |
+| --- | --- |
+| Metodologias e melhoria continua | `expertise.groups.methods` |
+| Normas, qualidade e seguranca | `expertise.groups.standards` |
+| Capacidades tecnicas e industriais | `expertise.groups.technical` |
+
+Cards de resumo:
+
+| Card | Chave |
+| --- | --- |
+| Melhoria continua | `expertise.summaryCards.continuousImprovement` |
+| Execucao tecnica | `expertise.summaryCards.technicalExecution` |
+| Visao de fabrica | `expertise.summaryCards.factoryVision` |
 
 `src/components/Three/PrinterCanvas.tsx`:
 
@@ -394,31 +431,44 @@ Licenca do modelo:
 - Existe `public/Models/3DPrinter/license.txt`.
 - O JSON `pt-BR` menciona modelo baseado em "3D Printer - Bambu Lab A1 Mini" por `neilvfx`, licenciado sob `CC-BY-4.0`.
 
-## Expertise
+Observacao historica: nao existe mais `src/components/Sections/Section3/IndustrialShowcase.tsx` no estado atual do workspace. O modelo 3D foi incorporado em `Expertise.tsx`.
 
-`src/components/Sections/Section4/Expertise.tsx`:
+## Customers
 
-- Client component.
-- Usa tres grupos de conhecimento:
-  - Metodologias e melhoria continua.
-  - Normas, qualidade e seguranca.
-  - Capacidades tecnicas e industriais.
-- Usa cards com pills.
+`src/components/Sections/Section4/Customers.tsx`:
 
-Ponto de atencao: no final da secao ainda existem textos fixos em portugues dentro do componente, nao vindos do sistema de i18n:
+- E um client component.
+- Renderiza a nova secao `id="customers"`.
+- Usa `SectionTitle` com `customers.title` e `customers.description`.
+- Usa `ScrollReveal` para animar o titulo e os itens da grade.
+- Usa `Image` do Next.js para logos SVG de clientes.
+- Usa `unoptimized` nos logos SVG.
+- Cada logo usa `alt={t(customer.altKey)}`.
+- A grade e responsiva: 2 colunas no mobile, 3 no `md`, 5 no `lg`.
+- Os cards possuem hover com elevacao, borda, brilho e transicao de grayscale para cor.
 
-```tsx
-Melhoria continua
-Estruturacao de processos com foco em produtividade, organizacao e reducao de desperdicios.
+Clientes/logos atuais:
 
-Execucao tecnica
-Integracao entre projeto, ferramentaria, prototipagem, dispositivos e producao industrial.
+| Cliente | Asset | Chave de alt |
+| --- | --- | --- |
+| Colgate | `/Sections/Section4/logo01Colgate.svg` | `customers.logos.colgate` |
+| Tramontina | `/Sections/Section4/logo02Tramontina.svg` | `customers.logos.tramontina` |
+| Bridgestone | `/Sections/Section4/logo03Bridgestone.svg` | `customers.logos.bridgestone` |
+| Vigor | `/Sections/Section4/logo04VigorAlimentos.svg` | `customers.logos.vigor` |
+| Valeo | `/Sections/Section4/logo05Valeo.svg` | `customers.logos.valeo` |
+| Dormer Pramet | `/Sections/Section4/logo06DormerPramet.svg` | `customers.logos.dormerPramet` |
+| Wheaton | `/Sections/Section4/logo07Wheaton.svg` | `customers.logos.wheaton` |
+| Noar | `/Sections/Section4/logo08Noar.svg` | `customers.logos.noar` |
+| Farmacap | `/Sections/Section4/logo09Farmacap.svg` | `customers.logos.farmacap` |
+| Arteres Estojos | `/Sections/Section4/logo010Arteres-Estojos.svg` | `customers.logos.arteresEstojos` |
 
-Visao de fabrica
-Experiencia pratica em chao de fabrica aplicada a decisoes tecnicas mais viaveis e eficientes.
-```
+Pontos de atencao:
 
-Recomendacao: se o site deve ser totalmente multilingue, mover esses textos para os arquivos JSON.
+| Ponto | Impacto | Recomendacao |
+| --- | --- | --- |
+| Chaves `customers` so existem em `pt-BR.json` | Outros idiomas exibem fallback em portugues | Adicionar traducoes aos demais JSONs |
+| Secao nao esta no menu | Usuario pode nao descobrir a secao via navegacao principal | Considerar item "Clientes" no `navItems` |
+| Nome do arquivo `logo010...` | Funciona, mas foge do padrao `logo10...` | Manter se ja referenciado ou renomear com cuidado |
 
 ## Componentes UI compartilhados
 
@@ -455,7 +505,7 @@ export function Container({ children, className }: ContainerProps) {
 
 ### SectionTitle
 
-`src/components/ui/SectionTitle.tsx` foi atualizado. A API atual e:
+`src/components/ui/SectionTitle.tsx` usa a API atual:
 
 ```tsx
 type SectionTitleProps = {
@@ -474,7 +524,7 @@ Uso esperado:
 />
 ```
 
-Antes ele recebia `children` e `eyebrow`; isso nao e mais valido na versao atual. Verificar se todas as secoes foram adaptadas para a nova API.
+Nao usar a API antiga baseada em `children` e `eyebrow`.
 
 ## Constantes do site
 
@@ -531,34 +581,35 @@ Pontos positivos:
 - `robots.index` e `robots.follow`.
 - Open Graph e Twitter card.
 - `alt` em imagens relevantes.
-- Imagem de fundo de `Services` tratada como decorativa com `alt=""`.
-- `aria-label` em navegacao, hero, menu mobile e accordions de servicos.
+- `aria-label` em navegacao, hero, menu mobile, accordions e secao de clientes.
 - `focus-visible:ring` em controles interativos.
 - Menu mobile com `aria-modal`, `role="dialog"`, `aria-expanded` e Escape.
 - `document.documentElement.lang` atualizado ao trocar idioma.
-- Cards de servico usam `aria-expanded` e `aria-controls`.
+- Cards de servico e expertise usam `aria-expanded` e `aria-controls`.
+- Logos de clientes possuem texto alternativo via i18n.
 
 Pontos de melhoria:
 
 | Ponto | Impacto | Recomendacao |
 | --- | --- | --- |
-| `SectionTitle` mudou de API | Pode quebrar secoes ainda usando `children`/`eyebrow` | Revisar `Expertise` e demais usos |
-| Textos fixos em portugues no `Expertise.tsx` | i18n incompleto | Mover para JSON |
+| `customers` so traduzido em `pt-BR` | Site parcialmente em portugues nos outros idiomas | Replicar/traduzir a chave em todos os JSONs |
+| `about` no menu pode nao ter alvo | Clique pode nao rolar se nao houver elemento com esse id | Confirmar `Hero` ou criar/ajustar id |
+| `customers` fora do menu | Nova secao menos acessivel pela navegacao | Adicionar item de menu se fizer sentido |
 | Placeholders `experience` e `contact` vazios | UX/SEO incompletos | Implementar conteudo real ou remover do menu |
-| `industrial-showcase` fora do menu | Navegacao menos previsivel | Decidir se deve aparecer no menu ou ser apenas secao visual |
 | Possivel encoding quebrado | Conteudo pode renderizar errado | Confirmar arquivos em UTF-8 |
-| `services.imageAlt` existe mas nao e usado | Chave inutil se imagem for decorativa | Remover chave ou usar se a imagem passar a ser informativa |
 | Metadata sem URL/imagem OG explicita | Compartilhamento social menos forte | Adicionar `metadataBase`, `openGraph.url`, `openGraph.images` quando houver dominio/imagem |
+| Modelo 3D em secao principal | Pode pesar em mobile | Validar performance e fallback visual em dispositivos fracos |
 
 ## Recomendacoes tecnicas prioritarias
 
 | Prioridade | Acao | Motivo |
 | --- | --- | --- |
-| Alta | Verificar todos os usos de `SectionTitle` | A API mudou e pode haver erro de TypeScript/build |
-| Alta | Validar encoding UTF-8 dos textos | Evita caracteres quebrados em producao |
+| Alta | Adicionar traducoes de `customers` aos demais JSONs | Evita fallback em portugues quando outro idioma esta ativo |
+| Alta | Confirmar alvo do menu `about` | Evita navegacao quebrada |
 | Alta | Implementar `experience` e `contact` ou remover temporariamente do menu | Evita navegacao para areas vazias |
-| Media | Internacionalizar textos fixos do `Expertise.tsx` | Mantem consistencia multilingue |
-| Media | Testar accordion de `Services` em teclado e leitor de tela | Garante acessibilidade real |
+| Media | Decidir se `customers` deve entrar no menu | Melhora descobribilidade da nova secao |
+| Media | Validar encoding UTF-8 dos textos | Evita caracteres quebrados em producao |
+| Media | Testar accordions de `Services` e `Expertise` com teclado e leitor de tela | Garante acessibilidade real |
 | Media | Validar performance do modelo 3D em mobile | Three.js pode impactar celulares |
 | Baixa | Considerar extrair dados de cards para configuracoes | Facilita manutencao futura |
 
@@ -573,6 +624,7 @@ Pontos de melhoria:
 - Estilizacao e majoritariamente via classes Tailwind.
 - Icones vem de `lucide-react`.
 - Imagens publicas sao referenciadas por caminho absoluto a partir de `public`.
+- O modelo 3D fica em `public/Models/3DPrinter/`.
 
 ## Prompt recomendado para proximas interacoes com IA
 
@@ -588,7 +640,9 @@ Regras:
 6. Nao inclua node_modules, .next, package-lock completo ou assets binarios nas respostas.
 7. Ao sugerir codigo, mostre exatamente quais arquivos alterar.
 8. Considere que `SectionTitle` usa props `title`, `description` e `className`.
-9. Considere que `Services` agora e um accordion com imagem decorativa de fundo.
+9. Considere que `Services` e um accordion com imagem `/Sections/Section2/3Dprinter.png`.
+10. Considere que `Expertise` tambem contem o canvas 3D carregado sob demanda.
+11. Considere que `Customers` existe como Section4, mas suas traducoes ainda estao somente em `pt-BR.json`.
 
 Minha tarefa e:
 [descreva a tarefa]

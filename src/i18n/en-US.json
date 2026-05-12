@@ -177,5 +177,22 @@
         "description": "Practical shop-floor experience applied to more feasible and efficient technical decisions."
       }
     }
+  },
+  "customers": {
+    "sectionAriaLabel": "Section of companies for which Longhini Industrial Development has already developed projects",
+    "title": "CUSTOMERS",
+    "description": "Projects developed for recognized brands across different industrial segments, connecting engineering, technical execution, and practical results.",
+    "logos": {
+      "colgate": "Colgate logo",
+      "tramontina": "Tramontina logo",
+      "bridgestone": "Bridgestone logo",
+      "vigor": "Vigor logo",
+      "valeo": "Valeo logo",
+      "dormerPramet": "Dormer Pramet logo",
+      "wheaton": "Wheaton logo",
+      "noar": "Noar logo",
+      "farmacap": "Farmacap logo",
+      "arteresEstojos": "Arteres Estojos logo"
+    }
   }
 }

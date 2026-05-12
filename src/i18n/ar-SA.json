@@ -1,18 +1,15 @@
 {
   "header": {
     "logoAriaLabel": "العودة إلى البداية",
-
     "brand": {
       "logoAlt": "شعار Longhini للتطوير الصناعي",
       "name": "LONGHINI",
       "subtitle": "التطوير الصناعي"
     },
-
     "aria": {
       "mainNavigation": "التنقل الرئيسي",
       "mobileNavigation": "التنقل عبر الهاتف"
     },
-
     "nav": {
       "about": "نبذة",
       "services": "الخدمات",
@@ -20,22 +17,17 @@
       "experience": "التجربة",
       "contact": "تواصل"
     },
-
     "navAria": {
       "goTo": "الانتقال إلى قسم {{section}}"
     },
-
     "mobile": {
       "open": "فتح القائمة",
       "close": "إغلاق القائمة"
     },
-
     "chooseLanguage": "اختر اللغة",
-
     "flags": {
       "alt": "العلم — {{language}}"
     },
-
     "languages": {
       "pt-BR": "البرتغالية",
       "en-US": "الإنجليزية",
@@ -184,6 +176,23 @@
         "title": "رؤية المصنع",
         "description": "خبرة عملية داخل بيئة المصنع تُطبق على قرارات تقنية أكثر جدوى وكفاءة."
       }
+    }
+  },
+  "customers": {
+    "sectionAriaLabel": "قسم الشركات التي طورت Longhini Industrial Development مشاريع لها بالفعل",
+    "title": "العملاء",
+    "description": "مشاريع طُورت لعلامات تجارية معروفة في قطاعات صناعية مختلفة، وتربط بين الهندسة والتنفيذ التقني والنتائج العملية.",
+    "logos": {
+      "colgate": "شعار Colgate",
+      "tramontina": "شعار Tramontina",
+      "bridgestone": "شعار Bridgestone",
+      "vigor": "شعار Vigor",
+      "valeo": "شعار Valeo",
+      "dormerPramet": "شعار Dormer Pramet",
+      "wheaton": "شعار Wheaton",
+      "noar": "شعار Noar",
+      "farmacap": "شعار Farmacap",
+      "arteresEstojos": "شعار Arteres Estojos"
     }
   }
 }
