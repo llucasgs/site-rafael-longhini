@@ -14,6 +14,7 @@
       "about": "Über uns",
       "services": "Leistungen",
       "expertise": "Expertise",
+      "customers": "Kunden",
       "experience": "Erfahrung",
       "contact": "Kontakt"
     },
@@ -179,20 +180,20 @@
     }
   },
   "customers": {
-    "sectionAriaLabel": "Bereich mit Unternehmen, für die Longhini Industrielle Entwicklung bereits Projekte entwickelt hat",
+    "sectionAriaLabel": "Sektion mit Unternehmen, für die Longhini Industrielle Entwicklung bereits Projekte entwickelt hat",
     "title": "KUNDEN",
-    "description": "Projekte für anerkannte Marken aus verschiedenen Industriesegmenten, die Engineering, technische Umsetzung und praktische Ergebnisse verbinden.",
+    "description": "Projekte für anerkannte Marken aus verschiedenen Industriebereichen, die Engineering, technische Umsetzung und praktische Ergebnisse verbinden.",
     "logos": {
-      "colgate": "Colgate-Logo",
-      "tramontina": "Tramontina-Logo",
-      "bridgestone": "Bridgestone-Logo",
-      "vigor": "Vigor-Logo",
-      "valeo": "Valeo-Logo",
-      "dormerPramet": "Dormer Pramet-Logo",
-      "wheaton": "Wheaton-Logo",
-      "noar": "Noar-Logo",
-      "farmacap": "Farmacap-Logo",
-      "arteresEstojos": "Arteres Estojos-Logo"
+      "colgate": "Logo von Colgate",
+      "tramontina": "Logo von Tramontina",
+      "bridgestone": "Logo von Bridgestone",
+      "vigor": "Logo von Vigor",
+      "valeo": "Logo von Valeo",
+      "dormerPramet": "Logo von Dormer Pramet",
+      "wheaton": "Logo von Wheaton",
+      "noar": "Logo von Noar",
+      "farmacap": "Logo von Farmacap",
+      "arteresEstojos": "Logo von Arteres Estojos"
     }
   }
 }

@@ -14,6 +14,7 @@
       "about": "परिचय",
       "services": "सेवाएँ",
       "expertise": "विशेषज्ञता",
+      "customers": "ग्राहक",
       "experience": "अनुभव",
       "contact": "संपर्क"
     },
@@ -179,20 +180,20 @@
     }
   },
   "customers": {
-    "sectionAriaLabel": "उन कंपनियों का सेक्शन जिनके लिए Longhini Industrial Development पहले ही प्रोजेक्ट विकसित कर चुका है",
+    "sectionAriaLabel": "उन कंपनियों का अनुभाग जिनके लिए Longhini औद्योगिक विकास ने पहले ही परियोजनाएँ विकसित की हैं",
     "title": "ग्राहक",
-    "description": "विभिन्न औद्योगिक क्षेत्रों में मान्यता प्राप्त ब्रांडों के लिए विकसित प्रोजेक्ट, जो इंजीनियरिंग, तकनीकी निष्पादन और व्यावहारिक परिणामों को जोड़ते हैं।",
+    "description": "विभिन्न औद्योगिक क्षेत्रों में मान्यता प्राप्त ब्रांडों के लिए विकसित परियोजनाएँ, जो इंजीनियरिंग, तकनीकी निष्पादन और व्यावहारिक परिणामों को जोड़ती हैं।",
     "logos": {
-      "colgate": "Colgate लोगो",
-      "tramontina": "Tramontina लोगो",
-      "bridgestone": "Bridgestone लोगो",
-      "vigor": "Vigor लोगो",
-      "valeo": "Valeo लोगो",
-      "dormerPramet": "Dormer Pramet लोगो",
-      "wheaton": "Wheaton लोगो",
-      "noar": "Noar लोगो",
-      "farmacap": "Farmacap लोगो",
-      "arteresEstojos": "Arteres Estojos लोगो"
+      "colgate": "Colgate का लोगो",
+      "tramontina": "Tramontina का लोगो",
+      "bridgestone": "Bridgestone का लोगो",
+      "vigor": "Vigor का लोगो",
+      "valeo": "Valeo का लोगो",
+      "dormerPramet": "Dormer Pramet का लोगो",
+      "wheaton": "Wheaton का लोगो",
+      "noar": "Noar का लोगो",
+      "farmacap": "Farmacap का लोगो",
+      "arteresEstojos": "Arteres Estojos का लोगो"
     }
   }
 }

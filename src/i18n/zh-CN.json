@@ -14,6 +14,7 @@
       "about": "关于",
       "services": "服务",
       "expertise": "专业能力",
+      "customers": "客户",
       "experience": "经验",
       "contact": "联系"
     },
@@ -179,9 +180,9 @@
     }
   },
   "customers": {
-    "sectionAriaLabel": "Longhini Industrial Development 已为其开发项目的企业部分",
+    "sectionAriaLabel": "Longhini 工业开发已为其开发项目的企业展示区域",
     "title": "客户",
-    "description": "为不同行业领域的知名品牌开发的项目，将工程设计、技术执行和实际成果连接起来。",
+    "description": "为不同工业领域的知名品牌开发的项目，连接工程设计、技术执行与实际成果。",
     "logos": {
       "colgate": "Colgate 标志",
       "tramontina": "Tramontina 标志",

@@ -14,6 +14,7 @@
       "about": "概要",
       "services": "サービス",
       "expertise": "専門性",
+      "customers": "顧客",
       "experience": "実績",
       "contact": "お問い合わせ"
     },
@@ -179,9 +180,9 @@
     }
   },
   "customers": {
-    "sectionAriaLabel": "Longhini Industrial Development がすでにプロジェクトを開発した企業のセクション",
+    "sectionAriaLabel": "Longhini 産業開発がこれまでにプロジェクトを手がけた企業のセクション",
     "title": "顧客",
-    "description": "さまざまな産業分野の認知されたブランド向けに開発されたプロジェクトです。エンジニアリング、技術実行、実用的な成果を結びつけます。",
+    "description": "さまざまな産業分野の著名ブランド向けに開発されたプロジェクト。エンジニアリング、技術実行、実践的な成果を結びつけます。",
     "logos": {
       "colgate": "Colgate のロゴ",
       "tramontina": "Tramontina のロゴ",

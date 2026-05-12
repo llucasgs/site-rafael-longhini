@@ -14,6 +14,7 @@
       "about": "אודות",
       "services": "שירותים",
       "expertise": "מומחיות",
+      "customers": "לקוחות",
       "experience": "ניסיון",
       "contact": "צור קשר"
     },
@@ -179,20 +180,20 @@
     }
   },
   "customers": {
-    "sectionAriaLabel": "אזור החברות שעבורן Longhini Industrial Development כבר פיתחה פרויקטים",
+    "sectionAriaLabel": "מקטע של חברות שעבורן Longhini פיתוח תעשייתי כבר פיתחה פרויקטים",
     "title": "לקוחות",
     "description": "פרויקטים שפותחו עבור מותגים מוכרים במגזרים תעשייתיים שונים, המחברים בין הנדסה, ביצוע טכני ותוצאות מעשיות.",
     "logos": {
-      "colgate": "הלוגו של Colgate",
-      "tramontina": "הלוגו של Tramontina",
-      "bridgestone": "הלוגו של Bridgestone",
-      "vigor": "הלוגו של Vigor",
-      "valeo": "הלוגו של Valeo",
-      "dormerPramet": "הלוגו של Dormer Pramet",
-      "wheaton": "הלוגו של Wheaton",
-      "noar": "הלוגו של Noar",
-      "farmacap": "הלוגו של Farmacap",
-      "arteresEstojos": "הלוגו של Arteres Estojos"
+      "colgate": "לוגו של Colgate",
+      "tramontina": "לוגו של Tramontina",
+      "bridgestone": "לוגו של Bridgestone",
+      "vigor": "לוגו של Vigor",
+      "valeo": "לוגו של Valeo",
+      "dormerPramet": "לוגו של Dormer Pramet",
+      "wheaton": "לוגו של Wheaton",
+      "noar": "לוגו של Noar",
+      "farmacap": "לוגו של Farmacap",
+      "arteresEstojos": "לוגו של Arteres Estojos"
     }
   }
 }

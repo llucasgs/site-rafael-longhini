@@ -14,6 +14,7 @@
       "about": "نبذة",
       "services": "الخدمات",
       "expertise": "الخبرة",
+      "customers": "العملاء",
       "experience": "التجربة",
       "contact": "تواصل"
     },
@@ -179,9 +180,9 @@
     }
   },
   "customers": {
-    "sectionAriaLabel": "قسم الشركات التي طورت Longhini Industrial Development مشاريع لها بالفعل",
+    "sectionAriaLabel": "قسم الشركات التي طورت Longhini للتطوير الصناعي مشاريع لها",
     "title": "العملاء",
-    "description": "مشاريع طُورت لعلامات تجارية معروفة في قطاعات صناعية مختلفة، وتربط بين الهندسة والتنفيذ التقني والنتائج العملية.",
+    "description": "مشاريع تم تطويرها لعلامات تجارية معروفة في قطاعات صناعية مختلفة، تجمع بين الهندسة والتنفيذ التقني والنتائج العملية.",
     "logos": {
       "colgate": "شعار Colgate",
       "tramontina": "شعار Tramontina",

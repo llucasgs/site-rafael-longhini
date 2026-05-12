@@ -14,6 +14,7 @@
       "about": "À propos",
       "services": "Services",
       "expertise": "Expertise",
+      "customers": "Clients",
       "experience": "Expérience",
       "contact": "Contact"
     },
@@ -181,7 +182,7 @@
   "customers": {
     "sectionAriaLabel": "Section des entreprises pour lesquelles Longhini Développement Industriel a déjà développé des projets",
     "title": "CLIENTS",
-    "description": "Projets développés pour des marques reconnues dans différents segments industriels, reliant ingénierie, exécution technique et résultats concrets.",
+    "description": "Projets développés pour des marques reconnues dans différents segments industriels, associant ingénierie, exécution technique et résultats concrets.",
     "logos": {
       "colgate": "Logo de Colgate",
       "tramontina": "Logo de Tramontina",
