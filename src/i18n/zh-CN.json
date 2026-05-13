@@ -199,5 +199,48 @@
       "farmacap": "Farmacap 标志",
       "arteresEstojos": "Arteres Estojos 标志"
     }
+  },
+  "experience": {
+    "sectionAriaLabel": "Rafael Longhini Lopes 的专业经验区域",
+    "title": "经验",
+    "description": "在机械工程、工装制造、工业自动化、产品开发以及生产现场团队管理中积累的职业轨迹。",
+    "card": {
+      "toggleAria": "切换 {{experience}} 的经验详情",
+      "current": "当前"
+    },
+    "items": {
+      "longhini": {
+        "company": "Longhini 工业开发",
+        "logoAlt": "Longhini 工业开发标志",
+        "role": "机械工程师 | 技术总监",
+        "period": "2014年1月 - 至今",
+        "location": "巴西圣保罗",
+        "description": "参与新产品、塑料模具、切削工具、批量和非批量生产机器、工业自动化、逆向工程、3D原型制作以及定制工业解决方案的开发项目。"
+      },
+      "arteres": {
+        "company": "Arteres",
+        "logoAlt": "Arteres 标志",
+        "role": "项目与开发经理 | 工装经理",
+        "period": "2014年1月 - 2016年12月",
+        "location": "巴西 Santo André",
+        "description": "负责工厂管理、Lean Manufacturing 和 Kaizen 文化导入、新产品开发、生产部门结构化、内部工装部门建设、多学科团队组建以及流程自动化。"
+      },
+      "cardenas": {
+        "company": "Cardenas 机械工业",
+        "logoAlt": "Cardenas 机械工业标志",
+        "role": "工装技师 | 工业自动化技术专家",
+        "period": "2002年9月 - 2014年1月",
+        "location": "巴西圣保罗及周边地区",
+        "description": "从事工装制造、批量生产机器的设计与制造、自动化装置、产品再设计、新产品开发，以及面向中大型客户的生产解决方案。"
+      },
+      "amemiya": {
+        "company": "Amemiya Honda Motos",
+        "logoAlt": "Amemiya Honda Motos 标志",
+        "role": "机械技术员",
+        "period": "1999年7月 - 2002年3月",
+        "location": "巴西圣保罗",
+        "description": "技术职业生涯始于设备操作、准备、工装制造、批量生产装置构建以及机器防护装置组装等工作。"
+      }
+    }
   }
 }

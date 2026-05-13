@@ -199,5 +199,48 @@
       "farmacap": "Farmacap のロゴ",
       "arteresEstojos": "Arteres Estojos のロゴ"
     }
+  },
+  "experience": {
+    "sectionAriaLabel": "Rafael Longhini Lopes の職務経験セクション",
+    "title": "実績",
+    "description": "機械工学、金型・工具製作、産業自動化、製品開発、製造現場でのチーム管理を通じて築かれたキャリア。",
+    "card": {
+      "toggleAria": "{{experience}} の経験詳細を切り替える",
+      "current": "現在"
+    },
+    "items": {
+      "longhini": {
+        "company": "Longhini 産業開発",
+        "logoAlt": "Longhini 産業開発のロゴ",
+        "role": "機械エンジニア | 技術責任者",
+        "period": "2014年1月 - 現在",
+        "location": "サンパウロ、ブラジル",
+        "description": "新製品、プラスチック金型、切削工具、量産および非量産向け機械、産業自動化、リバースエンジニアリング、3Dプロトタイピング、カスタム産業ソリューションの開発に従事。"
+      },
+      "arteres": {
+        "company": "Arteres",
+        "logoAlt": "Arteres のロゴ",
+        "role": "プロジェクト・開発マネージャー | 金型・工具部門マネージャー",
+        "period": "2014年1月 - 2016年12月",
+        "location": "Santo André、ブラジル",
+        "description": "工場管理、Lean Manufacturing と Kaizen 文化の導入、新製品開発、生産部門の構築、社内金型・工具部門の設立、多分野チームの形成、工程自動化を担当。"
+      },
+      "cardenas": {
+        "company": "Cardenas 機械工業",
+        "logoAlt": "Cardenas 機械工業のロゴ",
+        "role": "金型・工具技術者 | 産業自動化技術者",
+        "period": "2002年9月 - 2014年1月",
+        "location": "サンパウロおよび周辺地域、ブラジル",
+        "description": "金型・工具製作、量産機械の設計・製作、自動化装置、製品再設計、新製品開発、中規模および大規模顧客向けの生産ソリューションに従事。"
+      },
+      "amemiya": {
+        "company": "Amemiya Honda Motos",
+        "logoAlt": "Amemiya Honda Motos のロゴ",
+        "role": "機械技術者",
+        "period": "1999年7月 - 2002年3月",
+        "location": "サンパウロ、ブラジル",
+        "description": "操作、準備、金型・工具製作、量産向け治具の製作、機械保護カバーの組み立てを通じて技術キャリアを開始。"
+      }
+    }
   }
 }

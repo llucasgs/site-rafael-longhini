@@ -199,5 +199,48 @@
       "farmacap": "Logo di Farmacap",
       "arteresEstojos": "Logo di Arteres Estojos"
     }
+  },
+  "experience": {
+    "sectionAriaLabel": "Sezione dell’esperienza professionale di Rafael Longhini Lopes",
+    "title": "ESPERIENZA",
+    "description": "Percorso costruito nell’ingegneria meccanica, nell’attrezzeria, nell’automazione industriale, nello sviluppo prodotto e nella gestione di team in produzione.",
+    "card": {
+      "toggleAria": "Mostra o nascondi i dettagli dell’esperienza {{experience}}",
+      "current": "Attuale"
+    },
+    "items": {
+      "longhini": {
+        "company": "Longhini Sviluppo Industriale",
+        "logoAlt": "Logo di Longhini Sviluppo Industriale",
+        "role": "Ingegnere Meccanico | Direttore Tecnico",
+        "period": "Gennaio 2014 - presente",
+        "location": "São Paulo, Brasile",
+        "description": "Attività in progetti di nuovi prodotti, stampi plastici, utensili da taglio, macchine di produzione in serie e non in serie, automazione industriale, reverse engineering, prototipazione 3D e sviluppo di soluzioni industriali su misura."
+      },
+      "arteres": {
+        "company": "Arteres",
+        "logoAlt": "Logo di Arteres",
+        "role": "Responsabile Progetti e Sviluppo | Responsabile Attrezzeria",
+        "period": "Gennaio 2014 - dicembre 2016",
+        "location": "Santo André, Brasile",
+        "description": "Gestione di fabbriche, implementazione della cultura Lean Manufacturing e Kaizen, sviluppo di nuovi prodotti, strutturazione di reparti produttivi, creazione di attrezzeria interna, formazione di team multidisciplinari e automazione dei processi."
+      },
+      "cardenas": {
+        "company": "Cardenas Industria Meccanica",
+        "logoAlt": "Logo di Cardenas Industria Meccanica",
+        "role": "Attrezzista | Tecnologo in Automazione Industriale",
+        "period": "Settembre 2002 - gennaio 2014",
+        "location": "São Paulo e regione, Brasile",
+        "description": "Attività in attrezzeria, progettazione e costruzione di macchine per produzione in serie, dispositivi di automazione, riprogettazione di prodotti, sviluppo di nuovi prodotti e soluzioni produttive per clienti di media e grande scala."
+      },
+      "amemiya": {
+        "company": "Amemiya Honda Motos",
+        "logoAlt": "Logo di Amemiya Honda Motos",
+        "role": "Tecnico Meccanico",
+        "period": "Luglio 1999 - marzo 2002",
+        "location": "São Paulo, Brasile",
+        "description": "Inizio del percorso tecnico con attività di operazione, preparazione, attrezzeria, costruzione di dispositivi per produzione in serie e montaggio di protezioni per macchine."
+      }
+    }
   }
 }

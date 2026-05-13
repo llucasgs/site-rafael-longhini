@@ -199,5 +199,48 @@
       "farmacap": "Logotipo de Farmacap",
       "arteresEstojos": "Logotipo de Arteres Estojos"
     }
+  },
+  "experience": {
+    "sectionAriaLabel": "Sección de experiencia profesional de Rafael Longhini Lopes",
+    "title": "EXPERIENCIA",
+    "description": "Trayectoria construida en ingeniería mecánica, matricería, automatización industrial, desarrollo de productos y gestión de equipos en el entorno de fábrica.",
+    "card": {
+      "toggleAria": "Alternar detalles de la experiencia {{experience}}",
+      "current": "Actual"
+    },
+    "items": {
+      "longhini": {
+        "company": "Longhini Desarrollo Industrial",
+        "logoAlt": "Logotipo de Longhini Desarrollo Industrial",
+        "role": "Ingeniero Mecánico | Director Técnico",
+        "period": "Enero de 2014 - presente",
+        "location": "São Paulo, Brasil",
+        "description": "Actuación en proyectos de nuevos productos, moldes plásticos, herramientas de corte, máquinas de producción seriada y no seriada, automatización industrial, ingeniería inversa, prototipado 3D y desarrollo de soluciones industriales a medida."
+      },
+      "arteres": {
+        "company": "Arteres",
+        "logoAlt": "Logotipo de Arteres",
+        "role": "Gerente de Proyectos y Desarrollo | Gerente de Matricería",
+        "period": "Enero de 2014 - diciembre de 2016",
+        "location": "Santo André, Brasil",
+        "description": "Gestión de fábricas, implantación de cultura Lean Manufacturing y Kaizen, desarrollo de nuevos productos, estructuración de sectores productivos, montaje de matricería interna, formación de equipos multidisciplinarios y automatización de procesos."
+      },
+      "cardenas": {
+        "company": "Cardenas Industria Mecánica",
+        "logoAlt": "Logotipo de Cardenas Industria Mecánica",
+        "role": "Matricero | Tecnólogo en Automatización Industrial",
+        "period": "Septiembre de 2002 - enero de 2014",
+        "location": "São Paulo y Región, Brasil",
+        "description": "Actuación en matricería, diseño y construcción de máquinas de producción seriada, dispositivos de automatización, rediseño de productos, desarrollo de nuevos productos y soluciones productivas para clientes de mediana y gran escala."
+      },
+      "amemiya": {
+        "company": "Amemiya Honda Motos",
+        "logoAlt": "Logotipo de Amemiya Honda Motos",
+        "role": "Técnico Mecánico",
+        "period": "Julio de 1999 - marzo de 2002",
+        "location": "São Paulo, Brasil",
+        "description": "Inicio de la trayectoria técnica con actuación en operación, preparación, matricería, construcción de dispositivos para producción seriada y montaje de protecciones de máquinas."
+      }
+    }
   }
 }

@@ -199,5 +199,48 @@
       "farmacap": "Logo de Farmacap",
       "arteresEstojos": "Logo de Arteres Estojos"
     }
+  },
+  "experience": {
+    "sectionAriaLabel": "Section d’expérience professionnelle de Rafael Longhini Lopes",
+    "title": "EXPÉRIENCE",
+    "description": "Parcours construit dans l’ingénierie mécanique, l’outillage, l’automatisation industrielle, le développement de produits et la gestion d’équipes sur le terrain industriel.",
+    "card": {
+      "toggleAria": "Afficher ou masquer les détails de l’expérience {{experience}}",
+      "current": "Actuel"
+    },
+    "items": {
+      "longhini": {
+        "company": "Longhini Développement Industriel",
+        "logoAlt": "Logo de Longhini Développement Industriel",
+        "role": "Ingénieur Mécanique | Directeur Technique",
+        "period": "Janvier 2014 - aujourd’hui",
+        "location": "São Paulo, Brésil",
+        "description": "Intervention dans des projets de nouveaux produits, moules plastiques, outils de coupe, machines de production en série et hors série, automatisation industrielle, ingénierie inverse, prototypage 3D et développement de solutions industrielles sur mesure."
+      },
+      "arteres": {
+        "company": "Arteres",
+        "logoAlt": "Logo de Arteres",
+        "role": "Responsable Projets et Développement | Responsable Outillage",
+        "period": "Janvier 2014 - décembre 2016",
+        "location": "Santo André, Brésil",
+        "description": "Gestion d’usines, mise en place d’une culture Lean Manufacturing et Kaizen, développement de nouveaux produits, structuration de secteurs productifs, mise en place d’un atelier d’outillage interne, formation d’équipes pluridisciplinaires et automatisation des processus."
+      },
+      "cardenas": {
+        "company": "Cardenas Industrie Mécanique",
+        "logoAlt": "Logo de Cardenas Industrie Mécanique",
+        "role": "Outilleur | Technologue en Automatisation Industrielle",
+        "period": "Septembre 2002 - janvier 2014",
+        "location": "São Paulo et région, Brésil",
+        "description": "Intervention en outillage, conception et construction de machines de production en série, dispositifs d’automatisation, reconception de produits, développement de nouveaux produits et solutions de production pour des clients de moyenne et grande échelle."
+      },
+      "amemiya": {
+        "company": "Amemiya Honda Motos",
+        "logoAlt": "Logo de Amemiya Honda Motos",
+        "role": "Technicien Mécanique",
+        "period": "Juillet 1999 - mars 2002",
+        "location": "São Paulo, Brésil",
+        "description": "Début du parcours technique avec des activités d’opération, de préparation, d’outillage, de construction de dispositifs pour la production en série et de montage de protections de machines."
+      }
+    }
   }
 }

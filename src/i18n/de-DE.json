@@ -199,5 +199,48 @@
       "farmacap": "Logo von Farmacap",
       "arteresEstojos": "Logo von Arteres Estojos"
     }
+  },
+  "experience": {
+    "sectionAriaLabel": "Sektion zur Berufserfahrung von Rafael Longhini Lopes",
+    "title": "ERFAHRUNG",
+    "description": "Ein Werdegang, aufgebaut in Maschinenbau, Werkzeugbau, industrieller Automatisierung, Produktentwicklung und Teammanagement in der Fertigungspraxis.",
+    "card": {
+      "toggleAria": "Details zur Erfahrung {{experience}} umschalten",
+      "current": "Aktuell"
+    },
+    "items": {
+      "longhini": {
+        "company": "Longhini Industrielle Entwicklung",
+        "logoAlt": "Logo von Longhini Industrielle Entwicklung",
+        "role": "Maschinenbauingenieur | Technischer Direktor",
+        "period": "Januar 2014 - heute",
+        "location": "São Paulo, Brasilien",
+        "description": "Tätigkeit in Projekten für neue Produkte, Kunststoffformen, Schneidwerkzeuge, Serien- und Sonderproduktionsmaschinen, industrielle Automatisierung, Reverse Engineering, 3D-Prototyping und Entwicklung maßgeschneiderter industrieller Lösungen."
+      },
+      "arteres": {
+        "company": "Arteres",
+        "logoAlt": "Logo von Arteres",
+        "role": "Projekt- und Entwicklungsmanager | Werkzeugbauleiter",
+        "period": "Januar 2014 - Dezember 2016",
+        "location": "Santo André, Brasilien",
+        "description": "Fabrikmanagement, Einführung von Lean Manufacturing und Kaizen-Kultur, Entwicklung neuer Produkte, Strukturierung von Produktionsbereichen, Aufbau interner Werkzeugbauprozesse, Bildung multidisziplinärer Teams und Prozessautomatisierung."
+      },
+      "cardenas": {
+        "company": "Cardenas Mechanische Industrie",
+        "logoAlt": "Logo von Cardenas Mechanische Industrie",
+        "role": "Werkzeugmacher | Technologe für industrielle Automatisierung",
+        "period": "September 2002 - Januar 2014",
+        "location": "São Paulo und Region, Brasilien",
+        "description": "Tätigkeit im Werkzeugbau, in der Konstruktion und dem Bau von Serienproduktionsmaschinen, Automatisierungsvorrichtungen, Produktneugestaltung, Entwicklung neuer Produkte und produktiven Lösungen für mittelgroße und große Kunden."
+      },
+      "amemiya": {
+        "company": "Amemiya Honda Motos",
+        "logoAlt": "Logo von Amemiya Honda Motos",
+        "role": "Mechanischer Techniker",
+        "period": "Juli 1999 - März 2002",
+        "location": "São Paulo, Brasilien",
+        "description": "Beginn der technischen Laufbahn mit Tätigkeit in Betrieb, Vorbereitung, Werkzeugbau, Bau von Vorrichtungen für Serienproduktion und Montage von Maschinenschutzvorrichtungen."
+      }
+    }
   }
 }
