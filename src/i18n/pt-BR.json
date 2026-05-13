@@ -208,5 +208,48 @@
       "farmacap": "Logotipo da Farmacap",
       "arteresEstojos": "Logotipo da Arteres Estojos"
     }
+  },
+  "experience": {
+    "sectionAriaLabel": "Seção de experiência profissional de Rafael Longhini Lopes",
+    "title": "EXPERIÊNCIA",
+    "description": "Trajetória construída em engenharia mecânica, ferramentaria, automação industrial, desenvolvimento de produtos e gestão de equipes no chão de fábrica.",
+    "card": {
+      "toggleAria": "Alternar detalhes da experiência {{experience}}",
+      "current": "Atual"
+    },
+    "items": {
+      "longhini": {
+        "company": "Longhini Desenvolvimento Industrial",
+        "logoAlt": "Logotipo da Longhini Desenvolvimento Industrial",
+        "role": "Eng. Mecânico | Diretor Técnico",
+        "period": "Janeiro de 2014 - presente",
+        "location": "São Paulo, Brasil",
+        "description": "Atuação em projetos de novos produtos, moldes plásticos, ferramentas de corte, máquinas de produção seriada e não seriada, automação industrial, engenharia reversa, prototipagem 3D e desenvolvimento de soluções industriais sob medida."
+      },
+      "arteres": {
+        "company": "Arteres",
+        "logoAlt": "Logotipo da Arteres",
+        "role": "Gerente de Projetos e Desenvolvimento | Gerente de Ferramentaria",
+        "period": "Janeiro de 2014 - dezembro de 2016",
+        "location": "Santo André, Brasil",
+        "description": "Gestão de fábricas, implantação de cultura Lean Manufacturing e Kaizen, desenvolvimento de novos produtos, estruturação de setores produtivos, montagem de ferramentaria interna, formação de equipes multidisciplinares e automação de processos."
+      },
+      "cardenas": {
+        "company": "Cardenas Indústria Mecânica",
+        "logoAlt": "Logotipo da Cardenas Indústria Mecânica",
+        "role": "Ferramenteiro | Tecnólogo em Automação Industrial",
+        "period": "Setembro de 2002 - janeiro de 2014",
+        "location": "São Paulo e Região, Brasil",
+        "description": "Atuação em ferramentaria, projeto e construção de máquinas de produção seriada, dispositivos de automação, reprojeto de produtos, desenvolvimento de novos produtos e soluções produtivas para clientes de média e grande escala."
+      },
+      "amemiya": {
+        "company": "Amemiya Honda Motos",
+        "logoAlt": "Logotipo da Amemiya Honda Motos",
+        "role": "Técnico Mecânico",
+        "period": "Julho de 1999 - março de 2002",
+        "location": "São Paulo, Brasil",
+        "description": "Início da trajetória técnica com atuação em operação, preparação, ferramentaria, construção de dispositivos para produção seriada e montagem de proteções de máquinas."
+      }
+    }
   }
 }
