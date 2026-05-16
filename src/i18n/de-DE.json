@@ -257,5 +257,53 @@
         "ariaLabel": "Interaktives 3D-Modell eines Oculus Quest 2 Headsets"
       }
     }
+  },
+  "contact": {
+    "sectionAriaLabel": "Kontaktsektion von Longhini Industrielle Entwicklung",
+    "title": "KONTAKT",
+    "description": "Sprechen Sie mit Longhini Industrielle Entwicklung, um technische Anforderungen in maßgeschneiderte industrielle Lösungen zu verwandeln.",
+    "ctaBadge": "Direkter Kontakt",
+    "ctaTitle": "Sprechen wir über Ihr nächstes Projekt?",
+    "ctaDescription": "Senden Sie Ihre technische Anforderung, Idee, Ihren Verbesserungsbedarf oder Ihre Produktionsherausforderung. Longhini entwickelt Produkte, Vorrichtungen, Maschinen, Werkzeuge, Prototypen und maßgeschneiderte industrielle Lösungen – mit der Möglichkeit von Vor-Ort- oder Remote-Service.",
+    "actions": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "Fordern Sie ein Angebot an oder senden Sie Ihre technische Anforderung direkt über WhatsApp.",
+        "ariaLabel": "Longhini über WhatsApp kontaktieren"
+      },
+      "email": {
+        "label": "Geschäftliche E-Mail",
+        "description": "Senden Sie Projektdetails, technische Dateien oder eine geschäftliche Anfrage per E-Mail.",
+        "ariaLabel": "Eine E-Mail an Longhini Industrielle Entwicklung senden"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "Rufen Sie das berufliche Profil von Rafael Longhini Lopes auf LinkedIn auf.",
+        "ariaLabel": "LinkedIn-Profil von Rafael Longhini Lopes öffnen"
+      }
+    },
+    "company": {
+      "eyebrow": "LONGHINI",
+      "name": "LONGHINI - INDUSTRIELLE ENTWICKLUNG",
+      "description": "Engineering für Produktentwicklung, Automatisierung, Werkzeugbau, Prototyping und maßgeschneiderte industrielle Lösungen.",
+      "imageAlt": "Industrielle Umgebung mit dem Logo von Longhini Industrielle Entwicklung"
+    },
+    "info": {
+      "email": {
+        "label": "E-Mail"
+      },
+      "location": {
+        "label": "Standort",
+        "value": "São Paulo, São Paulo, Brasilien"
+      },
+      "focus": {
+        "label": "Fokus",
+        "value": "Maßgeschneiderte Industrieprojekte"
+      },
+      "serviceMode": {
+        "label": "Service",
+        "value": "Vor Ort und remote"
+      }
+    }
   }
 }

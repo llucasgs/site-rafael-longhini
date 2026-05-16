@@ -257,5 +257,53 @@
         "ariaLabel": "Oculus Quest 2 头显的交互式3D模型"
       }
     }
+  },
+  "contact": {
+    "sectionAriaLabel": "Longhini 工业开发联系区域",
+    "title": "联系",
+    "description": "与 Longhini 工业开发沟通，将技术需求转化为定制工业解决方案。",
+    "ctaBadge": "直接服务",
+    "ctaTitle": "我们来聊聊您的下一个项目？",
+    "ctaDescription": "请发送您的技术需求、想法、改进需求或生产挑战。Longhini 从事产品、装置、机器、工具、原型和定制工业解决方案的开发，并可提供现场或远程服务。",
+    "actions": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "通过 WhatsApp 申请报价或直接发送您的技术需求。",
+        "ariaLabel": "通过 WhatsApp 联系 Longhini"
+      },
+      "email": {
+        "label": "商务邮箱",
+        "description": "通过电子邮件发送项目详情、技术文件或商务需求。",
+        "ariaLabel": "向 Longhini 工业开发发送电子邮件"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "访问 Rafael Longhini Lopes 在 LinkedIn 上的职业资料。",
+        "ariaLabel": "访问 Rafael Longhini Lopes 的 LinkedIn"
+      }
+    },
+    "company": {
+      "eyebrow": "LONGHINI",
+      "name": "LONGHINI - 工业开发",
+      "description": "应用于产品开发、自动化、工装制造、原型制作和定制工业解决方案的工程技术。",
+      "imageAlt": "带有 Longhini 工业开发标志的工业环境"
+    },
+    "info": {
+      "email": {
+        "label": "电子邮箱"
+      },
+      "location": {
+        "label": "地点",
+        "value": "巴西圣保罗州圣保罗市"
+      },
+      "focus": {
+        "label": "重点",
+        "value": "定制工业项目"
+      },
+      "serviceMode": {
+        "label": "服务方式",
+        "value": "现场和远程"
+      }
+    }
   }
 }

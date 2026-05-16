@@ -257,5 +257,53 @@
         "ariaLabel": "Modèle 3D interactif d’un casque Oculus Quest 2"
       }
     }
+  },
+  "contact": {
+    "sectionAriaLabel": "Section de contact de Longhini Développement Industriel",
+    "title": "CONTACT",
+    "description": "Contactez Longhini Développement Industriel pour transformer des besoins techniques en solutions industrielles sur mesure.",
+    "ctaBadge": "Contact direct",
+    "ctaTitle": "Parlons de votre prochain projet ?",
+    "ctaDescription": "Envoyez votre demande technique, votre idée, votre besoin d’amélioration ou votre défi de production. Longhini intervient dans le développement de produits, dispositifs, machines, outils, prototypes et solutions industrielles personnalisées, avec possibilité d’intervention sur site ou à distance.",
+    "actions": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "Demandez un devis ou envoyez votre besoin technique directement via WhatsApp.",
+        "ariaLabel": "Contacter Longhini via WhatsApp"
+      },
+      "email": {
+        "label": "E-mail commercial",
+        "description": "Envoyez les détails du projet, des fichiers techniques ou une demande commerciale par e-mail.",
+        "ariaLabel": "Envoyer un e-mail à Longhini Développement Industriel"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "Accédez au profil professionnel de Rafael Longhini Lopes sur LinkedIn.",
+        "ariaLabel": "Accéder au LinkedIn de Rafael Longhini Lopes"
+      }
+    },
+    "company": {
+      "eyebrow": "LONGHINI",
+      "name": "LONGHINI - DÉVELOPPEMENT INDUSTRIEL",
+      "description": "Ingénierie appliquée au développement de produits, à l’automatisation, à l’outillage, au prototypage et aux solutions industrielles sur mesure.",
+      "imageAlt": "Environnement industriel avec le logo de Longhini Développement Industriel"
+    },
+    "info": {
+      "email": {
+        "label": "E-mail"
+      },
+      "location": {
+        "label": "Localisation",
+        "value": "São Paulo, São Paulo, Brésil"
+      },
+      "focus": {
+        "label": "Focus",
+        "value": "Projets industriels sur mesure"
+      },
+      "serviceMode": {
+        "label": "Service",
+        "value": "Sur site et à distance"
+      }
+    }
   }
 }

@@ -257,5 +257,53 @@
         "ariaLabel": "Modelo 3D interactivo de un visor Oculus Quest 2"
       }
     }
+  },
+  "contact": {
+    "sectionAriaLabel": "Sección de contacto de Longhini Desarrollo Industrial",
+    "title": "CONTACTO",
+    "description": "Hable con Longhini Desarrollo Industrial para transformar necesidades técnicas en soluciones industriales a medida.",
+    "ctaBadge": "Atención directa",
+    "ctaTitle": "¿Hablamos sobre su próximo proyecto?",
+    "ctaDescription": "Envíe su demanda técnica, idea, necesidad de mejora o desafío productivo. Longhini trabaja en el desarrollo de productos, dispositivos, máquinas, herramientas, prototipos y soluciones industriales personalizadas, con posibilidad de atención presencial o a distancia.",
+    "actions": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "Solicite un presupuesto o envíe su necesidad técnica directamente por WhatsApp.",
+        "ariaLabel": "Contactar con Longhini por WhatsApp"
+      },
+      "email": {
+        "label": "Correo comercial",
+        "description": "Envíe detalles del proyecto, archivos técnicos o una solicitud comercial por correo electrónico.",
+        "ariaLabel": "Enviar un correo electrónico a Longhini Desarrollo Industrial"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "Acceda al perfil profesional de Rafael Longhini Lopes en LinkedIn.",
+        "ariaLabel": "Acceder al LinkedIn de Rafael Longhini Lopes"
+      }
+    },
+    "company": {
+      "eyebrow": "LONGHINI",
+      "name": "LONGHINI - DESARROLLO INDUSTRIAL",
+      "description": "Ingeniería aplicada al desarrollo de productos, automatización, matricería, prototipado y soluciones industriales a medida.",
+      "imageAlt": "Ambiente industrial con el logotipo de Longhini Desarrollo Industrial"
+    },
+    "info": {
+      "email": {
+        "label": "Correo"
+      },
+      "location": {
+        "label": "Ubicación",
+        "value": "São Paulo, São Paulo, Brasil"
+      },
+      "focus": {
+        "label": "Enfoque",
+        "value": "Proyectos industriales a medida"
+      },
+      "serviceMode": {
+        "label": "Atención",
+        "value": "Presencial y a distancia"
+      }
+    }
   }
 }

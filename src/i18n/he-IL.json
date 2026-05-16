@@ -257,5 +257,53 @@
         "ariaLabel": "מודל תלת-ממדי אינטראקטיבי של משקפי Oculus Quest 2"
       }
     }
+  },
+  "contact": {
+    "sectionAriaLabel": "מקטע יצירת קשר של Longhini פיתוח תעשייתי",
+    "title": "צור קשר",
+    "description": "צרו קשר עם Longhini פיתוח תעשייתי כדי להפוך צרכים טכניים לפתרונות תעשייתיים מותאמים אישית.",
+    "ctaBadge": "קשר ישיר",
+    "ctaTitle": "נדבר על הפרויקט הבא שלך?",
+    "ctaDescription": "שלחו את הדרישה הטכנית, הרעיון, הצורך בשיפור או אתגר הייצור שלכם. Longhini עוסקת בפיתוח מוצרים, התקנים, מכונות, כלים, אבות-טיפוס ופתרונות תעשייתיים מותאמים אישית, עם אפשרות לשירות פרונטלי או מרחוק.",
+    "actions": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "בקשו הצעת מחיר או שלחו את הצורך הטכני שלכם ישירות דרך WhatsApp.",
+        "ariaLabel": "יצירת קשר עם Longhini דרך WhatsApp"
+      },
+      "email": {
+        "label": "אימייל מסחרי",
+        "description": "שלחו פרטי פרויקט, קבצים טכניים או בקשה מסחרית באימייל.",
+        "ariaLabel": "שליחת אימייל אל Longhini פיתוח תעשייתי"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "גשו לפרופיל המקצועי של Rafael Longhini Lopes ב-LinkedIn.",
+        "ariaLabel": "גישה ל-LinkedIn של Rafael Longhini Lopes"
+      }
+    },
+    "company": {
+      "eyebrow": "LONGHINI",
+      "name": "LONGHINI - פיתוח תעשייתי",
+      "description": "הנדסה המיושמת בפיתוח מוצרים, אוטומציה, ייצור כלים, אב-טיפוס ופתרונות תעשייתיים מותאמים אישית.",
+      "imageAlt": "סביבה תעשייתית עם הלוגו של Longhini פיתוח תעשייתי"
+    },
+    "info": {
+      "email": {
+        "label": "אימייל"
+      },
+      "location": {
+        "label": "מיקום",
+        "value": "סאו פאולו, סאו פאולו, ברזיל"
+      },
+      "focus": {
+        "label": "מיקוד",
+        "value": "פרויקטים תעשייתיים מותאמים אישית"
+      },
+      "serviceMode": {
+        "label": "שירות",
+        "value": "פרונטלי ומרחוק"
+      }
+    }
   }
 }

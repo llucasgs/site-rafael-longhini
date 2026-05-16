@@ -6,6 +6,7 @@ import { Expertise } from "@/components/Sections/Section3/Expertise";
 import { Customers } from "@/components/Sections/Section4/Customers";
 import { Experience } from "@/components/Sections/Section5/Experience";
 import { IndustrialModels } from "@/components/Sections/Section6/IndustrialModels";
+import { Contact } from "@/components/Sections/Section7/Contact";
 
 export default function Home() {
   return (
@@ -19,8 +20,7 @@ export default function Home() {
         <Customers />
         <Experience />
         <IndustrialModels />
-
-        <section id="contact" className="min-h-screen" />
+        <Contact />{" "}
       </main>
       <FloatingButtons />
     </>

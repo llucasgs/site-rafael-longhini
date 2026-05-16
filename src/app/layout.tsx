@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { site } from "@/constants/site";
+
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -12,44 +15,27 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "Longhini Desenvolvimento Industrial | Soluções Industriais",
-    template: "%s | Longhini Desenvolvimento Industrial",
+    default: site.seo.title,
+    template: site.seo.titleTemplate,
   },
-  description:
-    "Projetos mecânicos, desenvolvimento de novos produtos, engenharia reversa, prototipagem 3D, automação industrial e soluções industriais personalizadas.",
-  keywords: [
-    "Longhini Desenvolvimento Industrial",
-    "Rafael Longhini Lopes",
-    "desenvolvimento industrial",
-    "projetos mecânicos",
-    "engenharia reversa",
-    "prototipagem 3D",
-    "automação industrial",
-    "SolidWorks",
-    "AutoCAD",
-    "CAD CAM",
-    "máquinas especiais",
-    "moldes plásticos",
-    "ferramentaria",
-  ],
-  authors: [{ name: "Rafael Longhini Lopes" }],
+  description: site.seo.description,
+  keywords: [...site.seo.keywords],
+  authors: [{ name: site.owner }],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Longhini Desenvolvimento Industrial",
-    description:
-      "Transformando ideias em produtos reais, eficientes e inovadores com engenharia, tecnologia e experiência industrial.",
+    title: site.name,
+    description: site.seo.openGraphDescription,
     type: "website",
     locale: "pt_BR",
-    siteName: "Longhini Desenvolvimento Industrial",
+    siteName: site.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Longhini Desenvolvimento Industrial",
-    description:
-      "Projetos mecânicos, engenharia reversa, prototipagem 3D e soluções industriais personalizadas.",
+    title: site.name,
+    description: site.seo.twitterDescription,
   },
 };
 

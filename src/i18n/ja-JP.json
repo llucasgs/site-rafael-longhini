@@ -257,5 +257,53 @@
         "ariaLabel": "Oculus Quest 2 ヘッドセットのインタラクティブ3Dモデル"
       }
     }
+  },
+  "contact": {
+    "sectionAriaLabel": "Longhini 産業開発のお問い合わせセクション",
+    "title": "お問い合わせ",
+    "description": "技術的なニーズをカスタム産業ソリューションへ変えるために、Longhini 産業開発へご相談ください。",
+    "ctaBadge": "直接対応",
+    "ctaTitle": "次のプロジェクトについて話しませんか？",
+    "ctaDescription": "技術的なご要望、アイデア、改善ニーズ、生産上の課題をお送りください。Longhini は、製品、治具、機械、工具、プロトタイプ、カスタム産業ソリューションの開発に対応し、現地対応またはリモート対応も可能です。",
+    "actions": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "見積もり依頼や技術的なご要望を WhatsApp から直接お送りください。",
+        "ariaLabel": "WhatsApp で Longhini に連絡する"
+      },
+      "email": {
+        "label": "ビジネスメール",
+        "description": "プロジェクトの詳細、技術ファイル、または商談依頼をメールでお送りください。",
+        "ariaLabel": "Longhini 産業開発へメールを送信する"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "LinkedIn で Rafael Longhini Lopes の職務プロフィールをご覧ください。",
+        "ariaLabel": "Rafael Longhini Lopes の LinkedIn を開く"
+      }
+    },
+    "company": {
+      "eyebrow": "LONGHINI",
+      "name": "LONGHINI - 産業開発",
+      "description": "製品開発、自動化、金型・工具製作、プロトタイピング、カスタム産業ソリューションに応用されるエンジニアリング。",
+      "imageAlt": "Longhini 産業開発のロゴがある産業環境"
+    },
+    "info": {
+      "email": {
+        "label": "メール"
+      },
+      "location": {
+        "label": "所在地",
+        "value": "サンパウロ、サンパウロ、ブラジル"
+      },
+      "focus": {
+        "label": "重点分野",
+        "value": "カスタム産業プロジェクト"
+      },
+      "serviceMode": {
+        "label": "対応",
+        "value": "現地対応およびリモート対応"
+      }
+    }
   }
 }

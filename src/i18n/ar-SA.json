@@ -257,5 +257,53 @@
         "ariaLabel": "نموذج ثلاثي الأبعاد تفاعلي لسماعة Oculus Quest 2"
       }
     }
+  },
+  "contact": {
+    "sectionAriaLabel": "قسم التواصل مع Longhini للتطوير الصناعي",
+    "title": "التواصل",
+    "description": "تواصل مع Longhini للتطوير الصناعي لتحويل الاحتياجات التقنية إلى حلول صناعية مخصصة.",
+    "ctaBadge": "تواصل مباشر",
+    "ctaTitle": "هل نناقش مشروعك القادم؟",
+    "ctaDescription": "أرسل طلبك التقني أو فكرتك أو حاجتك إلى تحسين أو تحديك الإنتاجي. تعمل Longhini في تطوير المنتجات والأجهزة والآلات والأدوات والنماذج الأولية والحلول الصناعية المخصصة، مع إمكانية تقديم الخدمة حضوريًا أو عن بُعد.",
+    "actions": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "اطلب عرض سعر أو أرسل حاجتك التقنية مباشرة عبر WhatsApp.",
+        "ariaLabel": "التواصل مع Longhini عبر WhatsApp"
+      },
+      "email": {
+        "label": "البريد التجاري",
+        "description": "أرسل تفاصيل المشروع أو الملفات التقنية أو طلبًا تجاريًا عبر البريد الإلكتروني.",
+        "ariaLabel": "إرسال بريد إلكتروني إلى Longhini للتطوير الصناعي"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "ادخل إلى الملف المهني لـ Rafael Longhini Lopes على LinkedIn.",
+        "ariaLabel": "الوصول إلى LinkedIn الخاص بـ Rafael Longhini Lopes"
+      }
+    },
+    "company": {
+      "eyebrow": "LONGHINI",
+      "name": "LONGHINI - التطوير الصناعي",
+      "description": "هندسة مطبقة على تطوير المنتجات والأتمتة وتصنيع الأدوات والنمذجة الأولية والحلول الصناعية المخصصة.",
+      "imageAlt": "بيئة صناعية مع شعار Longhini للتطوير الصناعي"
+    },
+    "info": {
+      "email": {
+        "label": "البريد الإلكتروني"
+      },
+      "location": {
+        "label": "الموقع",
+        "value": "ساو باولو، ساو باولو، البرازيل"
+      },
+      "focus": {
+        "label": "التركيز",
+        "value": "مشاريع صناعية مخصصة"
+      },
+      "serviceMode": {
+        "label": "الخدمة",
+        "value": "حضوريًا وعن بُعد"
+      }
+    }
   }
 }

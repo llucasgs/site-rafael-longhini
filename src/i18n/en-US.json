@@ -257,5 +257,53 @@
         "ariaLabel": "Interactive 3D model of an Oculus Quest 2 headset"
       }
     }
+  },
+  "contact": {
+    "sectionAriaLabel": "Contact section for Longhini Industrial Development",
+    "title": "CONTACT",
+    "description": "Talk to Longhini Industrial Development to turn technical needs into custom industrial solutions.",
+    "ctaBadge": "Direct support",
+    "ctaTitle": "Shall we talk about your next project?",
+    "ctaDescription": "Send your technical demand, idea, improvement need or production challenge. Longhini works on the development of products, devices, machines, tools, prototypes and custom industrial solutions, with the possibility of on-site or remote service.",
+    "actions": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "Request a quote or send your technical need directly through WhatsApp.",
+        "ariaLabel": "Contact Longhini through WhatsApp"
+      },
+      "email": {
+        "label": "Business email",
+        "description": "Send project details, technical files or a business request by email.",
+        "ariaLabel": "Send an email to Longhini Industrial Development"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "Access Rafael Longhini Lopes’ professional profile on LinkedIn.",
+        "ariaLabel": "Access Rafael Longhini Lopes’ LinkedIn profile"
+      }
+    },
+    "company": {
+      "eyebrow": "LONGHINI",
+      "name": "LONGHINI - INDUSTRIAL DEVELOPMENT",
+      "description": "Engineering applied to product development, automation, tooling, prototyping and custom industrial solutions.",
+      "imageAlt": "Industrial environment with the Longhini Industrial Development logo"
+    },
+    "info": {
+      "email": {
+        "label": "Email"
+      },
+      "location": {
+        "label": "Location",
+        "value": "São Paulo, São Paulo, Brazil"
+      },
+      "focus": {
+        "label": "Focus",
+        "value": "Custom industrial projects"
+      },
+      "serviceMode": {
+        "label": "Service",
+        "value": "On-site and remote"
+      }
+    }
   }
 }

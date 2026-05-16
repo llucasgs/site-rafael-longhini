@@ -1,6 +1,6 @@
 # Contexto do Projeto para Claude/ChatGPT
 
-Arquivo preparado para ser carregado em assistentes de IA no navegador. Ele resume o projeto, a arquitetura atual, os arquivos relevantes, decisoes tecnicas e pontos de atencao.
+Arquivo preparado para ser carregado em assistentes de IA no navegador. Ele resume o estado atual do projeto, a arquitetura, os arquivos relevantes, decisoes tecnicas e pontos de atencao.
 
 ## Como usar
 
@@ -22,9 +22,9 @@ Objetivo: [descreva aqui a tarefa].
 | Tipo | Landing page institucional |
 | Empresa | Longhini Desenvolvimento Industrial |
 | Responsavel citado | Rafael Longhini Lopes |
-| Segmento | Desenvolvimento industrial, projetos mecanicos, engenharia reversa, prototipagem 3D, automacao industrial |
+| Segmento | Desenvolvimento industrial, projetos mecanicos, engenharia reversa, prototipagem 3D, automacao industrial, ferramentaria, dispositivos, moldes e maquinas especiais |
 | Idioma principal | Portugues do Brasil |
-| Publico | Clientes industriais e empresas que precisam transformar ideias em produtos, dispositivos, moldes, ferramentas ou maquinas especiais |
+| Publico | Clientes industriais e empresas que precisam transformar ideias em produtos, dispositivos, moldes, ferramentas, prototipos, automacoes ou maquinas especiais |
 
 ## Stack tecnica
 
@@ -66,6 +66,19 @@ Objetivo: [descreva aqui a tarefa].
 }
 ```
 
+Dev dependencies relevantes:
+
+```json
+{
+  "@gltf-transform/cli": "^4.3.0",
+  "@tailwindcss/postcss": "^4",
+  "eslint": "^9",
+  "eslint-config-next": "16.2.4",
+  "tailwindcss": "^4",
+  "typescript": "^5"
+}
+```
+
 ## Instrucao importante do projeto
 
 O arquivo `AGENTS.md` informa:
@@ -74,18 +87,18 @@ O arquivo `AGENTS.md` informa:
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-This version has breaking changes - APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 ```
 
-Interpretacao pratica: antes de mudancas profundas em APIs do Next.js, validar contra a documentacao local instalada em `node_modules/next/dist/docs/`.
+Interpretacao pratica: antes de mudancas em APIs, convencoes, metadata, roteamento, imagens ou comportamento do Next.js, validar contra a documentacao local instalada em `node_modules/next/dist/docs/`.
 
 ## Estado atual do Git no momento desta atualizacao
 
 ```text
- M .gitignore
- M AI_PROJECT_CONTEXT.md
- M src/components/Sections/Section5/Experience.tsx
+ M src/app/layout.tsx
+ M src/app/page.tsx
+ M src/constants/site.ts
  M src/i18n/ar-SA.json
  M src/i18n/de-DE.json
  M src/i18n/en-US.json
@@ -99,13 +112,11 @@ Interpretacao pratica: antes de mudancas profundas em APIs do Next.js, validar c
  M src/i18n/pt-BR.json
  M src/i18n/ru-RU.json
  M src/i18n/zh-CN.json
-?? public/Models/Chassis/
-?? public/Models/Oculus/
-?? public/Models/Robot/
-?? src/components/Three/ExperienceModelCanvas.tsx
+?? public/Sections/Section7/
+?? src/components/Sections/Section7/
 ```
 
-Leitura: ha trabalho em andamento na Section5 `Experience`, novos modelos 3D em `public/Models`, novas chaves de experiencia em todos os JSONs de idioma e ajustes no `.gitignore`. Nao assumir que esses arquivos ja foram commitados.
+Leitura: ha trabalho em andamento em SEO/layout, pagina principal, constantes, traducoes e uma nova secao de contato. Nao assumir que esses arquivos ja foram commitados.
 
 ## Estrutura relevante
 
@@ -124,20 +135,17 @@ src/
       MobileMenu.tsx
       LanguageSelector.tsx
     Sections/
-      Section1/
-        Hero.tsx
-      Section2/
-        Services.tsx
-      Section3/
-        Expertise.tsx
-      Section4/
-        Customers.tsx
-      Section5/
-        Experience.tsx
+      Section1/Hero.tsx
+      Section2/Services.tsx
+      Section3/Expertise.tsx
+      Section4/Customers.tsx
+      Section5/Experience.tsx
+      Section6/IndustrialModels.tsx
+      Section7/Contact.tsx
     Three/
       PrinterCanvas.tsx
       PrinterModel.tsx
-      ExperienceModelCanvas.tsx
+      ModelCanvas.tsx
     ui/
       Container.tsx
       ScrollReveal.tsx
@@ -191,6 +199,8 @@ public/
       logoArteres.svg
       logoCardenas.svg
       logoAmemiya.svg
+    Section7/
+      longhiniSpace.webp
   Models/
     3DPrinter/
       printer-optimized.glb
@@ -229,6 +239,8 @@ import { Services } from "@/components/Sections/Section2/Services";
 import { Expertise } from "@/components/Sections/Section3/Expertise";
 import { Customers } from "@/components/Sections/Section4/Customers";
 import { Experience } from "@/components/Sections/Section5/Experience";
+import { IndustrialModels } from "@/components/Sections/Section6/IndustrialModels";
+import { Contact } from "@/components/Sections/Section7/Contact";
 
 export default function Home() {
   return (
@@ -241,16 +253,16 @@ export default function Home() {
         <Expertise />
         <Customers />
         <Experience />
-        <section id="contact" className="min-h-screen" />
+        <IndustrialModels />
+        <Contact />{" "}
       </main>
-
       <FloatingButtons />
     </>
   );
 }
 ```
 
-Ponto atual: `contact` ainda parece placeholder vazio. `Experience` ja e uma secao real.
+Ponto de atencao: existe um `{" "}` apos `<Contact />`. Nao parece necessario funcionalmente; pode ser removido em limpeza futura.
 
 ## Layout global e SEO
 
@@ -258,11 +270,16 @@ Ponto atual: `contact` ainda parece placeholder vazio. `Experience` ja e uma sec
 
 - Usa Montserrat via `next/font/google`.
 - Envolve a aplicacao com `LanguageProvider`.
-- Define metadados basicos de SEO.
 - Define `html lang="pt-BR"` inicialmente.
-- Define Open Graph e Twitter card, mas ainda sem `metadataBase`, URL canonica ou imagem OG explicita.
+- Define `metadata` usando `site.seo` de `src/constants/site.ts`.
+- Define `title.default`, `title.template`, `description`, `keywords`, `authors`, `robots`, Open Graph e Twitter card.
 
-Ponto de atencao: algumas leituras no terminal podem exibir textos acentuados com mojibake. Validar o arquivo real em UTF-8 antes de alterar conteudo textual.
+Pontos de atencao:
+
+| Ponto | Impacto | Recomendacao |
+| --- | --- | --- |
+| Metadata sem `metadataBase`, canonical e URL OG explicita | Compartilhamento social e canonicalizacao menos fortes | Adicionar quando houver dominio oficial e imagem social |
+| Textos acentuados aparecem com mojibake em leituras de terminal | Risco de editar conteudo corrompido por engano | Validar encoding real antes de alterar textos |
 
 ## Estilo global
 
@@ -309,10 +326,10 @@ Estado atual das chaves:
 
 | Arquivo | Chaves |
 | --- | --- |
-| `pt-BR.json` | 159 chaves |
-| Demais JSONs | 159 chaves |
+| `pt-BR.json` | 186 chaves |
+| Demais JSONs | 186 chaves |
 
-Estado atual de i18n: todos os 13 JSONs possuem a mesma estrutura do `pt-BR.json`, com 159 chaves, sem chaves faltando ou extras no momento da validacao.
+Validacao feita no momento desta atualizacao: todos os 13 JSONs possuem a mesma estrutura do `pt-BR.json`, sem chaves faltando ou extras.
 
 ## Header e navegacao
 
@@ -338,12 +355,13 @@ const navItems = [
 ];
 ```
 
-Pontos de atencao:
+Observacoes:
 
-| Ponto | Impacto | Recomendacao |
-| --- | --- | --- |
-| `about` no menu | Confirmar se ha alvo real com `id="about"` | Ajustar se o Hero nao tiver esse id |
-| `contact` | Ainda parece placeholder vazio | Implementar conteudo real ou remover temporariamente do menu |
+| Ponto | Estado |
+| --- | --- |
+| `about` | Aponta para o `id="about"` do Hero |
+| `contact` | Aponta para a Section7 real de contato |
+| `industrial-models` | Existe como secao, mas nao aparece no menu principal |
 
 ## FloatingButtons
 
@@ -362,6 +380,7 @@ Pontos de atencao:
 `src/components/Sections/Section1/Hero.tsx`:
 
 - Client component.
+- Renderiza a secao `id="about"`.
 - Usa imagem `/Sections/Section1/longhiniPicture.webp`.
 - Usa logo `/Header/longhiniLogo.svg`.
 - CTA primario aponta para WhatsApp.
@@ -438,7 +457,7 @@ Servicos:
 - Usa `unoptimized` nos logos SVG.
 - Cada logo usa `alt={t(customer.altKey)}`.
 - A grade e responsiva: 2 colunas no mobile, 3 no `md`, 5 no `lg`.
-- Os logos aparecem coloridos por padrao. A classe `grayscale` foi removida.
+- Os logos aparecem coloridos por padrao.
 
 Clientes/logos atuais:
 
@@ -462,13 +481,11 @@ Clientes/logos atuais:
 - Client component.
 - Renderiza a secao `id="experience"`.
 - Usa `SectionTitle` com `experience.title` e `experience.description`.
-- Define dois tipos de cards:
-  - `ExperienceCard`: card accordion de experiencia profissional.
-  - `Experience3DCard`: card visual com modelo 3D interativo.
-- Usa `ExperienceModelCanvas` carregado via `next/dynamic` com `ssr: false`.
-- Usa `IntersectionObserver` para iniciar os modelos 3D apenas quando a area dos modelos se aproxima da viewport (`rootMargin: "400px 0px"`).
+- Renderiza uma timeline de experiencia profissional.
+- Usa `ExperienceCard`, um card accordion com logo, cargo, periodo, local e descricao.
 - Usa `ScrollReveal` nos cards.
 - Usa timeline mobile e timeline desktop separadas.
+- A experiencia atual mostra selo `experience.card.current`.
 
 Timeline:
 
@@ -486,21 +503,32 @@ Experiencias atuais:
 | Cardenas Industria Mecanica | `experience.items.cardenas` | `/Sections/Section5/logoCardenas.svg` |
 | Amemiya Honda Motos | `experience.items.amemiya` | `/Sections/Section5/logoAmemiya.svg` |
 
-Modelos 3D da Experience:
+## IndustrialModels
 
-| Modelo | Caminho | Chave aria |
-| --- | --- | --- |
-| Robo | `/Models/Robot/robot-optimized.glb` | `experience.models.robot.ariaLabel` |
-| Chassi | `/Models/Chassis/chassis-optimized.glb` | `experience.models.chassis.ariaLabel` |
-| Oculus | `/Models/Oculus/oculus-optimized.glb` | `experience.models.oculus.ariaLabel` |
-
-Ponto de atencao: as chaves `experience.models.*.ariaLabel` ja existem em todos os JSONs no momento desta atualizacao.
-
-## ExperienceModelCanvas
-
-`src/components/Three/ExperienceModelCanvas.tsx`:
+`src/components/Sections/Section6/IndustrialModels.tsx`:
 
 - Client component.
+- Renderiza a secao `id="industrial-models"`.
+- Exibe tres cards com modelos 3D interativos em grid responsivo.
+- Usa `dynamic()` com `ssr: false` para carregar `ModelCanvas`.
+- Cada card usa `IntersectionObserver` proprio para renderizar o modelo apenas quando o card se aproxima da viewport (`rootMargin: "280px 0px"`).
+- Cada card usa `role="img"` e `aria-label` vindo de i18n.
+- Usa `ScrollReveal`.
+
+Modelos:
+
+| Modelo | Caminho | Chave aria | Ajustes |
+| --- | --- | --- | --- |
+| Robo | `/Models/Robot/robot-optimized.glb` | `industrialModels.models.robot.ariaLabel` | `rotation: [0, -Math.PI / 4, 0]`, `fitMargin: 1.1` |
+| Chassi | `/Models/Chassis/chassis-optimized.glb` | `industrialModels.models.chassis.ariaLabel` | `rotation: [0, -Math.PI / 8, 0]`, `fitMargin: 0.9` |
+| Oculus | `/Models/Oculus/oculus-optimized.glb` | `industrialModels.models.oculus.ariaLabel` | `rotation: [0, -Math.PI / 6, 0]`, `fitMargin: 1` |
+
+## ModelCanvas
+
+`src/components/Three/ModelCanvas.tsx`:
+
+- Client component.
+- Componente generico para renderizar modelos GLB.
 - Usa `Canvas` de `@react-three/fiber`.
 - Usa `Bounds fit clip observe` e `Center` para enquadrar modelos de tamanhos diferentes.
 - Usa `useGLTF(modelPath)`.
@@ -511,32 +539,84 @@ Ponto de atencao: as chaves `experience.models.*.ariaLabel` ja existem em todos 
 - Usa `OrbitControls` com rotacao, zoom e pan habilitados.
 - `frameloop="demand"` e `dpr={[1, 1.25]}` para reduzir custo de renderizacao.
 
-## Modelos 3D e .gitignore
+## Contact
 
-O `.gitignore` ignora arquivos fonte e texturas dos modelos 3D, mantendo apenas GLBs otimizados e licencas como candidatos a versionamento.
+`src/components/Sections/Section7/Contact.tsx`:
 
-Regras relevantes:
+- Client component.
+- Renderiza a secao `id="contact"`.
+- Usa `SectionTitle` com `contact.title` e `contact.description`.
+- Usa `site.links.whatsapp`, `site.links.email` e `site.links.linkedin`.
+- Usa `site.contact.email` no bloco de informacoes.
+- Renderiza tres cards de acao:
+  - WhatsApp.
+  - E-mail comercial.
+  - LinkedIn.
+- Usa imagem `/Sections/Section7/longhiniSpace.webp` no card lateral da empresa.
+- Usa `InfoPill` para e-mail, localizacao, atendimento e foco.
+- Usa `ScrollReveal`, `aria-label`, `alt`, foco visivel e links externos com `target="_blank"` e `rel="noopener noreferrer"`.
 
-```gitignore
-# 3D source files - 3DPrinter
-public/Models/3DPrinter/printer-metalrough.glb
-public/Models/3DPrinter/scene.gltf
-public/Models/3DPrinter/scene.bin
-public/Models/3DPrinter/textures/
+Ponto de atencao: `LinkedInIcon` e um SVG manual local, nao um icone de `lucide-react`.
 
-# 3D source files - Robot
-public/Models/Robot/scene.gltf
-public/Models/Robot/scene.bin
-public/Models/Robot/textures/
+## Constantes do site
 
-# 3D source files - Oculus
-public/Models/Oculus/scene.gltf
-public/Models/Oculus/scene.bin
-public/Models/Oculus/textures/
+`src/constants/site.ts` centraliza dados de marca, contato, links e SEO.
 
-# 3D source files - Chassis
-public/Models/Chassis/scene.gltf
-public/Models/Chassis/scene.bin
+Estrutura atual:
+
+```ts
+export const site = {
+  name: "LONGHINI - DESENVOLVIMENTO INDUSTRIAL",
+  brandName: "LONGHINI",
+  businessArea: "DESENVOLVIMENTO INDUSTRIAL",
+  owner: "Rafael Longhini Lopes",
+  headline: "...",
+  slogan: "Transformo a sua ideia em realidade.",
+  location: "...",
+  description: "...",
+  contact: {
+    phone: "+55 11 98060-9919",
+    whatsappNumber: "5511980609919",
+    email: "comercial@longhinieng.com.br",
+  },
+  links: {
+    whatsapp: "https://wa.me/5511980609919",
+    email: "mailto:comercial@longhinieng.com.br",
+    linkedin: "https://www.linkedin.com/in/rafael-longhini-lopes-69256751/",
+  },
+  seo: {
+    title: "Longhini Desenvolvimento Industrial | Solucoes Industriais",
+    titleTemplate: "%s | Longhini Desenvolvimento Industrial",
+    description: "...",
+    openGraphDescription: "...",
+    twitterDescription: "...",
+    keywords: ["..."],
+  },
+} as const;
+```
+
+Ponto de atencao: leituras no terminal exibiram alguns textos acentuados como mojibake. Confirmar o conteudo real no editor antes de alterar estes textos.
+
+## Utilitario de scroll
+
+`src/utils/scrollToSection.ts`:
+
+```ts
+export function scrollToSection(id: string) {
+  const element = document.getElementById(id);
+
+  if (!element) return;
+
+  const headerOffset = 96;
+
+  const top =
+    element.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+  window.scrollTo({
+    top,
+    behavior: "smooth",
+  });
+}
 ```
 
 ## Componentes UI compartilhados
@@ -595,81 +675,74 @@ Uso esperado:
 
 Nao usar API antiga baseada em `children` e `eyebrow`.
 
-## Constantes do site
+## Modelos 3D e .gitignore
 
-`src/constants/site.ts`:
+O `.gitignore` ignora arquivos fonte e texturas dos modelos 3D, mantendo principalmente GLBs otimizados e licencas como candidatos a versionamento.
 
-```ts
-export const site = {
-  name: "LONGHINI - DESENVOLVIMENTO INDUSTRIAL",
-  owner: "Rafael Longhini Lopes",
-  headline:
-    "Projeto e Desenvolvimento de Novos Produtos e Solucoes Industriais",
-  slogan: "Transformo a sua ideia em realidade.",
-  location: "Sao Paulo, Sao Paulo, Brasil",
+Regras relevantes:
 
-  description:
-    "Solucoes industriais personalizadas com projetos mecanicos, engenharia reversa, prototipagem 3D, automacao industrial, ferramentas de producao e maquinas especiais.",
+```gitignore
+# 3D source files - 3DPrinter
+public/Models/3DPrinter/printer-metalrough.glb
+public/Models/3DPrinter/scene.gltf
+public/Models/3DPrinter/scene.bin
+public/Models/3DPrinter/textures/
 
-  links: {
-    whatsapp: "https://wa.me/5511980609919",
-    linkedin: "https://www.linkedin.com/in/rafael-longhini-lopes-69256751",
-  },
-} as const;
-```
+# 3D source files - Robot
+public/Models/Robot/scene.gltf
+public/Models/Robot/scene.bin
+public/Models/Robot/textures/
 
-## Utilitario de scroll
+# 3D source files - Oculus
+public/Models/Oculus/scene.gltf
+public/Models/Oculus/scene.bin
+public/Models/Oculus/textures/
 
-`src/utils/scrollToSection.ts`:
-
-```ts
-export function scrollToSection(id: string) {
-  const element = document.getElementById(id);
-
-  if (!element) return;
-
-  const headerOffset = 96;
-
-  const top =
-    element.getBoundingClientRect().top + window.scrollY - headerOffset;
-
-  window.scrollTo({
-    top,
-    behavior: "smooth",
-  });
-}
+# 3D source files - Chassis
+public/Models/Chassis/scene.gltf
+public/Models/Chassis/scene.bin
 ```
 
 ## SEO e acessibilidade
 
 Pontos positivos:
 
-- `metadata` definido no layout.
+- `metadata` definido no layout a partir de `site.seo`.
 - `robots.index` e `robots.follow`.
-- Open Graph e Twitter card.
+- Open Graph e Twitter card basicos.
 - `alt` em imagens relevantes.
-- `aria-label` em navegacao, hero, menu mobile, accordions, clientes, experiencia e botoes flutuantes.
+- `aria-label` em navegacao, hero, menu mobile, accordions, clientes, modelos 3D, contato e botoes flutuantes.
 - `focus-visible:ring` em controles interativos.
 - Menu mobile com `aria-modal`, `role="dialog"`, `aria-expanded` e Escape.
 - `document.documentElement.lang` atualizado ao trocar idioma.
 - Cards de servico, expertise e experiencia usam `aria-expanded` e `aria-controls`.
 - Logos de clientes e experiencias possuem texto alternativo via i18n.
-- Cards 3D da Experience usam `role="img"` com `aria-label`.
+- Cards 3D usam `role="img"` com `aria-label`.
 
 Pontos de melhoria:
 
 | Ponto | Impacto | Recomendacao |
 | --- | --- | --- |
-| `about` no menu pode nao ter alvo | Clique pode nao rolar se nao houver elemento com esse id | Confirmar `Hero` ou criar/ajustar id |
-| `contact` placeholder vazio | UX/SEO incompletos | Implementar conteudo real ou remover temporariamente do menu |
-| Metadata sem URL/imagem OG explicita | Compartilhamento social menos forte | Adicionar `metadataBase`, `openGraph.url`, `openGraph.images` quando houver dominio/imagem |
+| `industrial-models` nao aparece no menu | Secao pode ser descoberta apenas por rolagem | Decidir se deve entrar no menu ou permanecer como bloco visual de apoio |
+| Metadata sem URL/imagem OG explicita | Compartilhamento social menos forte | Adicionar `metadataBase`, canonical, `openGraph.url` e `openGraph.images` quando houver dominio/imagem |
 | Modelos 3D em secoes principais | Pode pesar em mobile | Validar performance real em dispositivos fracos |
+| Mojibake em terminal | Pode causar edicao incorreta de textos | Confirmar encoding/conteudo no editor antes de alterar copy |
+| `<Contact />{" "}` em `page.tsx` | Pequena sujeira de markup | Remover em limpeza futura |
 
 ## Validacao conhecida
 
-`npm.cmd run lint` ja foi executado anteriormente e falhou por 2 erros nao relacionados as ultimas alteracoes:
+Validacao executada nesta atualizacao:
 
 ```text
+Todos os arquivos src/i18n/*.json possuem 186 chaves.
+Nao ha chaves faltando ou extras em relacao ao pt-BR.json.
+```
+
+Validacao anterior registrada:
+
+```text
+npm.cmd run lint falhou por 2 erros:
+
 src/components/Header/MobileMenu.tsx
   react-hooks/set-state-in-effect em setMounted(true)
 
@@ -677,18 +750,18 @@ src/contexts/LanguageContext.tsx
   react-hooks/set-state-in-effect em setLanguage(stored)
 ```
 
-Esses erros devem ser tratados separadamente antes de considerar o lint limpo.
+Esses erros devem ser tratados separadamente antes de considerar o lint limpo. O lint nao foi reexecutado durante esta atualizacao de contexto.
 
 ## Recomendacoes tecnicas prioritarias
 
 | Prioridade | Acao | Motivo |
 | --- | --- | --- |
-| Alta | Implementar `contact` ou remover temporariamente do menu | Evita navegacao para area vazia |
-| Alta | Confirmar alvo do menu `about` | Evita navegacao quebrada |
-| Media | Validar performance dos 4 modelos 3D em mobile | Three.js pode impactar celulares |
-| Media | Resolver erros atuais de lint | Mantem qualidade e reduz regressao |
+| Alta | Validar encoding dos textos acentuados | Evita corromper conteudo em `site.ts` e JSONs |
+| Alta | Resolver erros atuais de lint | Mantem qualidade e reduz regressao |
+| Media | Validar performance dos modelos 3D em mobile | Three.js pode impactar celulares |
 | Media | Adicionar metadata canonica/OG completa quando houver dominio | Melhora SEO e compartilhamento |
-| Baixa | Considerar extrair dados de cards para configuracoes | Facilita manutencao futura |
+| Media | Decidir se `industrial-models` deve entrar na navegacao | Melhora descoberta da secao, se ela for estrategica |
+| Baixa | Remover `{" "}` apos `<Contact />` | Limpeza simples de JSX |
 
 ## Convencoes atuais do codigo
 
@@ -699,10 +772,11 @@ Esses erros devem ser tratados separadamente antes de considerar o lint limpo.
 - Textos multilingues ficam em `src/i18n/*.json`.
 - Estado global de idioma fica em `src/contexts/LanguageContext.tsx`.
 - Estilizacao e majoritariamente via classes Tailwind.
-- Icones vem de `lucide-react`.
+- Icones vem de `lucide-react`, com excecao atual do `LinkedInIcon` manual em `Contact.tsx`.
 - Imagens publicas sao referenciadas por caminho absoluto a partir de `public`.
 - Modelos 3D ficam em `public/Models/<Nome>/`.
 - Para modelos 3D no React, preferir carregamento sob demanda com `dynamic(..., { ssr: false })` e/ou `IntersectionObserver`.
+- Para SEO/copy institucional, preferir atualizar `src/constants/site.ts` e `src/i18n/*.json` conforme a responsabilidade de cada texto.
 
 ## Prompt recomendado para proximas interacoes com IA
 
@@ -721,8 +795,11 @@ Regras:
 9. Considere que `Services` e um accordion com imagem `/Sections/Section2/3Dprinter.png`.
 10. Considere que `Expertise` contem o canvas 3D da impressora carregado sob demanda.
 11. Considere que `Customers` existe como Section4, tem logos SVG coloridos e esta no menu.
-12. Considere que `Experience` existe como Section5, com timeline, accordions, logos e tres modelos 3D carregados sob demanda.
-13. Considere que `FloatingButtons` renderiza botao de voltar ao topo e WhatsApp.
+12. Considere que `Experience` existe como Section5, com timeline, accordions e logos.
+13. Considere que `IndustrialModels` existe como Section6, com tres modelos 3D carregados sob demanda.
+14. Considere que `Contact` existe como Section7, com WhatsApp, e-mail, LinkedIn e imagem institucional.
+15. Considere que `FloatingButtons` renderiza botao de voltar ao topo e WhatsApp.
+16. Valide APIs de Next.js na documentacao local antes de alteracoes estruturais.
 
 Minha tarefa e:
 [descreva a tarefa]

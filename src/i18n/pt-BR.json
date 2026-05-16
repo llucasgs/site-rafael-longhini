@@ -266,5 +266,53 @@
         "ariaLabel": "Modelo 3D interativo de um headset Oculus Quest 2"
       }
     }
+  },
+  "contact": {
+    "sectionAriaLabel": "Seção de contato da Longhini Desenvolvimento Industrial",
+    "title": "CONTATO",
+    "description": "Fale com a Longhini Desenvolvimento Industrial para transformar necessidades técnicas em soluções industriais sob medida.",
+    "ctaBadge": "Atendimento direto",
+    "ctaTitle": "Vamos conversar sobre o seu próximo projeto?",
+    "ctaDescription": "Envie sua demanda técnica, ideia, necessidade de melhoria ou desafio produtivo. A Longhini atua no desenvolvimento de produtos, dispositivos, máquinas, ferramentas, protótipos e soluções industriais personalizadas, com possibilidade de atendimento presencial ou à distância.",
+    "actions": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "Solicite um orçamento ou envie sua necessidade técnica diretamente pelo WhatsApp.",
+        "ariaLabel": "Entrar em contato com a Longhini pelo WhatsApp"
+      },
+      "email": {
+        "label": "E-mail comercial",
+        "description": "Envie detalhes do projeto, arquivos técnicos ou uma solicitação comercial por e-mail.",
+        "ariaLabel": "Enviar e-mail para a Longhini Desenvolvimento Industrial"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "Acesse o perfil profissional de Rafael Longhini Lopes no LinkedIn.",
+        "ariaLabel": "Acessar o LinkedIn de Rafael Longhini Lopes"
+      }
+    },
+    "company": {
+      "eyebrow": "LONGHINI",
+      "name": "LONGHINI - DESENVOLVIMENTO INDUSTRIAL",
+      "description": "Engenharia aplicada ao desenvolvimento de produtos, automação, ferramentaria, prototipagem e soluções industriais sob medida.",
+      "imageAlt": "Ambiente industrial com logo da Longhini Desenvolvimento Industrial"
+    },
+    "info": {
+      "email": {
+        "label": "E-mail"
+      },
+      "location": {
+        "label": "Localização",
+        "value": "São Paulo, São Paulo, Brasil"
+      },
+      "focus": {
+        "label": "Foco",
+        "value": "Projetos industriais sob medida"
+      },
+      "serviceMode": {
+        "label": "Atendimento",
+        "value": "Presencial e à distância"
+      }
+    }
   }
 }

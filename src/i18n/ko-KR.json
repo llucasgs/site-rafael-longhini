@@ -257,5 +257,53 @@
         "ariaLabel": "Oculus Quest 2 헤드셋의 인터랙티브 3D 모델"
       }
     }
+  },
+  "contact": {
+    "sectionAriaLabel": "Longhini 산업 개발 문의 섹션",
+    "title": "문의",
+    "description": "기술적 요구를 맞춤형 산업 솔루션으로 전환하기 위해 Longhini 산업 개발과 상담하세요.",
+    "ctaBadge": "직접 상담",
+    "ctaTitle": "다음 프로젝트에 대해 이야기해 볼까요?",
+    "ctaDescription": "기술적 요구, 아이디어, 개선 필요 사항 또는 생산 과제를 보내주세요. Longhini는 제품, 장치, 기계, 공구, 프로토타입 및 맞춤형 산업 솔루션 개발을 수행하며, 현장 또는 원격 서비스가 가능합니다.",
+    "actions": {
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "견적을 요청하거나 기술적 요구 사항을 WhatsApp으로 직접 보내세요.",
+        "ariaLabel": "WhatsApp으로 Longhini에 문의하기"
+      },
+      "email": {
+        "label": "비즈니스 이메일",
+        "description": "프로젝트 세부 정보, 기술 파일 또는 비즈니스 요청을 이메일로 보내세요.",
+        "ariaLabel": "Longhini 산업 개발에 이메일 보내기"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "LinkedIn에서 Rafael Longhini Lopes의 전문 프로필을 확인하세요.",
+        "ariaLabel": "Rafael Longhini Lopes의 LinkedIn 열기"
+      }
+    },
+    "company": {
+      "eyebrow": "LONGHINI",
+      "name": "LONGHINI - 산업 개발",
+      "description": "제품 개발, 자동화, 툴링, 프로토타이핑 및 맞춤형 산업 솔루션에 적용되는 엔지니어링.",
+      "imageAlt": "Longhini 산업 개발 로고가 있는 산업 환경"
+    },
+    "info": {
+      "email": {
+        "label": "이메일"
+      },
+      "location": {
+        "label": "위치",
+        "value": "상파울루, 상파울루, 브라질"
+      },
+      "focus": {
+        "label": "중점 분야",
+        "value": "맞춤형 산업 프로젝트"
+      },
+      "serviceMode": {
+        "label": "서비스",
+        "value": "현장 및 원격"
+      }
+    }
   }
 }
