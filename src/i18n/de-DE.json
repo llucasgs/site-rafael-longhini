@@ -305,5 +305,28 @@
         "value": "Vor Ort und remote"
       }
     }
+  },
+  "footer": {
+    "sectionAriaLabel": "Fußzeile der Website",
+    "logoAriaLabel": "Zurück zum Seitenanfang",
+    "logoAlt": "Logo von Longhini Industrielle Entwicklung",
+    "brandSubtitle": "Industrielle Entwicklung",
+    "copyright": {
+      "company": "Longhini Industrielle Entwicklung",
+      "rights": "Alle Rechte vorbehalten."
+    },
+    "developer": {
+      "label": "Entwickelt von",
+      "badgeAriaLabel": "Website des Entwicklers Lucas Garcia e Silva öffnen",
+      "signatureAlt": "Visuelle Signatur des Entwicklers Lucas Garcia e Silva",
+      "signatureAriaLabel": "Instagram des Entwicklers Lucas Garcia e Silva öffnen",
+      "linkedinAriaLabel": "LinkedIn von Lucas Garcia e Silva öffnen"
+    },
+    "modelCredits": {
+      "title": "Credits der 3D-Modelle",
+      "by": "von",
+      "license": "Lizenz:",
+      "source": "Quelle ansehen"
+    }
   }
 }

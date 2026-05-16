@@ -305,5 +305,28 @@
         "value": "Очно и удаленно"
       }
     }
+  },
+  "footer": {
+    "sectionAriaLabel": "Подвал сайта",
+    "logoAriaLabel": "Вернуться к началу страницы",
+    "logoAlt": "Логотип Longhini Промышленная Разработка",
+    "brandSubtitle": "Промышленная Разработка",
+    "copyright": {
+      "company": "Longhini Промышленная Разработка",
+      "rights": "Все права защищены."
+    },
+    "developer": {
+      "label": "Разработано",
+      "badgeAriaLabel": "Открыть сайт разработчика Lucas Garcia e Silva",
+      "signatureAlt": "Визуальная подпись разработчика Lucas Garcia e Silva",
+      "signatureAriaLabel": "Открыть Instagram разработчика Lucas Garcia e Silva",
+      "linkedinAriaLabel": "Открыть LinkedIn Lucas Garcia e Silva"
+    },
+    "modelCredits": {
+      "title": "Авторы 3D-моделей",
+      "by": "автор",
+      "license": "Лицензия:",
+      "source": "Смотреть источник"
+    }
   }
 }

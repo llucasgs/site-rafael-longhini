@@ -305,5 +305,28 @@
         "value": "现场和远程"
       }
     }
+  },
+  "footer": {
+    "sectionAriaLabel": "网站页脚",
+    "logoAriaLabel": "返回页面顶部",
+    "logoAlt": "Longhini 工业开发标志",
+    "brandSubtitle": "工业开发",
+    "copyright": {
+      "company": "Longhini 工业开发",
+      "rights": "版权所有。"
+    },
+    "developer": {
+      "label": "开发者",
+      "badgeAriaLabel": "访问开发者 Lucas Garcia e Silva 的网站",
+      "signatureAlt": "开发者 Lucas Garcia e Silva 的视觉签名",
+      "signatureAriaLabel": "访问开发者 Lucas Garcia e Silva 的 Instagram",
+      "linkedinAriaLabel": "访问 Lucas Garcia e Silva 的 LinkedIn"
+    },
+    "modelCredits": {
+      "title": "3D模型鸣谢",
+      "by": "作者",
+      "license": "许可证:",
+      "source": "查看来源"
+    }
   }
 }

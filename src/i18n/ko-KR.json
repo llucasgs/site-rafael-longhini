@@ -305,5 +305,28 @@
         "value": "현장 및 원격"
       }
     }
+  },
+  "footer": {
+    "sectionAriaLabel": "웹사이트 푸터",
+    "logoAriaLabel": "페이지 상단으로 돌아가기",
+    "logoAlt": "Longhini 산업 개발 로고",
+    "brandSubtitle": "산업 개발",
+    "copyright": {
+      "company": "Longhini 산업 개발",
+      "rights": "모든 권리 보유."
+    },
+    "developer": {
+      "label": "개발자",
+      "badgeAriaLabel": "개발자 Lucas Garcia e Silva의 웹사이트 열기",
+      "signatureAlt": "개발자 Lucas Garcia e Silva의 시각적 서명",
+      "signatureAriaLabel": "개발자 Lucas Garcia e Silva의 Instagram 열기",
+      "linkedinAriaLabel": "Lucas Garcia e Silva의 LinkedIn 열기"
+    },
+    "modelCredits": {
+      "title": "3D 모델 크레딧",
+      "by": "제작자",
+      "license": "라이선스:",
+      "source": "출처 보기"
+    }
   }
 }

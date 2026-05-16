@@ -328,7 +328,8 @@
       "label": "Desenvolvido por",
       "badgeAriaLabel": "Acessar o site do desenvolvedor Lucas Garcia e Silva",
       "signatureAlt": "Assinatura visual do desenvolvedor Lucas Garcia e Silva",
-      "signatureAriaLabel": "Acessar o Instagram do desenvolvedor Lucas Garcia e Silva"
+      "signatureAriaLabel": "Acessar o Instagram do desenvolvedor Lucas Garcia e Silva",
+      "linkedinAriaLabel": "Acessar o LinkedIn de Lucas Garcia e Silva"
     },
     "modelCredits": {
       "title": "Créditos dos modelos 3D",

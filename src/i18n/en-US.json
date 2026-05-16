@@ -305,5 +305,28 @@
         "value": "On-site and remote"
       }
     }
+  },
+  "footer": {
+    "sectionAriaLabel": "Website footer",
+    "logoAriaLabel": "Back to the top of the page",
+    "logoAlt": "Longhini Industrial Development logo",
+    "brandSubtitle": "Industrial Development",
+    "copyright": {
+      "company": "Longhini Industrial Development",
+      "rights": "All rights reserved."
+    },
+    "developer": {
+      "label": "Developed by",
+      "badgeAriaLabel": "Access the developer Lucas Garcia e Silva's website",
+      "signatureAlt": "Visual signature of developer Lucas Garcia e Silva",
+      "signatureAriaLabel": "Access the developer Lucas Garcia e Silva's Instagram",
+      "linkedinAriaLabel": "Access Lucas Garcia e Silva's LinkedIn"
+    },
+    "modelCredits": {
+      "title": "3D model credits",
+      "by": "by",
+      "license": "License:",
+      "source": "View source"
+    }
   }
 }

@@ -305,5 +305,28 @@
         "value": "In presenza e a distanza"
       }
     }
+  },
+  "footer": {
+    "sectionAriaLabel": "Piè di pagina del sito",
+    "logoAriaLabel": "Torna all’inizio della pagina",
+    "logoAlt": "Logo di Longhini Sviluppo Industriale",
+    "brandSubtitle": "Sviluppo Industriale",
+    "copyright": {
+      "company": "Longhini Sviluppo Industriale",
+      "rights": "Tutti i diritti riservati."
+    },
+    "developer": {
+      "label": "Sviluppato da",
+      "badgeAriaLabel": "Accedere al sito dello sviluppatore Lucas Garcia e Silva",
+      "signatureAlt": "Firma visiva dello sviluppatore Lucas Garcia e Silva",
+      "signatureAriaLabel": "Accedere all’Instagram dello sviluppatore Lucas Garcia e Silva",
+      "linkedinAriaLabel": "Accedere al LinkedIn di Lucas Garcia e Silva"
+    },
+    "modelCredits": {
+      "title": "Crediti dei modelli 3D",
+      "by": "di",
+      "license": "Licenza:",
+      "source": "Vedi fonte"
+    }
   }
 }

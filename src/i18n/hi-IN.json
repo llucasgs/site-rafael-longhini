@@ -305,5 +305,28 @@
         "value": "ऑन-साइट और रिमोट"
       }
     }
+  },
+  "footer": {
+    "sectionAriaLabel": "वेबसाइट फुटर",
+    "logoAriaLabel": "पेज के शीर्ष पर वापस जाएँ",
+    "logoAlt": "Longhini औद्योगिक विकास का लोगो",
+    "brandSubtitle": "औद्योगिक विकास",
+    "copyright": {
+      "company": "Longhini औद्योगिक विकास",
+      "rights": "सभी अधिकार सुरक्षित।"
+    },
+    "developer": {
+      "label": "द्वारा विकसित",
+      "badgeAriaLabel": "डेवलपर Lucas Garcia e Silva की वेबसाइट खोलें",
+      "signatureAlt": "डेवलपर Lucas Garcia e Silva का दृश्य हस्ताक्षर",
+      "signatureAriaLabel": "डेवलपर Lucas Garcia e Silva का Instagram खोलें",
+      "linkedinAriaLabel": "Lucas Garcia e Silva का LinkedIn खोलें"
+    },
+    "modelCredits": {
+      "title": "3D मॉडल क्रेडिट",
+      "by": "द्वारा",
+      "license": "लाइसेंस:",
+      "source": "स्रोत देखें"
+    }
   }
 }

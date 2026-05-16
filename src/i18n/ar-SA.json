@@ -305,5 +305,28 @@
         "value": "حضوريًا وعن بُعد"
       }
     }
+  },
+  "footer": {
+    "sectionAriaLabel": "تذييل الموقع",
+    "logoAriaLabel": "العودة إلى أعلى الصفحة",
+    "logoAlt": "شعار Longhini للتطوير الصناعي",
+    "brandSubtitle": "التطوير الصناعي",
+    "copyright": {
+      "company": "Longhini للتطوير الصناعي",
+      "rights": "جميع الحقوق محفوظة."
+    },
+    "developer": {
+      "label": "تم التطوير بواسطة",
+      "badgeAriaLabel": "زيارة موقع المطور Lucas Garcia e Silva",
+      "signatureAlt": "التوقيع البصري للمطور Lucas Garcia e Silva",
+      "signatureAriaLabel": "زيارة Instagram الخاص بالمطور Lucas Garcia e Silva",
+      "linkedinAriaLabel": "زيارة LinkedIn الخاص بـ Lucas Garcia e Silva"
+    },
+    "modelCredits": {
+      "title": "اعتمادات النماذج ثلاثية الأبعاد",
+      "by": "بواسطة",
+      "license": "الترخيص:",
+      "source": "عرض المصدر"
+    }
   }
 }

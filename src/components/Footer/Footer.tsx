@@ -39,16 +39,6 @@ function InstagramIcon({ size = 13 }: { size?: number }) {
   );
 }
 
-// --------------------------------------------------------------------------
-// ModelCredits
-//
-// Mudanças em relação à versão anterior:
-//   • Container usa o mesmo padrão glass dos painéis do Contact
-//     (border/bg/backdrop-blur/shadow) em vez de apenas rounded-full
-//   • Estado fechado tem aparência de "pill" e estado aberto expande
-//     suavemente para um card completo (mesma lógica, visual mais refinado)
-//   • Cards internos de cada crédito ganham a linha de brilho superior
-// --------------------------------------------------------------------------
 function ModelCredits() {
   const { t } = useLanguage();
 
@@ -160,21 +150,6 @@ function ModelCredits() {
   );
 }
 
-// --------------------------------------------------------------------------
-// Footer — componente principal
-//
-// Mudanças em relação à versão anterior:
-//   • Separador visual entre o corpo do footer e o rodapé de copyright:
-//     linha com gradiente laranja/sky (detalhe premium consistente com a
-//     identidade da landing page)
-//   • Logo e copyright agrupados em painel glass leve (mesmo estilo dos
-//     painéis do Contact), substituindo o bloco solto
-//   • Bloco do desenvolvedor (assinatura + badge) num painel glass espelhado
-//     à direita, criando simetria visual com o painel da esquerda
-//   • ModelCredits centralizado no grid mantém a lógica existente, agora
-//     com visual elevado
-//   • Blobs decorativos alinhados com Contact (mesma intensidade/posição)
-// --------------------------------------------------------------------------
 export function Footer() {
   const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
@@ -372,7 +347,7 @@ export function Footer() {
                     href={site.developer.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Acessar o LinkedIn de Lucas Garcia e Silva"
+                    aria-label={t("footer.developer.linkedinAriaLabel")}
                     className="
                       group inline-flex items-center gap-2
                       text-xs text-slate-600 transition-colors duration-300

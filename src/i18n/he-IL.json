@@ -305,5 +305,28 @@
         "value": "פרונטלי ומרחוק"
       }
     }
+  },
+  "footer": {
+    "sectionAriaLabel": "כותרת תחתונה של האתר",
+    "logoAriaLabel": "חזרה לראש הדף",
+    "logoAlt": "לוגו של Longhini פיתוח תעשייתי",
+    "brandSubtitle": "פיתוח תעשייתי",
+    "copyright": {
+      "company": "Longhini פיתוח תעשייתי",
+      "rights": "כל הזכויות שמורות."
+    },
+    "developer": {
+      "label": "פותח על ידי",
+      "badgeAriaLabel": "גישה לאתר של המפתח Lucas Garcia e Silva",
+      "signatureAlt": "חתימה חזותית של המפתח Lucas Garcia e Silva",
+      "signatureAriaLabel": "גישה לאינסטגרם של המפתח Lucas Garcia e Silva",
+      "linkedinAriaLabel": "גישה ל-LinkedIn של Lucas Garcia e Silva"
+    },
+    "modelCredits": {
+      "title": "קרדיטים למודלים תלת-ממדיים",
+      "by": "מאת",
+      "license": "רישיון:",
+      "source": "צפייה במקור"
+    }
   }
 }

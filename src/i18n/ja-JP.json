@@ -305,5 +305,28 @@
         "value": "現地対応およびリモート対応"
       }
     }
+  },
+  "footer": {
+    "sectionAriaLabel": "サイトのフッター",
+    "logoAriaLabel": "ページ上部へ戻る",
+    "logoAlt": "Longhini 産業開発のロゴ",
+    "brandSubtitle": "産業開発",
+    "copyright": {
+      "company": "Longhini 産業開発",
+      "rights": "無断転載を禁じます。"
+    },
+    "developer": {
+      "label": "開発者",
+      "badgeAriaLabel": "開発者 Lucas Garcia e Silva のウェブサイトを開く",
+      "signatureAlt": "開発者 Lucas Garcia e Silva のビジュアル署名",
+      "signatureAriaLabel": "開発者 Lucas Garcia e Silva の Instagram を開く",
+      "linkedinAriaLabel": "Lucas Garcia e Silva の LinkedIn を開く"
+    },
+    "modelCredits": {
+      "title": "3Dモデルのクレジット",
+      "by": "作者",
+      "license": "ライセンス:",
+      "source": "出典を見る"
+    }
   }
 }
