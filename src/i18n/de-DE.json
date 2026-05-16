@@ -242,5 +242,20 @@
         "description": "Beginn der technischen Laufbahn mit Tätigkeit in Betrieb, Vorbereitung, Werkzeugbau, Bau von Vorrichtungen für Serienproduktion und Montage von Maschinenschutzvorrichtungen."
       }
     }
+  },
+  "industrialModels": {
+    "sectionAriaLabel": "Sektion mit interaktiven 3D-Modellen zu Technologie, Automatisierung und industrieller Entwicklung",
+
+    "models": {
+      "robot": {
+        "ariaLabel": "Interaktives 3D-Modell eines Roboters"
+      },
+      "chassis": {
+        "ariaLabel": "Interaktives 3D-Modell eines mechanischen Fahrgestells"
+      },
+      "oculus": {
+        "ariaLabel": "Interaktives 3D-Modell eines Oculus Quest 2 Headsets"
+      }
+    }
   }
 }

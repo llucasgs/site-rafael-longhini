@@ -242,5 +242,20 @@
         "description": "Beginning of the technical career with work in operation, preparation, tooling, construction of devices for serial production and assembly of machine guards."
       }
     }
+  },
+  "industrialModels": {
+    "sectionAriaLabel": "Section with interactive 3D models related to technology, automation and industrial development",
+
+    "models": {
+      "robot": {
+        "ariaLabel": "Interactive 3D model of a robot"
+      },
+      "chassis": {
+        "ariaLabel": "Interactive 3D model of a mechanical chassis"
+      },
+      "oculus": {
+        "ariaLabel": "Interactive 3D model of an Oculus Quest 2 headset"
+      }
+    }
   }
 }

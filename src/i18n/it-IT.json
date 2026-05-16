@@ -242,5 +242,20 @@
         "description": "Inizio del percorso tecnico con attività di operazione, preparazione, attrezzeria, costruzione di dispositivi per produzione in serie e montaggio di protezioni per macchine."
       }
     }
+  },
+  "industrialModels": {
+    "sectionAriaLabel": "Sezione con modelli 3D interattivi legati a tecnologia, automazione e sviluppo industriale",
+
+    "models": {
+      "robot": {
+        "ariaLabel": "Modello 3D interattivo di un robot"
+      },
+      "chassis": {
+        "ariaLabel": "Modello 3D interattivo di un telaio meccanico"
+      },
+      "oculus": {
+        "ariaLabel": "Modello 3D interattivo di un visore Oculus Quest 2"
+      }
+    }
   }
 }

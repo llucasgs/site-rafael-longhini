@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
-import { useId, useState } from "react";
+import { Fragment, useId, useState } from "react";
 import { CalendarDays, ChevronDown, MapPin } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
@@ -158,7 +157,9 @@ function ExperienceCard({
         id={contentId}
         className={`
           relative z-10 grid transition-all duration-300 ease-out
-          ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}
+          ${
+            isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          }
         `}
       >
         <div className="overflow-hidden">
@@ -262,7 +263,6 @@ export function Experience() {
               return (
                 <ScrollReveal key={experience.companyKey} delay={delay}>
                   <div className="relative pl-16">
-                    {/* Timeline dot */}
                     <div
                       aria-hidden="true"
                       className="
@@ -271,6 +271,7 @@ export function Experience() {
                         bg-[#0b0b0f] shadow-[0_0_24px_rgba(251,146,60,0.35)]
                       "
                     />
+
                     <ExperienceCard
                       company={company}
                       role={t(experience.roleKey)}
@@ -303,7 +304,7 @@ export function Experience() {
                 index % 3 === 0 ? "none" : index % 3 === 1 ? "sm" : "md";
 
               return (
-                <React.Fragment key={experience.companyKey}>
+                <Fragment key={experience.companyKey}>
                   <ScrollReveal
                     delay={delay}
                     className="flex items-center pr-4"
@@ -328,10 +329,7 @@ export function Experience() {
                     )}
                   </ScrollReveal>
 
-                  <div
-                    key={`${experience.companyKey}-dot`}
-                    className="relative flex flex-col items-center"
-                  >
+                  <div className="relative flex flex-col items-center">
                     <div
                       aria-hidden="true"
                       className="
@@ -382,7 +380,7 @@ export function Experience() {
                       />
                     )}
                   </ScrollReveal>
-                </React.Fragment>
+                </Fragment>
               );
             })}
           </div>

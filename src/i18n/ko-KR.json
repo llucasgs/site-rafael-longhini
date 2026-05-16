@@ -242,5 +242,20 @@
         "description": "운영, 준비, 툴링, 양산용 장치 제작 및 기계 보호 장치 조립 업무를 통해 기술 경력을 시작했습니다."
       }
     }
+  },
+  "industrialModels": {
+    "sectionAriaLabel": "기술, 자동화 및 산업 개발과 관련된 인터랙티브 3D 모델 섹션",
+
+    "models": {
+      "robot": {
+        "ariaLabel": "로봇의 인터랙티브 3D 모델"
+      },
+      "chassis": {
+        "ariaLabel": "기계식 섀시의 인터랙티브 3D 모델"
+      },
+      "oculus": {
+        "ariaLabel": "Oculus Quest 2 헤드셋의 인터랙티브 3D 모델"
+      }
+    }
   }
 }

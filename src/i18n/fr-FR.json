@@ -242,5 +242,20 @@
         "description": "Début du parcours technique avec des activités d’opération, de préparation, d’outillage, de construction de dispositifs pour la production en série et de montage de protections de machines."
       }
     }
+  },
+  "industrialModels": {
+    "sectionAriaLabel": "Section avec des modèles 3D interactifs liés à la technologie, à l’automatisation et au développement industriel",
+
+    "models": {
+      "robot": {
+        "ariaLabel": "Modèle 3D interactif d’un robot"
+      },
+      "chassis": {
+        "ariaLabel": "Modèle 3D interactif d’un châssis mécanique"
+      },
+      "oculus": {
+        "ariaLabel": "Modèle 3D interactif d’un casque Oculus Quest 2"
+      }
+    }
   }
 }

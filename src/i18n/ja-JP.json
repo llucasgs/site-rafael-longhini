@@ -242,5 +242,20 @@
         "description": "操作、準備、金型・工具製作、量産向け治具の製作、機械保護カバーの組み立てを通じて技術キャリアを開始。"
       }
     }
+  },
+  "industrialModels": {
+    "sectionAriaLabel": "技術、自動化、産業開発に関連するインタラクティブ3Dモデルのセクション",
+
+    "models": {
+      "robot": {
+        "ariaLabel": "ロボットのインタラクティブ3Dモデル"
+      },
+      "chassis": {
+        "ariaLabel": "機械シャーシのインタラクティブ3Dモデル"
+      },
+      "oculus": {
+        "ariaLabel": "Oculus Quest 2 ヘッドセットのインタラクティブ3Dモデル"
+      }
+    }
   }
 }

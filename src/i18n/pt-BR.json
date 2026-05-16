@@ -251,5 +251,20 @@
         "description": "Início da trajetória técnica com atuação em operação, preparação, ferramentaria, construção de dispositivos para produção seriada e montagem de proteções de máquinas."
       }
     }
+  },
+  "industrialModels": {
+    "sectionAriaLabel": "Seção com modelos 3D interativos relacionados a tecnologia, automação e desenvolvimento industrial",
+
+    "models": {
+      "robot": {
+        "ariaLabel": "Modelo 3D interativo de um robô"
+      },
+      "chassis": {
+        "ariaLabel": "Modelo 3D interativo de um chassi mecânico"
+      },
+      "oculus": {
+        "ariaLabel": "Modelo 3D interativo de um headset Oculus Quest 2"
+      }
+    }
   }
 }

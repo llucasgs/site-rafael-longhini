@@ -242,5 +242,20 @@
         "description": "Inicio de la trayectoria técnica con actuación en operación, preparación, matricería, construcción de dispositivos para producción seriada y montaje de protecciones de máquinas."
       }
     }
+  },
+  "industrialModels": {
+    "sectionAriaLabel": "Sección con modelos 3D interactivos relacionados con tecnología, automatización y desarrollo industrial",
+
+    "models": {
+      "robot": {
+        "ariaLabel": "Modelo 3D interactivo de un robot"
+      },
+      "chassis": {
+        "ariaLabel": "Modelo 3D interactivo de un chasis mecánico"
+      },
+      "oculus": {
+        "ariaLabel": "Modelo 3D interactivo de un visor Oculus Quest 2"
+      }
+    }
   }
 }

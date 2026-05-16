@@ -40,8 +40,22 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# 3D source files
+# 3D source files - 3DPrinter
 public/Models/3DPrinter/printer-metalrough.glb
 public/Models/3DPrinter/scene.gltf
 public/Models/3DPrinter/scene.bin
 public/Models/3DPrinter/textures/
+
+# 3D source files - Robot
+public/Models/Robot/scene.gltf
+public/Models/Robot/scene.bin
+public/Models/Robot/textures/
+
+# 3D source files - Oculus
+public/Models/Oculus/scene.gltf
+public/Models/Oculus/scene.bin
+public/Models/Oculus/textures/
+
+# 3D source files - Chassis
+public/Models/Chassis/scene.gltf
+public/Models/Chassis/scene.bin

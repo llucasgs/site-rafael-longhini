@@ -5,6 +5,7 @@ import { Services } from "@/components/Sections/Section2/Services";
 import { Expertise } from "@/components/Sections/Section3/Expertise";
 import { Customers } from "@/components/Sections/Section4/Customers";
 import { Experience } from "@/components/Sections/Section5/Experience";
+import { IndustrialModels } from "@/components/Sections/Section6/IndustrialModels";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
         <Expertise />
         <Customers />
         <Experience />
+        <IndustrialModels />
+
         <section id="contact" className="min-h-screen" />
       </main>
       <FloatingButtons />

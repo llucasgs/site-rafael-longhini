@@ -242,5 +242,20 @@
         "description": "技术职业生涯始于设备操作、准备、工装制造、批量生产装置构建以及机器防护装置组装等工作。"
       }
     }
+  },
+  "industrialModels": {
+    "sectionAriaLabel": "与技术、自动化和工业开发相关的交互式3D模型区域",
+
+    "models": {
+      "robot": {
+        "ariaLabel": "机器人的交互式3D模型"
+      },
+      "chassis": {
+        "ariaLabel": "机械底盘的交互式3D模型"
+      },
+      "oculus": {
+        "ariaLabel": "Oculus Quest 2 头显的交互式3D模型"
+      }
+    }
   }
 }
