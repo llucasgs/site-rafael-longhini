@@ -1,4 +1,5 @@
 import { FloatingButtons } from "@/components/FloatingButtons/FloatingButtons";
+import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import { Hero } from "@/components/Sections/Section1/Hero";
 import { Services } from "@/components/Sections/Section2/Services";
@@ -22,6 +23,7 @@ export default function Home() {
         <IndustrialModels />
         <Contact />{" "}
       </main>
+      <Footer />
       <FloatingButtons />
     </>
   );

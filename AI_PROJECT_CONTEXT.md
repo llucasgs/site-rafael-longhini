@@ -87,7 +87,7 @@ O arquivo `AGENTS.md` informa:
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+This version has breaking changes - APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 ```
 
@@ -96,27 +96,15 @@ Interpretacao pratica: antes de mudancas em APIs, convencoes, metadata, roteamen
 ## Estado atual do Git no momento desta atualizacao
 
 ```text
- M src/app/layout.tsx
+ M AI_PROJECT_CONTEXT.md
  M src/app/page.tsx
  M src/constants/site.ts
- M src/i18n/ar-SA.json
- M src/i18n/de-DE.json
- M src/i18n/en-US.json
- M src/i18n/es-ES.json
- M src/i18n/fr-FR.json
- M src/i18n/he-IL.json
- M src/i18n/hi-IN.json
- M src/i18n/it-IT.json
- M src/i18n/ja-JP.json
- M src/i18n/ko-KR.json
  M src/i18n/pt-BR.json
- M src/i18n/ru-RU.json
- M src/i18n/zh-CN.json
-?? public/Sections/Section7/
-?? src/components/Sections/Section7/
+?? public/Footer/
+?? src/components/Footer/
 ```
 
-Leitura: ha trabalho em andamento em SEO/layout, pagina principal, constantes, traducoes e uma nova secao de contato. Nao assumir que esses arquivos ja foram commitados.
+Leitura: este contexto foi alterado, e ha trabalho em andamento na pagina principal, constantes, `pt-BR.json` e um novo footer com asset proprio. Nao assumir que esses arquivos ja foram commitados.
 
 ## Estrutura relevante
 
@@ -127,6 +115,8 @@ src/
     layout.tsx
     globals.css
   components/
+    Footer/
+      Footer.tsx
     FloatingButtons/
       FloatingButtons.tsx
     Header/
@@ -174,6 +164,8 @@ src/
     scrollToSection.ts
 
 public/
+  Footer/
+    devSignature.svg
   Header/
     longhiniLogo.svg
     Flags/*.webp
@@ -233,6 +225,7 @@ public/
 
 ```tsx
 import { FloatingButtons } from "@/components/FloatingButtons/FloatingButtons";
+import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import { Hero } from "@/components/Sections/Section1/Hero";
 import { Services } from "@/components/Sections/Section2/Services";
@@ -256,6 +249,7 @@ export default function Home() {
         <IndustrialModels />
         <Contact />{" "}
       </main>
+      <Footer />
       <FloatingButtons />
     </>
   );
@@ -326,10 +320,29 @@ Estado atual das chaves:
 
 | Arquivo | Chaves |
 | --- | --- |
-| `pt-BR.json` | 186 chaves |
+| `pt-BR.json` | 200 chaves |
 | Demais JSONs | 186 chaves |
 
-Validacao feita no momento desta atualizacao: todos os 13 JSONs possuem a mesma estrutura do `pt-BR.json`, sem chaves faltando ou extras.
+Validacao feita no momento desta atualizacao: `pt-BR.json` possui 14 chaves novas de `footer`; os demais 12 JSONs ainda nao possuem essas chaves. Como o `LanguageContext` tem fallback para `pt-BR`, a UI tende a exibir portugues para essas chaves nos outros idiomas ate as traducoes serem completadas.
+
+Chaves faltando nos demais idiomas:
+
+```text
+footer.sectionAriaLabel
+footer.logoAriaLabel
+footer.logoAlt
+footer.brandSubtitle
+footer.copyright.company
+footer.copyright.rights
+footer.developer.label
+footer.developer.badgeAriaLabel
+footer.developer.signatureAlt
+footer.developer.signatureAriaLabel
+footer.modelCredits.title
+footer.modelCredits.by
+footer.modelCredits.license
+footer.modelCredits.source
+```
 
 ## Header e navegacao
 
@@ -554,9 +567,36 @@ Modelos:
   - LinkedIn.
 - Usa imagem `/Sections/Section7/longhiniSpace.webp` no card lateral da empresa.
 - Usa `InfoPill` para e-mail, localizacao, atendimento e foco.
+- O grid de informacoes usa `grid-cols-1 sm:grid-cols-2`; e-mail e foco ocupam duas colunas em telas `sm+`.
+- O badge de CTA usa ponto pulsante e camada `bg-orange-500/10 animate-pulse`.
 - Usa `ScrollReveal`, `aria-label`, `alt`, foco visivel e links externos com `target="_blank"` e `rel="noopener noreferrer"`.
 
 Ponto de atencao: `LinkedInIcon` e um SVG manual local, nao um icone de `lucide-react`.
+
+## Footer
+
+`src/components/Footer/Footer.tsx`:
+
+- Client component.
+- Renderiza o rodape apos `main` e antes de `FloatingButtons`.
+- Usa `Container`, `Image`, `site`, `useLanguage` e icones `ChevronDown`/`ExternalLink` de `lucide-react`.
+- Usa logo `/Header/longhiniLogo.svg`.
+- Usa assinatura visual do desenvolvedor em `/Footer/devSignature.svg`.
+- Usa `site.developer` para nome, site e Instagram do desenvolvedor.
+- Usa `site.modelCredits` para listar creditos/licencas/fontes dos modelos 3D.
+- `ModelCredits` usa `<details>`/`<summary>` para mostrar/ocultar os creditos.
+- `DeveloperBadge` aponta para `site.developer.website`.
+- A assinatura visual aponta para `site.developer.instagram`.
+- Exibe ano atual com `new Date().getFullYear()`.
+- Usa chaves `footer.*` do i18n.
+
+Pontos de atencao:
+
+| Ponto | Impacto | Recomendacao |
+| --- | --- | --- |
+| Chaves `footer.*` existem apenas no `pt-BR.json` | Outros idiomas caem no fallback em portugues | Traduzir as 14 chaves novas para os demais JSONs |
+| Texto de copyright aparece com `Â©` no terminal | Pode ser apenas mojibake de exibicao ou caractere incorreto real | Validar no editor; preferir `&copy;` ou caractere correto se necessario |
+| Creditos de modelos 3D ficam em `site.modelCredits` | Centraliza atribuicoes e facilita manutencao | Manter toda nova licenca/fonte de modelo nesse array |
 
 ## Constantes do site
 
@@ -584,6 +624,23 @@ export const site = {
     email: "mailto:comercial@longhinieng.com.br",
     linkedin: "https://www.linkedin.com/in/rafael-longhini-lopes-69256751/",
   },
+  developer: {
+    name: "Lucas Garcia e Silva",
+    website: "https://devllucasgs.com.br",
+    instagram: "https://www.instagram.com/devllucas_gs/",
+  },
+  modelCredits: [
+    {
+      title: "3D Printer - Bambu Lab A1 Mini",
+      source: "https://sketchfab.com/...",
+      author: "neilvfx",
+      authorUrl: "https://sketchfab.com/neilvfx",
+      license: "CC-BY-4.0",
+      licenseUrl: "http://creativecommons.org/licenses/by/4.0/",
+      attributionRequired: true,
+    },
+    // Chassis, Oculus e Robot tambem ficam neste array.
+  ],
   seo: {
     title: "Longhini Desenvolvimento Industrial | Solucoes Industriais",
     titleTemplate: "%s | Longhini Desenvolvimento Industrial",
@@ -711,13 +768,14 @@ Pontos positivos:
 - `robots.index` e `robots.follow`.
 - Open Graph e Twitter card basicos.
 - `alt` em imagens relevantes.
-- `aria-label` em navegacao, hero, menu mobile, accordions, clientes, modelos 3D, contato e botoes flutuantes.
+- `aria-label` em navegacao, hero, menu mobile, accordions, clientes, modelos 3D, contato, footer e botoes flutuantes.
 - `focus-visible:ring` em controles interativos.
 - Menu mobile com `aria-modal`, `role="dialog"`, `aria-expanded` e Escape.
 - `document.documentElement.lang` atualizado ao trocar idioma.
 - Cards de servico, expertise e experiencia usam `aria-expanded` e `aria-controls`.
 - Logos de clientes e experiencias possuem texto alternativo via i18n.
 - Cards 3D usam `role="img"` com `aria-label`.
+- Footer usa `<details>`/`<summary>` para creditos de modelos 3D e links externos com `rel="noopener noreferrer"`.
 
 Pontos de melhoria:
 
@@ -728,14 +786,16 @@ Pontos de melhoria:
 | Modelos 3D em secoes principais | Pode pesar em mobile | Validar performance real em dispositivos fracos |
 | Mojibake em terminal | Pode causar edicao incorreta de textos | Confirmar encoding/conteudo no editor antes de alterar copy |
 | `<Contact />{" "}` em `page.tsx` | Pequena sujeira de markup | Remover em limpeza futura |
+| Chaves `footer.*` faltando em 12 idiomas | Footer aparece parcialmente em portugues fora de `pt-BR` | Traduzir e sincronizar todos os JSONs |
 
 ## Validacao conhecida
 
 Validacao executada nesta atualizacao:
 
 ```text
-Todos os arquivos src/i18n/*.json possuem 186 chaves.
-Nao ha chaves faltando ou extras em relacao ao pt-BR.json.
+pt-BR.json possui 200 chaves.
+Os demais 12 JSONs possuem 186 chaves.
+Faltam 14 chaves footer.* nos demais idiomas.
 ```
 
 Validacao anterior registrada:
@@ -756,6 +816,7 @@ Esses erros devem ser tratados separadamente antes de considerar o lint limpo. O
 
 | Prioridade | Acao | Motivo |
 | --- | --- | --- |
+| Alta | Traduzir as 14 chaves `footer.*` para os demais 12 idiomas | Evita fallback visual em portugues ao trocar idioma |
 | Alta | Validar encoding dos textos acentuados | Evita corromper conteudo em `site.ts` e JSONs |
 | Alta | Resolver erros atuais de lint | Mantem qualidade e reduz regressao |
 | Media | Validar performance dos modelos 3D em mobile | Three.js pode impactar celulares |
@@ -768,6 +829,7 @@ Esses erros devem ser tratados separadamente antes de considerar o lint limpo. O
 - Componentes client-side declaram `"use client"` no topo.
 - Alias `@/*` aponta para `./src/*`.
 - Componentes visuais ficam em `src/components`.
+- Footer fica em `src/components/Footer/Footer.tsx`.
 - Secoes ficam em `src/components/Sections/SectionN`.
 - Textos multilingues ficam em `src/i18n/*.json`.
 - Estado global de idioma fica em `src/contexts/LanguageContext.tsx`.
@@ -777,6 +839,7 @@ Esses erros devem ser tratados separadamente antes de considerar o lint limpo. O
 - Modelos 3D ficam em `public/Models/<Nome>/`.
 - Para modelos 3D no React, preferir carregamento sob demanda com `dynamic(..., { ssr: false })` e/ou `IntersectionObserver`.
 - Para SEO/copy institucional, preferir atualizar `src/constants/site.ts` e `src/i18n/*.json` conforme a responsabilidade de cada texto.
+- Creditos/licencas/fontes dos modelos 3D ficam em `site.modelCredits`.
 
 ## Prompt recomendado para proximas interacoes com IA
 
@@ -798,8 +861,10 @@ Regras:
 12. Considere que `Experience` existe como Section5, com timeline, accordions e logos.
 13. Considere que `IndustrialModels` existe como Section6, com tres modelos 3D carregados sob demanda.
 14. Considere que `Contact` existe como Section7, com WhatsApp, e-mail, LinkedIn e imagem institucional.
-15. Considere que `FloatingButtons` renderiza botao de voltar ao topo e WhatsApp.
-16. Valide APIs de Next.js na documentacao local antes de alteracoes estruturais.
+15. Considere que `Footer` existe, usa `site.modelCredits`, `site.developer` e asset `/Footer/devSignature.svg`.
+16. Considere que `FloatingButtons` renderiza botao de voltar ao topo e WhatsApp.
+17. Considere que as chaves `footer.*` ainda faltam nos 12 idiomas diferentes de `pt-BR`.
+18. Valide APIs de Next.js na documentacao local antes de alteracoes estruturais.
 
 Minha tarefa e:
 [descreva a tarefa]
