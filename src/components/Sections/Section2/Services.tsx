@@ -182,8 +182,8 @@ export function Services() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
       >
-        <div className="absolute left-[-8rem] top-[6rem] h-56 w-56 rounded-full bg-orange-500/8 blur-3xl" />
-        <div className="absolute right-[-8rem] bottom-[4rem] h-64 w-64 rounded-full bg-sky-500/8 blur-3xl" />
+        <div className="absolute left-[-8rem] top-[6rem] h-56 w-56 rounded-full bg-orange-500/8 blur-3xl animate-glow-orange" />
+        <div className="absolute right-[-8rem] bottom-[4rem] h-64 w-64 rounded-full bg-sky-500/8 blur-3xl animate-glow-blue" />
       </div>
 
       <Container className="relative z-10">

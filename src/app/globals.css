@@ -45,3 +45,45 @@ body::selection {
   background: rgba(249, 115, 22, 0.35);
   color: #ffffff;
 }
+
+@keyframes glow-float-orange {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  30% {
+    transform: translate3d(3.5rem, -2.5rem, 0) scale(1.12);
+  }
+
+  65% {
+    transform: translate3d(-2rem, 2rem, 0) scale(0.94);
+  }
+}
+
+@keyframes glow-float-blue {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  30% {
+    transform: translate3d(-3.5rem, 2.25rem, 0) scale(1.1);
+  }
+
+  65% {
+    transform: translate3d(2rem, -1.75rem, 0) scale(0.96);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-glow-orange {
+    animation: glow-float-orange 9s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .animate-glow-blue {
+    animation: glow-float-blue 10s ease-in-out infinite;
+    will-change: transform;
+  }
+}

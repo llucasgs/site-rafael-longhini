@@ -233,8 +233,8 @@ export function Experience() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
       >
-        <div className="absolute left-[-8rem] top-[8rem] h-64 w-64 rounded-full bg-orange-500/7 blur-3xl" />
-        <div className="absolute bottom-[5rem] right-[-10rem] h-72 w-72 rounded-full bg-sky-500/7 blur-3xl" />
+        <div className="absolute left-[-8rem] top-[8rem] h-64 w-64 rounded-full bg-orange-500/7 blur-3xl animate-glow-orange" />
+        <div className="absolute bottom-[5rem] right-[-10rem] h-72 w-72 rounded-full bg-sky-500/7 blur-3xl animate-glow-blue" />
       </div>
 
       <Container className="relative z-10">

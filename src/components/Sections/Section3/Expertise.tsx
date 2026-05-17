@@ -224,8 +224,8 @@ export function Expertise() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
       >
-        <div className="absolute left-[10%] top-[10%] h-64 w-64 rounded-full bg-orange-500/6 blur-3xl" />
-        <div className="absolute right-[8%] top-[25%] h-72 w-72 rounded-full bg-sky-500/6 blur-3xl" />
+        <div className="absolute left-[10%] top-[10%] h-64 w-64 rounded-full bg-orange-500/6 blur-3xl animate-glow-orange" />
+        <div className="absolute right-[8%] top-[25%] h-72 w-72 rounded-full bg-sky-500/6 blur-3xl animate-glow-blue" />
       </div>
 
       <Container className="relative z-10">
