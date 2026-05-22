@@ -52,28 +52,36 @@
   "hero": {
     "sectionAriaLabel": "Section principale de présentation de Longhini Développement Industriel",
     "badge": "Solutions Industrielles Personnalisées",
-    "title": "Conception et Développement de Produits",
-    "description": "Nous transformons les idées en produits, dispositifs, moules, outils et machines spéciales grâce à une ingénierie pratique, à l’innovation technologique et à une approche orientée résultats.",
+    "title": "Conception et Développement de Nouveaux Produits",
+    "description": "Nous transformons les idées en produits, dispositifs, moules, outils et machines spéciales grâce à une ingénierie pratique, une innovation technique et une orientation vers les résultats.",
     "primaryButton": "Demander un devis",
     "secondaryButton": "Découvrir les solutions",
-    "personImageAlt": "Photo de Rafael Longhini Lopes",
     "companyLogoAlt": "Logo de Longhini Développement Industriel",
     "stats": {
       "experience": "Plus de 20 ans d’expérience",
       "innovation": "Innovation et ingénierie inverse",
       "prototyping": "Prototypage et impression 3D"
     },
+    "processImages": {
+      "sketchAlt": "Esquisse technique 2D d’un produit industriel",
+      "productAlt": "Modèle 3D d’un produit industriel",
+      "moldAlt": "Moule de produit industriel coupé en deux"
+    },
     "card": {
-      "eyebrow": "Directeur Technique",
-      "title": "Rafael Longhini Lopes",
-      "subtitle": "Ingénierie mécanique, développement de produits, outillage, automatisation industrielle et solutions sur mesure.",
+      "eyebrow": "Du concept à l’outil",
+      "subtitle": "Ingénierie appliquée pour transformer les idées en produits, prototypes, moules, dispositifs et solutions industrielles prêtes pour la production.",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
-      "tag3": "Ingénierie Inverse",
+      "tag3": "Ingénierie inverse",
       "tag4": "Impression 3D",
       "companyLabel": "Entreprise",
       "companyName": "LONGHINI - DÉVELOPPEMENT INDUSTRIEL",
       "companyLocation": "São Paulo, São Paulo, Brésil",
+      "processImages": {
+        "sketchAlt": "Esquisse technique 2D d’un produit industriel",
+        "productAlt": "Modèle 3D d’un produit industriel",
+        "moldAlt": "Moule coupé en deux avec produit industriel"
+      },
       "miniCards": {
         "cadcam": "CAD/CAM",
         "molds": "Moules",

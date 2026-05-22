@@ -52,21 +52,24 @@
   "hero": {
     "sectionAriaLabel": "Longhini 工业开发主展示区域",
     "badge": "定制工业解决方案",
-    "title": "产品设计与开发",
+    "title": "新产品设计与开发",
     "description": "我们通过实用工程、技术创新和结果导向的方法，将创意转化为产品、装置、模具、工具和专用机器。",
     "primaryButton": "申请报价",
     "secondaryButton": "了解解决方案",
-    "personImageAlt": "Rafael Longhini Lopes 的照片",
     "companyLogoAlt": "Longhini 工业开发标志",
     "stats": {
       "experience": "20多年经验",
       "innovation": "创新与逆向工程",
       "prototyping": "原型制作与3D打印"
     },
+    "processImages": {
+      "sketchAlt": "工业产品的技术2D草图",
+      "productAlt": "工业产品的3D模型",
+      "moldAlt": "被切成两半的工业产品模具"
+    },
     "card": {
-      "eyebrow": "技术总监",
-      "title": "Rafael Longhini Lopes",
-      "subtitle": "机械工程、产品开发、工装制造、工业自动化和定制解决方案。",
+      "eyebrow": "从概念到工具",
+      "subtitle": "应用工程技术，将创意转化为产品、原型、模具、装置以及可投入生产的工业解决方案。",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
       "tag3": "逆向工程",
@@ -74,6 +77,11 @@
       "companyLabel": "公司",
       "companyName": "LONGHINI - 工业开发",
       "companyLocation": "巴西圣保罗州圣保罗市",
+      "processImages": {
+        "sketchAlt": "工业产品的技术2D草图",
+        "productAlt": "工业产品的3D模型",
+        "moldAlt": "带有工业产品的半切模具"
+      },
       "miniCards": {
         "cadcam": "CAD/CAM",
         "molds": "模具",

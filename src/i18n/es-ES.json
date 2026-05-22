@@ -52,28 +52,36 @@
   "hero": {
     "sectionAriaLabel": "Sección principal de presentación de Longhini Desarrollo Industrial",
     "badge": "Soluciones Industriales Personalizadas",
-    "title": "Diseño y Desarrollo de Productos",
-    "description": "Transformamos ideas en productos, dispositivos, moldes, herramientas y máquinas especiales con ingeniería práctica, innovación tecnológica y foco en resultados.",
-    "primaryButton": "Solicitar Presupuesto",
-    "secondaryButton": "Conocer Soluciones",
-    "personImageAlt": "Foto de Rafael Longhini Lopes",
+    "title": "Diseño y Desarrollo de Nuevos Productos",
+    "description": "Transformamos ideas en productos, dispositivos, moldes, herramientas y máquinas especiales con ingeniería práctica, innovación técnica y enfoque en resultados.",
+    "primaryButton": "Solicitar presupuesto",
+    "secondaryButton": "Conocer soluciones",
     "companyLogoAlt": "Logotipo de Longhini Desarrollo Industrial",
     "stats": {
       "experience": "Más de 20 años de experiencia",
       "innovation": "Innovación e ingeniería inversa",
       "prototyping": "Prototipado e impresión 3D"
     },
+    "processImages": {
+      "sketchAlt": "Boceto técnico 2D de un producto industrial",
+      "productAlt": "Modelo 3D de un producto industrial",
+      "moldAlt": "Molde de producto industrial cortado por la mitad"
+    },
     "card": {
-      "eyebrow": "Director Técnico",
-      "title": "Rafael Longhini Lopes",
-      "subtitle": "Ingeniería mecánica, desarrollo de productos, matricería, automatización industrial y soluciones a medida.",
+      "eyebrow": "Del concepto a la herramienta",
+      "subtitle": "Ingeniería aplicada para transformar ideas en productos, prototipos, moldes, dispositivos y soluciones industriales listas para producción.",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
-      "tag3": "Ingeniería Inversa",
+      "tag3": "Ingeniería inversa",
       "tag4": "Impresión 3D",
       "companyLabel": "Empresa",
       "companyName": "LONGHINI - DESARROLLO INDUSTRIAL",
       "companyLocation": "São Paulo, São Paulo, Brasil",
+      "processImages": {
+        "sketchAlt": "Boceto técnico 2D de un producto industrial",
+        "productAlt": "Modelo 3D de un producto industrial",
+        "moldAlt": "Molde cortado por la mitad con producto industrial"
+      },
       "miniCards": {
         "cadcam": "CAD/CAM",
         "molds": "Moldes",

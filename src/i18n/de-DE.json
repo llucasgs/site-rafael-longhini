@@ -50,23 +50,26 @@
     }
   },
   "hero": {
-    "sectionAriaLabel": "Hauptsektion zur Vorstellung von Longhini Industrielle Entwicklung",
-    "badge": "Individuelle Industrielösungen",
-    "title": "Konstruktion und Produktentwicklung",
-    "description": "Wir verwandeln Ideen in Produkte, Vorrichtungen, Formen, Werkzeuge und Sondermaschinen – mit praxisnaher Ingenieurarbeit, technologischer Innovation und Fokus auf Ergebnisse.",
+    "sectionAriaLabel": "Hauptpräsentationssektion von Longhini Industrielle Entwicklung",
+    "badge": "Maßgeschneiderte Industrielösungen",
+    "title": "Konstruktion und Entwicklung neuer Produkte",
+    "description": "Wir verwandeln Ideen in Produkte, Vorrichtungen, Formen, Werkzeuge und Sondermaschinen mit praxisnaher Technik, technischer Innovation und Fokus auf Ergebnisse.",
     "primaryButton": "Angebot anfordern",
-    "secondaryButton": "Lösungen entdecken",
-    "personImageAlt": "Foto von Rafael Longhini Lopes",
+    "secondaryButton": "Lösungen kennenlernen",
     "companyLogoAlt": "Logo von Longhini Industrielle Entwicklung",
     "stats": {
       "experience": "Über 20 Jahre Erfahrung",
       "innovation": "Innovation und Reverse Engineering",
       "prototyping": "Prototyping und 3D-Druck"
     },
+    "processImages": {
+      "sketchAlt": "Technische 2D-Skizze eines Industrieprodukts",
+      "productAlt": "3D-Modell eines Industrieprodukts",
+      "moldAlt": "Halbierte Form eines Industrieprodukts"
+    },
     "card": {
-      "eyebrow": "Technischer Direktor",
-      "title": "Rafael Longhini Lopes",
-      "subtitle": "Maschinenbau, Produktentwicklung, Werkzeugbau, industrielle Automatisierung und maßgeschneiderte Lösungen.",
+      "eyebrow": "Vom Konzept zum Werkzeug",
+      "subtitle": "Angewandte Technik, um Ideen in Produkte, Prototypen, Formen, Vorrichtungen und produktionsbereite Industrielösungen zu verwandeln.",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
       "tag3": "Reverse Engineering",
@@ -74,6 +77,11 @@
       "companyLabel": "Unternehmen",
       "companyName": "LONGHINI - INDUSTRIELLE ENTWICKLUNG",
       "companyLocation": "São Paulo, São Paulo, Brasilien",
+      "processImages": {
+        "sketchAlt": "Technische 2D-Skizze eines Industrieprodukts",
+        "productAlt": "3D-Modell eines Industrieprodukts",
+        "moldAlt": "Halbierte Form mit Industrieprodukt"
+      },
       "miniCards": {
         "cadcam": "CAD/CAM",
         "molds": "Formen",

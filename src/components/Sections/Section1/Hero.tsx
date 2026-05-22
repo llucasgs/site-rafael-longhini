@@ -13,8 +13,8 @@ import {
 
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { useLanguage } from "@/contexts/LanguageContext";
 import { site } from "@/constants/site";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { scrollToSection } from "@/utils/scrollToSection";
 
 function StatPill({ children }: { children: React.ReactNode }) {
@@ -83,6 +83,21 @@ export function Hero() {
     },
   ];
 
+  const processImages = [
+    {
+      src: "/Sections/Section1/2DproductSketch.webp",
+      alt: t("hero.card.processImages.sketchAlt"),
+    },
+    {
+      src: "/Sections/Section1/3Dproduct.webp",
+      alt: t("hero.card.processImages.productAlt"),
+    },
+    {
+      src: "/Sections/Section1/CutMoldProduct.webp",
+      alt: t("hero.card.processImages.moldAlt"),
+    },
+  ];
+
   return (
     <section
       id="about"
@@ -102,9 +117,9 @@ export function Hero() {
           "
         />
 
-        <div className="absolute left-[-8rem] top-[8rem] h-56 w-56 rounded-full bg-orange-500/10 blur-3xl md:h-72 md:w-72 animate-glow-orange" />
-        <div className="absolute right-[-6rem] top-[10rem] h-56 w-56 rounded-full bg-sky-500/10 blur-3xl md:h-72 md:w-72 animate-glow-blue" />
-        <div className="absolute bottom-[2rem] left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-blue-600/10 blur-3xl animate-glow-blue" />
+        <div className="absolute left-[-8rem] top-[8rem] h-56 w-56 rounded-full bg-orange-500/10 blur-3xl animate-glow-orange md:h-72 md:w-72" />
+        <div className="absolute right-[-6rem] top-[10rem] h-56 w-56 rounded-full bg-sky-500/10 blur-3xl animate-glow-blue md:h-72 md:w-72" />
+        <div className="absolute bottom-[2rem] left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-blue-600/10 blur-3xl" />
       </div>
 
       <Container className="relative z-10">
@@ -114,7 +129,7 @@ export function Hero() {
               <span
                 className="
                   relative mb-5 inline-flex items-center gap-2 overflow-hidden rounded-full
-                   px-4 py-2
+                  px-4 py-2
                   text-[0.72rem] font-bold uppercase tracking-[0.22em]
                   text-orange-300
                 "
@@ -176,7 +191,7 @@ export function Hero() {
                   "
                 >
                   {t("hero.primaryButton")}
-                  <ArrowRight size={16} />
+                  <ArrowRight size={16} aria-hidden="true" />
                 </a>
 
                 <button
@@ -226,53 +241,54 @@ export function Hero() {
                   aria-hidden="true"
                 />
 
-                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
-                  <div className="flex items-center gap-4">
-                    <div
-                      className="
-    relative h-28 w-24 shrink-0
-    sm:h-32 sm:w-28
-  "
-                    >
-                      <Image
-                        src="/Sections/Section1/longhiniPicture.webp"
-                        alt={t("hero.personImageAlt")}
-                        fill
-                        priority
-                        className="
-                        object-contain object-bottom
-                        [mask-image:linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)]
-                        [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)]
-                      "
-                      />
-                    </div>
+                <div className="flex items-start justify-between gap-5">
+                  <div>
+                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.28em] text-orange-300">
+                      {t("hero.card.eyebrow")}
+                    </span>
 
-                    <div>
-                      <span className="text-[0.7rem] font-bold uppercase tracking-[0.28em] text-orange-300">
-                        {t("hero.card.eyebrow")}
-                      </span>
-
-                      <h2 className="text-2xl font-extrabold tracking-tight text-white/95 sm:text-[1.9rem]">
-                        {t("hero.card.title")}
-                      </h2>
-                    </div>
+                    <p className="mt-3 max-w-xl text-sm leading-6 text-slate-300 sm:text-[0.98rem]">
+                      {t("hero.card.subtitle")}
+                    </p>
                   </div>
 
                   <div
                     className="
-                    hidden h-14 w-14 shrink-0 items-center justify-center rounded-2xl
-                    border border-white/10 bg-black/20 text-sky-300
-                    sm:flex
-                  "
+                      hidden h-14 w-14 shrink-0 items-center justify-center rounded-2xl
+                      border border-white/10 bg-black/20 text-sky-300
+                      sm:flex
+                    "
                     aria-hidden="true"
                   >
                     <Cog size={26} />
                   </div>
                 </div>
 
-                <p className="mt-5 max-w-xl text-sm leading-6 text-slate-300 sm:text-[0.98rem]">
-                  {t("hero.card.subtitle")}
-                </p>
+                <div
+                  className="
+                    mt-6 overflow-hidden rounded-[1.5rem]"
+                >
+                  <div className="grid grid-cols-3">
+                    {processImages.map((image) => (
+                      <div
+                        key={image.src}
+                        className="
+                          relative aspect-square overflow-hidden"
+                      >
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          sizes="(max-width: 1024px) 33vw, 180px"
+                          className="
+                            object-cover transition-transform duration-500
+                            hover:scale-105
+                          "
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
                 <div className="mt-6 flex flex-wrap gap-2.5">
                   <TechTag>{t("hero.card.tag1")}</TechTag>
@@ -286,9 +302,9 @@ export function Hero() {
                     <div
                       key={item.label}
                       className="
-                      rounded-2xl border border-white/10 bg-black/20 p-4
-                      transition-all duration-300 hover:border-orange-400/25
-                    "
+                        rounded-2xl border border-white/10 bg-black/20 p-4
+                        transition-all duration-300 hover:border-orange-400/25
+                      "
                     >
                       {item.icon}
 
@@ -313,11 +329,11 @@ export function Hero() {
                       </p>
 
                       <p className="mt-2 text-sm font-semibold text-white">
-                        {t("hero.card.companyName")}
+                        {site.name}
                       </p>
 
                       <p className="mt-1 text-sm text-slate-400">
-                        {t("hero.card.companyLocation")}
+                        {site.location}
                       </p>
                     </div>
 

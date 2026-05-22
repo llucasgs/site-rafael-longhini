@@ -52,28 +52,36 @@
   "hero": {
     "sectionAriaLabel": "Sezione principale di presentazione di Longhini Sviluppo Industriale",
     "badge": "Soluzioni Industriali Personalizzate",
-    "title": "Progettazione e Sviluppo di Prodotti",
-    "description": "Trasformiamo idee in prodotti, dispositivi, stampi, utensili e macchine speciali con ingegneria pratica, innovazione tecnologica e attenzione ai risultati.",
+    "title": "Progettazione e Sviluppo di Nuovi Prodotti",
+    "description": "Trasformiamo idee in prodotti, dispositivi, stampi, utensili e macchine speciali con ingegneria pratica, innovazione tecnica e attenzione ai risultati.",
     "primaryButton": "Richiedi un preventivo",
     "secondaryButton": "Scopri le soluzioni",
-    "personImageAlt": "Foto di Rafael Longhini Lopes",
     "companyLogoAlt": "Logo di Longhini Sviluppo Industriale",
     "stats": {
       "experience": "Oltre 20 anni di esperienza",
       "innovation": "Innovazione e reverse engineering",
       "prototyping": "Prototipazione e stampa 3D"
     },
+    "processImages": {
+      "sketchAlt": "Schizzo tecnico 2D di un prodotto industriale",
+      "productAlt": "Modello 3D di un prodotto industriale",
+      "moldAlt": "Stampo di prodotto industriale tagliato a metà"
+    },
     "card": {
-      "eyebrow": "Direttore Tecnico",
-      "title": "Rafael Longhini Lopes",
-      "subtitle": "Ingegneria meccanica, sviluppo prodotto, attrezzeria, automazione industriale e soluzioni su misura.",
+      "eyebrow": "Dal concetto all’attrezzatura",
+      "subtitle": "Ingegneria applicata per trasformare idee in prodotti, prototipi, stampi, dispositivi e soluzioni industriali pronte per la produzione.",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
-      "tag3": "Reverse Engineering",
+      "tag3": "Reverse engineering",
       "tag4": "Stampa 3D",
       "companyLabel": "Azienda",
       "companyName": "LONGHINI - SVILUPPO INDUSTRIALE",
       "companyLocation": "São Paulo, São Paulo, Brasile",
+      "processImages": {
+        "sketchAlt": "Schizzo tecnico 2D di un prodotto industriale",
+        "productAlt": "Modello 3D di un prodotto industriale",
+        "moldAlt": "Stampo tagliato a metà con prodotto industriale"
+      },
       "miniCards": {
         "cadcam": "CAD/CAM",
         "molds": "Stampi",

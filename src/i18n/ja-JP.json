@@ -50,23 +50,26 @@
     }
   },
   "hero": {
-    "sectionAriaLabel": "Longhini 産業開発を紹介するメインセクション",
+    "sectionAriaLabel": "Longhini 産業開発のメイン紹介セクション",
     "badge": "カスタム産業ソリューション",
-    "title": "製品設計と開発",
-    "description": "実践的なエンジニアリング、技術革新、成果重視のアプローチにより、アイデアを製品、治具、金型、工具、特殊機械へと具体化します。",
+    "title": "新製品の設計と開発",
+    "description": "実践的なエンジニアリング、技術革新、成果重視の姿勢で、アイデアを製品、治具、金型、工具、特殊機械へと形にします。",
     "primaryButton": "見積もりを依頼",
     "secondaryButton": "ソリューションを見る",
-    "personImageAlt": "Rafael Longhini Lopes の写真",
     "companyLogoAlt": "Longhini 産業開発のロゴ",
     "stats": {
       "experience": "20年以上の経験",
       "innovation": "革新とリバースエンジニアリング",
       "prototyping": "プロトタイピングと3Dプリント"
     },
+    "processImages": {
+      "sketchAlt": "産業製品の技術的な2Dスケッチ",
+      "productAlt": "産業製品の3Dモデル",
+      "moldAlt": "半分に切断された産業製品用金型"
+    },
     "card": {
-      "eyebrow": "技術責任者",
-      "title": "Rafael Longhini Lopes",
-      "subtitle": "機械工学、製品開発、金型・工具製作、産業自動化、カスタムソリューション。",
+      "eyebrow": "コンセプトから工具へ",
+      "subtitle": "アイデアを製品、プロトタイプ、金型、治具、そして生産準備の整った産業ソリューションへ変える応用エンジニアリング。",
       "tag1": "SolidWorks",
       "tag2": "AutoCAD",
       "tag3": "リバースエンジニアリング",
@@ -74,6 +77,11 @@
       "companyLabel": "会社",
       "companyName": "LONGHINI - 産業開発",
       "companyLocation": "サンパウロ、サンパウロ、ブラジル",
+      "processImages": {
+        "sketchAlt": "産業製品の技術的な2Dスケッチ",
+        "productAlt": "産業製品の3Dモデル",
+        "moldAlt": "産業製品を含む半分に切断された金型"
+      },
       "miniCards": {
         "cadcam": "CAD/CAM",
         "molds": "金型",

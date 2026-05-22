@@ -97,14 +97,9 @@ Interpretacao pratica: antes de mudancas em APIs, convencoes, metadata, roteamen
 
 ```text
  M AI_PROJECT_CONTEXT.md
- M src/app/page.tsx
- M src/constants/site.ts
- M src/i18n/pt-BR.json
-?? public/Footer/
-?? src/components/Footer/
 ```
 
-Leitura: este contexto foi alterado, e ha trabalho em andamento na pagina principal, constantes, `pt-BR.json` e um novo footer com asset proprio. Nao assumir que esses arquivos ja foram commitados.
+Leitura: antes desta atualizacao do proprio contexto, `git status --short --untracked-files=normal` nao retornava arquivos modificados ou nao rastreados. A unica alteracao atual esperada e este `AI_PROJECT_CONTEXT.md`.
 
 ## Estrutura relevante
 
@@ -320,29 +315,10 @@ Estado atual das chaves:
 
 | Arquivo | Chaves |
 | --- | --- |
-| `pt-BR.json` | 200 chaves |
-| Demais JSONs | 186 chaves |
+| `pt-BR.json` | 201 chaves |
+| Demais JSONs | 201 chaves |
 
-Validacao feita no momento desta atualizacao: `pt-BR.json` possui 14 chaves novas de `footer`; os demais 12 JSONs ainda nao possuem essas chaves. Como o `LanguageContext` tem fallback para `pt-BR`, a UI tende a exibir portugues para essas chaves nos outros idiomas ate as traducoes serem completadas.
-
-Chaves faltando nos demais idiomas:
-
-```text
-footer.sectionAriaLabel
-footer.logoAriaLabel
-footer.logoAlt
-footer.brandSubtitle
-footer.copyright.company
-footer.copyright.rights
-footer.developer.label
-footer.developer.badgeAriaLabel
-footer.developer.signatureAlt
-footer.developer.signatureAriaLabel
-footer.modelCredits.title
-footer.modelCredits.by
-footer.modelCredits.license
-footer.modelCredits.source
-```
+Validacao feita no momento desta atualizacao: todos os 13 JSONs possuem a mesma estrutura do `pt-BR.json`, com 201 chaves, sem chaves faltando ou extras.
 
 ## Header e navegacao
 
@@ -579,14 +555,15 @@ Ponto de atencao: `LinkedInIcon` e um SVG manual local, nao um icone de `lucide-
 
 - Client component.
 - Renderiza o rodape apos `main` e antes de `FloatingButtons`.
-- Usa `Container`, `Image`, `site`, `useLanguage` e icones `ChevronDown`/`ExternalLink` de `lucide-react`.
+- Usa `Container`, `Image`, `site`, `useLanguage` e icones `ChevronDown`/`ExternalLink`/`Globe` de `lucide-react`.
 - Usa logo `/Header/longhiniLogo.svg`.
 - Usa assinatura visual do desenvolvedor em `/Footer/devSignature.svg`.
-- Usa `site.developer` para nome, site e Instagram do desenvolvedor.
+- Usa `site.developer` para nome, site, Instagram e LinkedIn do desenvolvedor.
 - Usa `site.modelCredits` para listar creditos/licencas/fontes dos modelos 3D.
 - `ModelCredits` usa `<details>`/`<summary>` para mostrar/ocultar os creditos.
-- `DeveloperBadge` aponta para `site.developer.website`.
 - A assinatura visual aponta para `site.developer.instagram`.
+- Os links do desenvolvedor usam `site.developer.website`, `site.developer.instagram` e `site.developer.linkedin`.
+- `LinkedInIcon` e `InstagramIcon` sao SVGs manuais locais, seguindo o mesmo padrao usado na `Contact` para evitar problemas com icones externos em links.
 - Exibe ano atual com `new Date().getFullYear()`.
 - Usa chaves `footer.*` do i18n.
 
@@ -594,7 +571,6 @@ Pontos de atencao:
 
 | Ponto | Impacto | Recomendacao |
 | --- | --- | --- |
-| Chaves `footer.*` existem apenas no `pt-BR.json` | Outros idiomas caem no fallback em portugues | Traduzir as 14 chaves novas para os demais JSONs |
 | Texto de copyright aparece com `Â©` no terminal | Pode ser apenas mojibake de exibicao ou caractere incorreto real | Validar no editor; preferir `&copy;` ou caractere correto se necessario |
 | Creditos de modelos 3D ficam em `site.modelCredits` | Centraliza atribuicoes e facilita manutencao | Manter toda nova licenca/fonte de modelo nesse array |
 
@@ -628,6 +604,7 @@ export const site = {
     name: "Lucas Garcia e Silva",
     website: "https://devllucasgs.com.br",
     instagram: "https://www.instagram.com/devllucas_gs/",
+    linkedin: "https://www.linkedin.com/in/lucasgarciaesilva/",
   },
   modelCredits: [
     {
@@ -786,16 +763,14 @@ Pontos de melhoria:
 | Modelos 3D em secoes principais | Pode pesar em mobile | Validar performance real em dispositivos fracos |
 | Mojibake em terminal | Pode causar edicao incorreta de textos | Confirmar encoding/conteudo no editor antes de alterar copy |
 | `<Contact />{" "}` em `page.tsx` | Pequena sujeira de markup | Remover em limpeza futura |
-| Chaves `footer.*` faltando em 12 idiomas | Footer aparece parcialmente em portugues fora de `pt-BR` | Traduzir e sincronizar todos os JSONs |
 
 ## Validacao conhecida
 
 Validacao executada nesta atualizacao:
 
 ```text
-pt-BR.json possui 200 chaves.
-Os demais 12 JSONs possuem 186 chaves.
-Faltam 14 chaves footer.* nos demais idiomas.
+Todos os arquivos src/i18n/*.json possuem 201 chaves.
+Nao ha chaves faltando ou extras em relacao ao pt-BR.json.
 ```
 
 Validacao anterior registrada:
@@ -816,7 +791,6 @@ Esses erros devem ser tratados separadamente antes de considerar o lint limpo. O
 
 | Prioridade | Acao | Motivo |
 | --- | --- | --- |
-| Alta | Traduzir as 14 chaves `footer.*` para os demais 12 idiomas | Evita fallback visual em portugues ao trocar idioma |
 | Alta | Validar encoding dos textos acentuados | Evita corromper conteudo em `site.ts` e JSONs |
 | Alta | Resolver erros atuais de lint | Mantem qualidade e reduz regressao |
 | Media | Validar performance dos modelos 3D em mobile | Three.js pode impactar celulares |
@@ -834,7 +808,7 @@ Esses erros devem ser tratados separadamente antes de considerar o lint limpo. O
 - Textos multilingues ficam em `src/i18n/*.json`.
 - Estado global de idioma fica em `src/contexts/LanguageContext.tsx`.
 - Estilizacao e majoritariamente via classes Tailwind.
-- Icones vem de `lucide-react`, com excecao atual do `LinkedInIcon` manual em `Contact.tsx`.
+- Icones vem de `lucide-react`, com excecao dos SVGs manuais locais `LinkedInIcon` na `Contact` e `LinkedInIcon`/`InstagramIcon` no `Footer`.
 - Imagens publicas sao referenciadas por caminho absoluto a partir de `public`.
 - Modelos 3D ficam em `public/Models/<Nome>/`.
 - Para modelos 3D no React, preferir carregamento sob demanda com `dynamic(..., { ssr: false })` e/ou `IntersectionObserver`.
@@ -861,9 +835,9 @@ Regras:
 12. Considere que `Experience` existe como Section5, com timeline, accordions e logos.
 13. Considere que `IndustrialModels` existe como Section6, com tres modelos 3D carregados sob demanda.
 14. Considere que `Contact` existe como Section7, com WhatsApp, e-mail, LinkedIn e imagem institucional.
-15. Considere que `Footer` existe, usa `site.modelCredits`, `site.developer` e asset `/Footer/devSignature.svg`.
+15. Considere que `Footer` existe, usa `site.modelCredits`, `site.developer`, SVGs manuais para LinkedIn/Instagram e asset `/Footer/devSignature.svg`.
 16. Considere que `FloatingButtons` renderiza botao de voltar ao topo e WhatsApp.
-17. Considere que as chaves `footer.*` ainda faltam nos 12 idiomas diferentes de `pt-BR`.
+17. Considere que todos os 13 arquivos de idioma possuem 201 chaves sincronizadas.
 18. Valide APIs de Next.js na documentacao local antes de alteracoes estruturais.
 
 Minha tarefa e:
