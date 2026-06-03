@@ -130,6 +130,7 @@
     "title": "EXPERTISE",
     "description": "Une expérience construite sur le terrain industriel, combinant ingénierie, amélioration continue, qualité, sécurité et productivité pour transformer les projets en résultats concrets.",
     "modelAriaLabel": "Modèle 3D interactif d’une imprimante 3D industrielle",
+    "noarGlassAlt": "Pièce industrielle transparente développée pour un projet technique",
     "card": {
       "toggleAria": "Afficher ou masquer les détails de {{item}}"
     },

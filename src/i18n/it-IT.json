@@ -130,6 +130,7 @@
     "title": "EXPERTISE",
     "description": "Esperienza maturata sul campo in produzione, unendo ingegneria, miglioramento continuo, qualità, sicurezza e produttività per trasformare i progetti in risultati concreti.",
     "modelAriaLabel": "Modello 3D interattivo di una stampante 3D industriale",
+    "noarGlassAlt": "Componente industriale trasparente sviluppato per un progetto tecnico",
     "card": {
       "toggleAria": "Mostra o nascondi i dettagli di {{item}}"
     },

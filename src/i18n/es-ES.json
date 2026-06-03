@@ -130,6 +130,7 @@
     "title": "EXPERTISE",
     "description": "Experiencia construida en el entorno de fábrica, combinando ingeniería, mejora continua, calidad, seguridad y productividad para transformar proyectos en resultados concretos.",
     "modelAriaLabel": "Modelo 3D interactivo de una impresora 3D industrial",
+    "noarGlassAlt": "Pieza industrial transparente desarrollada para un proyecto técnico",
     "card": {
       "toggleAria": "Alternar detalles de {{item}}"
     },

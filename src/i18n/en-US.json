@@ -130,6 +130,7 @@
     "title": "EXPERTISE",
     "description": "Experience built on the shop floor, combining engineering, continuous improvement, quality, safety, and productivity to turn projects into concrete results.",
     "modelAriaLabel": "Interactive 3D model of an industrial 3D printer",
+    "noarGlassAlt": "Transparent industrial part developed for a technical project",
     "card": {
       "toggleAria": "Toggle details for {{item}}"
     },

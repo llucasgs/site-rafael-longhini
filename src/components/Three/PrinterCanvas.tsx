@@ -27,7 +27,7 @@ export function PrinterCanvas() {
       }}
       className="h-full w-full"
     >
-      <PerspectiveCamera makeDefault position={[0, 1.3, 4.2]} fov={35} />
+      <PerspectiveCamera makeDefault position={[0, 1.3, 3.7]} fov={35} />
 
       <ambientLight intensity={1.4} />
       <directionalLight position={[4, 5, 4]} intensity={2.4} />

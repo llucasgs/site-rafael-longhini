@@ -97,9 +97,14 @@ Interpretacao pratica: antes de mudancas em APIs, convencoes, metadata, roteamen
 
 ```text
  M AI_PROJECT_CONTEXT.md
+ M src/components/Sections/Section3/Expertise.tsx
+ M src/components/Three/ModelCanvas.tsx
+ M src/components/Three/PrinterCanvas.tsx
+ M src/i18n/pt-BR.json
+?? public/Sections/Section3/
 ```
 
-Leitura: antes desta atualizacao do proprio contexto, `git status --short --untracked-files=normal` nao retornava arquivos modificados ou nao rastreados. A unica alteracao atual esperada e este `AI_PROJECT_CONTEXT.md`.
+Leitura: antes desta atualizacao do proprio contexto, havia alteracoes locais nesses arquivos. Este documento deve ser tratado como um retrato do estado salvo em disco no momento da atualizacao; alteracoes nao salvas no editor podem nao estar refletidas aqui.
 
 ## Estrutura relevante
 
@@ -170,6 +175,8 @@ public/
       longhiniPicture.png
     Section2/
       3Dprinter.png
+    Section3/
+      noarGlass.webp
     Section4/
       logo01Colgate.svg
       logo02Tramontina.svg
@@ -190,17 +197,21 @@ public/
       longhiniSpace.webp
   Models/
     3DPrinter/
+      printer-metalrough.glb
       printer-optimized.glb
       license.txt
-    Robot/
-      robot-optimized.glb
-      license.txt
-    Chassis/
-      chassis-optimized.glb
-      license.txt
-    Oculus/
-      oculus-optimized.glb
-      license.txt
+    BombaRkp/
+      bomba-rkp-optimized.glb
+    CarTransmission/
+      car-transmission-optimized.glb
+    CdrTool/
+      cdr-tool-optimized.glb
+    ColgateCase/
+      colgate-case-optimized.glb
+    Glasses/
+      glasses-optimized.glb
+    Tablet/
+      tablet-optimized.glb
 ```
 
 ## Arquivos omitidos deste contexto
@@ -315,10 +326,10 @@ Estado atual das chaves:
 
 | Arquivo | Chaves |
 | --- | --- |
-| `pt-BR.json` | 201 chaves |
-| Demais JSONs | 201 chaves |
+| `pt-BR.json` | 213 chaves |
+| Demais JSONs | 212 chaves |
 
-Validacao feita no momento desta atualizacao: todos os 13 JSONs possuem a mesma estrutura do `pt-BR.json`, com 201 chaves, sem chaves faltando ou extras.
+Validacao feita no momento desta atualizacao: os 12 JSONs nao portugueses estao sem a chave `expertise.noarGlassAlt`, adicionada em `pt-BR.json`. Isso nao quebra a funcao `t()` porque existe fallback para `pt-BR`, mas deixa as traducoes incompletas.
 
 ## Header e navegacao
 
@@ -350,7 +361,8 @@ Observacoes:
 | --- | --- |
 | `about` | Aponta para o `id="about"` do Hero |
 | `contact` | Aponta para a Section7 real de contato |
-| `industrial-models` | Existe como secao, mas nao aparece no menu principal |
+| `experience` | Aponta para o primeiro elemento com `id="experience"`; atualmente ha risco porque Section5 e Section6 usam o mesmo id no estado salvo |
+| `industrial-models` | Nao existe como id salvo atual na Section6; o componente Section6 esta com `id="experience"` |
 
 ## FloatingButtons
 
@@ -418,6 +430,7 @@ Servicos:
 
 - Client component.
 - Combina a secao de expertise com o modelo 3D interativo da impressora.
+- Tambem exibe uma imagem tecnica ao lado do canvas: `/Sections/Section3/noarGlass.webp`.
 - Usa `dynamic()` com `ssr: false` para carregar `PrinterCanvas`.
 - Usa `IntersectionObserver` para renderizar o canvas apenas quando a secao se aproxima.
 - A secao tem `id="expertise"`.
@@ -427,11 +440,13 @@ Servicos:
   - Capacidades tecnicas e industriais.
 - Usa cards em formato accordion com pills.
 - Usa tres cards de resumo tambem em accordion.
+- A imagem `noarGlass.webp` usa `Image` do Next.js com `fill`, `sizes="(max-width: 1024px) 100vw, 50vw"` e `alt` via `expertise.noarGlassAlt`.
 
 `src/components/Three/PrinterCanvas.tsx` e `PrinterModel.tsx`:
 
 - Carregam `/Models/3DPrinter/printer-optimized.glb`.
 - Usam `Canvas`, `PerspectiveCamera`, luzes, `Environment` e `OrbitControls`.
+- A camera atual da impressora esta em `position={[0, 1.3, 3.7]}` com `fov={35}`.
 - `frameloop="demand"` e DPR limitado ajudam performance.
 
 ## Customers
@@ -497,20 +512,26 @@ Experiencias atuais:
 `src/components/Sections/Section6/IndustrialModels.tsx`:
 
 - Client component.
-- Renderiza a secao `id="industrial-models"`.
-- Exibe tres cards com modelos 3D interativos em grid responsivo.
+- Renderiza atualmente uma secao com `id="experience"`.
+- Exibe seis cards com modelos 3D interativos em grid responsivo.
 - Usa `dynamic()` com `ssr: false` para carregar `ModelCanvas`.
 - Cada card usa `IntersectionObserver` proprio para renderizar o modelo apenas quando o card se aproxima da viewport (`rootMargin: "280px 0px"`).
 - Cada card usa `role="img"` e `aria-label` vindo de i18n.
 - Usa `ScrollReveal`.
+- O tipo `IndustrialModelCard` aceita `rotation`, `fitMargin`, `minDistance`, `maxDistance` e `cameraPosition`, mas no estado salvo atual os seis cards usam apenas `rotation` e `fitMargin`.
+
+Ponto de atencao importante: a Section6 esta com `id="experience"`, duplicando a Section5. Isso pode quebrar navegacao por ancora, SEO semantico e acessibilidade. Se a intencao for secao propria, o id recomendado e voltar para algo como `industrial-models` e ajustar qualquer navegacao relacionada.
 
 Modelos:
 
 | Modelo | Caminho | Chave aria | Ajustes |
 | --- | --- | --- | --- |
-| Robo | `/Models/Robot/robot-optimized.glb` | `industrialModels.models.robot.ariaLabel` | `rotation: [0, -Math.PI / 4, 0]`, `fitMargin: 1.1` |
-| Chassi | `/Models/Chassis/chassis-optimized.glb` | `industrialModels.models.chassis.ariaLabel` | `rotation: [0, -Math.PI / 8, 0]`, `fitMargin: 0.9` |
-| Oculus | `/Models/Oculus/oculus-optimized.glb` | `industrialModels.models.oculus.ariaLabel` | `rotation: [0, -Math.PI / 6, 0]`, `fitMargin: 1` |
+| Tablet | `/Models/Tablet/tablet-optimized.glb` | `industrialModels.models.tablet.ariaLabel` | `rotation: [Math.PI / 5, -Math.PI / 5, 0]`, `fitMargin: 0.8` |
+| Glasses | `/Models/Glasses/glasses-optimized.glb` | `industrialModels.models.glasses.ariaLabel` | `rotation: [0, -Math.PI / 1.5, 0]`, `fitMargin: 0.8` |
+| Bomba RKP | `/Models/BombaRkp/bomba-rkp-optimized.glb` | `industrialModels.models.bombaRkp.ariaLabel` | `rotation: [0, -Math.PI / 5, 0]`, `fitMargin: 0.8` |
+| Car Transmission | `/Models/CarTransmission/car-transmission-optimized.glb` | `industrialModels.models.carTransmission.ariaLabel` | `rotation: [0, -Math.PI / 8, 0]`, `fitMargin: 0.9` |
+| CDR Tool | `/Models/CdrTool/cdr-tool-optimized.glb` | `industrialModels.models.cdrTool.ariaLabel` | `rotation: [-Math.PI / 5, -Math.PI / 4, Math.PI / 5]`, `fitMargin: 0.8` |
+| Colgate Case | `/Models/ColgateCase/colgate-case-optimized.glb` | `industrialModels.models.colgateCase.ariaLabel` | `rotation: [Math.PI / 2, -Math.PI / 1, -Math.PI / 1.2]`, `fitMargin: 0.8` |
 
 ## ModelCanvas
 
@@ -519,13 +540,20 @@ Modelos:
 - Client component.
 - Componente generico para renderizar modelos GLB.
 - Usa `Canvas` de `@react-three/fiber`.
-- Usa `Bounds fit clip observe` e `Center` para enquadrar modelos de tamanhos diferentes.
+- Usa `Bounds fit clip` e `Center` para enquadrar modelos de tamanhos diferentes.
 - Usa `useGLTF(modelPath)`.
 - Desativa `castShadow` e `receiveShadow`.
 - Marca materiais como `needsUpdate`.
 - Usa `ACESFilmicToneMapping` e `SRGBColorSpace`.
 - Usa `Environment preset="city"`.
 - Usa `OrbitControls` com rotacao, zoom e pan habilitados.
+- Recebe `fitMargin`, `minDistance`, `maxDistance` e `cameraPosition` por props.
+- `fitMargin` controla o enquadramento inicial do `Bounds`.
+- `minDistance` e `maxDistance` sao enviados ao `OrbitControls`, mas ha uma pegadinha: o `clip` do `Bounds` altera internamente `controls.maxDistance = distance * 10`. Portanto, `maxDistance` pode ser sobrescrito quando `clip` esta ativo.
+- Tentativas recentes feitas e revertidas:
+  - Remover `clip` do `Bounds`: revertido porque nao atendeu ao comportamento desejado.
+  - Reaplicar `minDistance`/`maxDistance` apos o `Bounds` usando helper interno: revertido porque nao atendeu ao comportamento desejado.
+- Estado atual: `Bounds fit clip margin={fitMargin}` esta mantido, sem helper extra para reaplicar limites.
 - `frameloop="demand"` e `dpr={[1, 1.25]}` para reduzir custo de renderizacao.
 
 ## Contact
@@ -615,8 +643,7 @@ export const site = {
       license: "CC-BY-4.0",
       licenseUrl: "http://creativecommons.org/licenses/by/4.0/",
       attributionRequired: true,
-    },
-    // Chassis, Oculus e Robot tambem ficam neste array.
+    }
   ],
   seo: {
     title: "Longhini Desenvolvimento Industrial | Solucoes Industriais",
@@ -629,7 +656,12 @@ export const site = {
 } as const;
 ```
 
-Ponto de atencao: leituras no terminal exibiram alguns textos acentuados como mojibake. Confirmar o conteudo real no editor antes de alterar estes textos.
+Pontos de atencao:
+
+| Ponto | Impacto | Recomendacao |
+| --- | --- | --- |
+| Leituras no terminal exibiram alguns textos acentuados como mojibake | Risco de alterar conteudo corrompido por engano | Confirmar o conteudo real no editor antes de alterar textos |
+| `site.modelCredits` lista apenas a impressora 3D | Novos modelos da Section6 podem precisar de creditos/licencas | Validar origem/licenca dos modelos Tablet, Glasses, BombaRkp, CarTransmission, CdrTool e ColgateCase |
 
 ## Utilitario de scroll
 
@@ -722,19 +754,31 @@ public/Models/3DPrinter/scene.gltf
 public/Models/3DPrinter/scene.bin
 public/Models/3DPrinter/textures/
 
-# 3D source files - Robot
-public/Models/Robot/scene.gltf
-public/Models/Robot/scene.bin
-public/Models/Robot/textures/
+# 3D source files - client models
+public/Models/Tablet/tablet.gltf
+public/Models/Tablet/data.bin
 
-# 3D source files - Oculus
-public/Models/Oculus/scene.gltf
-public/Models/Oculus/scene.bin
-public/Models/Oculus/textures/
+public/Models/Glasses/glasses.gltf
+public/Models/Glasses/data.bin
+public/Models/Glasses/*.dds
+public/Models/Glasses/*.png
 
-# 3D source files - Chassis
-public/Models/Chassis/scene.gltf
-public/Models/Chassis/scene.bin
+public/Models/BombaRkp/bombaRkp.gltf
+public/Models/BombaRkp/data.bin
+
+public/Models/CarTransmission/carTransmission.gltf
+public/Models/CarTransmission/data.bin
+public/Models/CarTransmission/*.dds
+public/Models/CarTransmission/*.png
+
+public/Models/CdrTool/cdrTool.gltf
+public/Models/CdrTool/data.bin
+
+public/Models/ColgateCase/ColgateCase.gltf
+public/Models/ColgateCase/data.bin
+
+# zip sources
+*.zip
 ```
 
 ## SEO e acessibilidade
@@ -759,18 +803,21 @@ Pontos de melhoria:
 | Ponto | Impacto | Recomendacao |
 | --- | --- | --- |
 | `industrial-models` nao aparece no menu | Secao pode ser descoberta apenas por rolagem | Decidir se deve entrar no menu ou permanecer como bloco visual de apoio |
+| Section5 e Section6 com `id="experience"` | IDs duplicados prejudicam navegacao por ancora, acessibilidade e semantica | Ajustar Section6 para um id unico, como `industrial-models`, se ela deve ser uma secao independente |
 | Metadata sem URL/imagem OG explicita | Compartilhamento social menos forte | Adicionar `metadataBase`, canonical, `openGraph.url` e `openGraph.images` quando houver dominio/imagem |
 | Modelos 3D em secoes principais | Pode pesar em mobile | Validar performance real em dispositivos fracos |
 | Mojibake em terminal | Pode causar edicao incorreta de textos | Confirmar encoding/conteudo no editor antes de alterar copy |
 | `<Contact />{" "}` em `page.tsx` | Pequena sujeira de markup | Remover em limpeza futura |
+| Chave `expertise.noarGlassAlt` ausente em 12 idiomas | Fallback para pt-BR funciona, mas traducoes ficam incompletas | Adicionar a chave aos demais JSONs |
 
 ## Validacao conhecida
 
 Validacao executada nesta atualizacao:
 
 ```text
-Todos os arquivos src/i18n/*.json possuem 201 chaves.
-Nao ha chaves faltando ou extras em relacao ao pt-BR.json.
+pt-BR.json possui 213 chaves.
+Os demais 12 JSONs possuem 212 chaves.
+Chave faltante nos demais idiomas: expertise.noarGlassAlt.
 ```
 
 Validacao anterior registrada:
@@ -793,6 +840,8 @@ Esses erros devem ser tratados separadamente antes de considerar o lint limpo. O
 | --- | --- | --- |
 | Alta | Validar encoding dos textos acentuados | Evita corromper conteudo em `site.ts` e JSONs |
 | Alta | Resolver erros atuais de lint | Mantem qualidade e reduz regressao |
+| Alta | Sincronizar `expertise.noarGlassAlt` nos 12 JSONs nao portugueses | Mantem i18n completo e evita fallback indesejado |
+| Alta | Corrigir id duplicado da Section6 se ela deve ser independente | Evita conflito com navegacao e acessibilidade |
 | Media | Validar performance dos modelos 3D em mobile | Three.js pode impactar celulares |
 | Media | Adicionar metadata canonica/OG completa quando houver dominio | Melhora SEO e compartilhamento |
 | Media | Decidir se `industrial-models` deve entrar na navegacao | Melhora descoberta da secao, se ela for estrategica |
@@ -833,12 +882,13 @@ Regras:
 10. Considere que `Expertise` contem o canvas 3D da impressora carregado sob demanda.
 11. Considere que `Customers` existe como Section4, tem logos SVG coloridos e esta no menu.
 12. Considere que `Experience` existe como Section5, com timeline, accordions e logos.
-13. Considere que `IndustrialModels` existe como Section6, com tres modelos 3D carregados sob demanda.
+13. Considere que `IndustrialModels` existe como Section6, com seis modelos 3D carregados sob demanda.
 14. Considere que `Contact` existe como Section7, com WhatsApp, e-mail, LinkedIn e imagem institucional.
 15. Considere que `Footer` existe, usa `site.modelCredits`, `site.developer`, SVGs manuais para LinkedIn/Instagram e asset `/Footer/devSignature.svg`.
 16. Considere que `FloatingButtons` renderiza botao de voltar ao topo e WhatsApp.
-17. Considere que todos os 13 arquivos de idioma possuem 201 chaves sincronizadas.
-18. Valide APIs de Next.js na documentacao local antes de alteracoes estruturais.
+17. Considere que `pt-BR.json` tem 213 chaves e os demais idiomas tem 212, faltando `expertise.noarGlassAlt`.
+18. Considere que a Section6 esta salva com `id="experience"`, duplicando a Section5; validar antes de mexer em navegacao.
+19. Valide APIs de Next.js na documentacao local antes de alteracoes estruturais.
 
 Minha tarefa e:
 [descreva a tarefa]

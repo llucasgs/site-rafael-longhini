@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useEffect, useId, useRef, useState } from "react";
 import {
@@ -295,55 +296,96 @@ export function Expertise() {
           </ScrollReveal>
         </div>
 
-        <ScrollReveal delay="sm">
-          <div
-            aria-label={t("expertise.modelAriaLabel")}
-            className="
-              relative mt-6 overflow-hidden rounded-[2rem]
+        <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:items-stretch">
+          <ScrollReveal delay="sm">
+            <div
+              role="img"
+              aria-label={t("expertise.modelAriaLabel")}
+              className="
+                relative h-[22rem] overflow-hidden rounded-[2rem]
+                border border-white/10 bg-white/[0.035]
+                shadow-[0_24px_90px_rgba(0,0,0,0.42)]
+                backdrop-blur-xl
+                md:h-[30rem]
+                lg:h-full lg:min-h-[36rem]
+              "
+            >
+              <div
+                aria-hidden="true"
+                className="
+                  pointer-events-none absolute inset-0
+                  bg-[linear-gradient(rgba(255,255,255,0.024)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.024)_1px,transparent_1px)]
+                  bg-[size:44px_44px]
+                  [mask-image:radial-gradient(circle_at_center,black,transparent_78%)]
+                "
+              />
+
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute left-[-8rem] top-[-8rem] h-72 w-72 rounded-full bg-orange-500/12 blur-3xl"
+              />
+
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute bottom-[-8rem] right-[-8rem] h-72 w-72 rounded-full bg-sky-500/12 blur-3xl"
+              />
+
+              <div
+                aria-hidden="true"
+                className="
+                  pointer-events-none absolute inset-x-0 top-0 h-px
+                  bg-gradient-to-r from-transparent via-white/25 to-transparent
+                "
+              />
+
+              <div className="relative z-10 h-full w-full touch-none">
+                {shouldRenderCanvas && <PrinterCanvas />}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay="md">
+            <figure
+              className="
+              relative h-[21.875rem] overflow-hidden rounded-[2rem]
               border border-white/10 bg-white/[0.035]
               shadow-[0_24px_90px_rgba(0,0,0,0.42)]
               backdrop-blur-xl
+              md:h-[29.875rem]
+              lg:h-full lg:min-h-[36rem]
             "
-          >
-            <div
-              aria-hidden="true"
-              className="
-                absolute inset-0
-                bg-[linear-gradient(rgba(255,255,255,0.024)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.024)_1px,transparent_1px)]
-                bg-[size:44px_44px]
-                [mask-image:radial-gradient(circle_at_center,black,transparent_78%)]
-              "
-            />
-
-            <div
-              aria-hidden="true"
-              className="absolute left-[-8rem] top-[-8rem] h-72 w-72 rounded-full bg-orange-500/12 blur-3xl"
-            />
-
-            <div
-              aria-hidden="true"
-              className="absolute bottom-[-8rem] right-[-8rem] h-72 w-72 rounded-full bg-sky-500/12 blur-3xl"
-            />
-
-            <div
-              aria-hidden="true"
-              className="
-                absolute inset-x-0 top-0 h-px
-                bg-gradient-to-r from-transparent via-white/25 to-transparent
-              "
-            />
-
-            <div
-              className="
-                relative z-10 mx-auto h-[22rem] w-full touch-none
-                md:h-[30rem]
-                lg:h-[36rem]
-              "
             >
-              {shouldRenderCanvas && <PrinterCanvas />}
-            </div>
-          </div>
-        </ScrollReveal>
+              <div
+                aria-hidden="true"
+                className="
+                  pointer-events-none absolute inset-x-0 top-0 z-20 h-px
+                  bg-gradient-to-r from-transparent via-white/25 to-transparent
+                "
+              />
+
+              <div
+                aria-hidden="true"
+                className="
+                  pointer-events-none absolute right-[-6rem] top-[-6rem] z-10
+                  h-56 w-56 rounded-full bg-sky-500/10 blur-3xl
+                "
+              />
+
+              <div className="relative h-full w-full">
+                <Image
+                  src="/Sections/Section3/noarGlass.webp"
+                  alt={t("expertise.noarGlassAlt")}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="
+                    object-contain
+                    
+                  "
+                />
+              </div>
+            </figure>
+          </ScrollReveal>
+        </div>
 
         <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
           <ScrollReveal>

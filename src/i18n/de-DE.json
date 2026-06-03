@@ -130,6 +130,7 @@
     "title": "EXPERTISE",
     "description": "Erfahrung aus der Fertigungspraxis, die Ingenieurwesen, kontinuierliche Verbesserung, Qualität, Sicherheit und Produktivität verbindet, um Projekte in konkrete Ergebnisse zu verwandeln.",
     "modelAriaLabel": "Interaktives 3D-Modell eines industriellen 3D-Druckers",
+    "noarGlassAlt": "Transparentes Industriebauteil, das für ein technisches Projekt entwickelt wurde",
     "card": {
       "toggleAria": "Details zu {{item}} umschalten"
     },

@@ -130,6 +130,7 @@
     "title": "专业能力",
     "description": "基于生产现场积累的经验，结合工程、持续改进、质量、安全和生产效率，将项目转化为具体成果。",
     "modelAriaLabel": "工业3D打印机的交互式3D模型",
+    "noarGlassAlt": "为技术项目开发的透明工业部件",
     "card": {
       "toggleAria": "切换 {{item}} 的详情"
     },
