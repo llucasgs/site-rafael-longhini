@@ -253,16 +253,24 @@
   },
   "industrialModels": {
     "sectionAriaLabel": "技術、自動化、産業開発に関連するインタラクティブ3Dモデルのセクション",
-
     "models": {
-      "robot": {
-        "ariaLabel": "ロボットのインタラクティブ3Dモデル"
+      "tablet": {
+        "ariaLabel": "産業用タブレットのインタラクティブ3Dモデル"
       },
-      "chassis": {
-        "ariaLabel": "機械シャーシのインタラクティブ3Dモデル"
+      "glasses": {
+        "ariaLabel": "メガネのインタラクティブ3Dモデル"
       },
-      "oculus": {
-        "ariaLabel": "Oculus Quest 2 ヘッドセットのインタラクティブ3Dモデル"
+      "bombaRkp": {
+        "ariaLabel": "RKPポンプのインタラクティブ3Dモデル"
+      },
+      "carTransmission": {
+        "ariaLabel": "自動車用トランスミッションのインタラクティブ3Dモデル"
+      },
+      "cdrTool": {
+        "ariaLabel": "CDRツールのインタラクティブ3Dモデル"
+      },
+      "colgateCase": {
+        "ariaLabel": "Colgateケースのインタラクティブ3Dモデル"
       }
     }
   },

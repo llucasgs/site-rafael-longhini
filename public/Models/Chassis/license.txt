@@ -1,8 +1,0 @@
-Model Information:
-* title:	Bagged truck frame /chassis with motor and trans
-* source:	https://sketchfab.com/3d-models/bagged-truck-frame-chassis-with-motor-and-trans-a741a84713f3448286ee3e7fe609480f
-* author:	austincj1239 (https://sketchfab.com/austinchasejez23)
-
-Model License:
-* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
-* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

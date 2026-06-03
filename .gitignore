@@ -46,16 +46,28 @@ public/Models/3DPrinter/scene.gltf
 public/Models/3DPrinter/scene.bin
 public/Models/3DPrinter/textures/
 
-# 3D source files - Robot
-public/Models/Robot/scene.gltf
-public/Models/Robot/scene.bin
-public/Models/Robot/textures/
+# 3D source files - client models
+public/Models/Tablet/tablet.gltf
+public/Models/Tablet/data.bin
 
-# 3D source files - Oculus
-public/Models/Oculus/scene.gltf
-public/Models/Oculus/scene.bin
-public/Models/Oculus/textures/
+public/Models/Glasses/glasses.gltf
+public/Models/Glasses/data.bin
+public/Models/Glasses/*.dds
+public/Models/Glasses/*.png
 
-# 3D source files - Chassis
-public/Models/Chassis/scene.gltf
-public/Models/Chassis/scene.bin
+public/Models/BombaRkp/bombaRkp.gltf
+public/Models/BombaRkp/data.bin
+
+public/Models/CarTransmission/carTransmission.gltf
+public/Models/CarTransmission/data.bin
+public/Models/CarTransmission/*.dds
+public/Models/CarTransmission/*.png
+
+public/Models/CdrTool/cdrTool.gltf
+public/Models/CdrTool/data.bin
+
+public/Models/ColgateCase/ColgateCase.gltf
+public/Models/ColgateCase/data.bin
+
+# zip sources
+*.zip

@@ -32,6 +32,8 @@ type ModelCanvasProps = {
   rotation?: Vector3Tuple;
   cameraPosition?: Vector3Tuple;
   fitMargin?: number;
+  minDistance?: number;
+  maxDistance?: number;
 };
 
 function Model({
@@ -69,7 +71,7 @@ function Model({
   }, [gltf]);
 
   return (
-    <Bounds fit clip observe margin={fitMargin}>
+    <Bounds fit clip margin={fitMargin}>
       <Center>
         <primitive object={gltf.scene} rotation={rotation} />
       </Center>
@@ -82,6 +84,8 @@ export function ModelCanvas({
   rotation = [0, -Math.PI / 5, 0],
   cameraPosition = [0, 1.2, 4.5],
   fitMargin = 0.85,
+  minDistance = 0.35,
+  maxDistance = 10,
 }: ModelCanvasProps) {
   return (
     <Canvas
@@ -97,6 +101,9 @@ export function ModelCanvas({
         gl.outputColorSpace = SRGBColorSpace;
       }}
       className="h-full w-full"
+      style={{
+        touchAction: "none",
+      }}
     >
       <PerspectiveCamera makeDefault position={cameraPosition} fov={38} />
 
@@ -123,10 +130,10 @@ export function ModelCanvas({
         enableDamping={false}
         screenSpacePanning
         rotateSpeed={0.7}
-        zoomSpeed={0.8}
+        zoomSpeed={1}
         panSpeed={0.65}
-        minDistance={1.4}
-        maxDistance={8}
+        minDistance={minDistance}
+        maxDistance={maxDistance}
         minPolarAngle={Math.PI / 8}
         maxPolarAngle={Math.PI / 1.08}
         mouseButtons={{

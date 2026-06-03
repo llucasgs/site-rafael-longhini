@@ -253,16 +253,24 @@
   },
   "industrialModels": {
     "sectionAriaLabel": "तकनीक, ऑटोमेशन और औद्योगिक विकास से जुड़े इंटरैक्टिव 3D मॉडलों का अनुभाग",
-
     "models": {
-      "robot": {
-        "ariaLabel": "रोबोट का इंटरैक्टिव 3D मॉडल"
+      "tablet": {
+        "ariaLabel": "औद्योगिक टैबलेट का इंटरैक्टिव 3D मॉडल"
       },
-      "chassis": {
-        "ariaLabel": "मैकेनिकल चेसिस का इंटरैक्टिव 3D मॉडल"
+      "glasses": {
+        "ariaLabel": "चश्मे का इंटरैक्टिव 3D मॉडल"
       },
-      "oculus": {
-        "ariaLabel": "Oculus Quest 2 हेडसेट का इंटरैक्टिव 3D मॉडल"
+      "bombaRkp": {
+        "ariaLabel": "RKP पंप का इंटरैक्टिव 3D मॉडल"
+      },
+      "carTransmission": {
+        "ariaLabel": "ऑटोमोटिव ट्रांसमिशन का इंटरैक्टिव 3D मॉडल"
+      },
+      "cdrTool": {
+        "ariaLabel": "CDR टूल का इंटरैक्टिव 3D मॉडल"
+      },
+      "colgateCase": {
+        "ariaLabel": "Colgate केस का इंटरैक्टिव 3D मॉडल"
       }
     }
   },

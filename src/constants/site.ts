@@ -42,36 +42,6 @@ export const site = {
       licenseUrl: "http://creativecommons.org/licenses/by/4.0/",
       attributionRequired: true,
     },
-    {
-      title: "Bagged truck frame /chassis with motor and trans",
-      source:
-        "https://sketchfab.com/3d-models/bagged-truck-frame-chassis-with-motor-and-trans-a741a84713f3448286ee3e7fe609480f",
-      author: "austincj1239",
-      authorUrl: "https://sketchfab.com/austinchasejez23",
-      license: "Sketchfab Standard",
-      licenseUrl: "https://sketchfab.com/licenses",
-      attributionRequired: false,
-    },
-    {
-      title: "Oculus quest 2",
-      source:
-        "https://sketchfab.com/3d-models/oculus-quest-2-c6a1c2623d224a1bbb81a38915f7e898",
-      author: "NosTeam",
-      authorUrl: "https://sketchfab.com/NosTeam",
-      license: "CC-BY-4.0",
-      licenseUrl: "http://creativecommons.org/licenses/by/4.0/",
-      attributionRequired: true,
-    },
-    {
-      title: "Robot character",
-      source:
-        "https://sketchfab.com/3d-models/robot-character-2fe59c8ef49547d2a1e0a65506701a7e",
-      author: "assetfactory",
-      authorUrl: "https://sketchfab.com/assetfactory",
-      license: "Sketchfab Standard",
-      licenseUrl: "https://sketchfab.com/licenses",
-      attributionRequired: false,
-    },
   ],
 
   seo: {

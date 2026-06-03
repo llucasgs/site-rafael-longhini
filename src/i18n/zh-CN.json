@@ -253,16 +253,24 @@
   },
   "industrialModels": {
     "sectionAriaLabel": "与技术、自动化和工业开发相关的交互式3D模型区域",
-
     "models": {
-      "robot": {
-        "ariaLabel": "机器人的交互式3D模型"
+      "tablet": {
+        "ariaLabel": "工业平板电脑的交互式3D模型"
       },
-      "chassis": {
-        "ariaLabel": "机械底盘的交互式3D模型"
+      "glasses": {
+        "ariaLabel": "眼镜的交互式3D模型"
       },
-      "oculus": {
-        "ariaLabel": "Oculus Quest 2 头显的交互式3D模型"
+      "bombaRkp": {
+        "ariaLabel": "RKP泵的交互式3D模型"
+      },
+      "carTransmission": {
+        "ariaLabel": "汽车变速器的交互式3D模型"
+      },
+      "cdrTool": {
+        "ariaLabel": "CDR工具的交互式3D模型"
+      },
+      "colgateCase": {
+        "ariaLabel": "Colgate外壳的交互式3D模型"
       }
     }
   },

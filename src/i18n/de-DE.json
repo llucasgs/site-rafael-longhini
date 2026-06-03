@@ -253,16 +253,24 @@
   },
   "industrialModels": {
     "sectionAriaLabel": "Sektion mit interaktiven 3D-Modellen zu Technologie, Automatisierung und industrieller Entwicklung",
-
     "models": {
-      "robot": {
-        "ariaLabel": "Interaktives 3D-Modell eines Roboters"
+      "tablet": {
+        "ariaLabel": "Interaktives 3D-Modell eines industriellen Tablets"
       },
-      "chassis": {
-        "ariaLabel": "Interaktives 3D-Modell eines mechanischen Fahrgestells"
+      "glasses": {
+        "ariaLabel": "Interaktives 3D-Modell einer Brille"
       },
-      "oculus": {
-        "ariaLabel": "Interaktives 3D-Modell eines Oculus Quest 2 Headsets"
+      "bombaRkp": {
+        "ariaLabel": "Interaktives 3D-Modell einer RKP-Pumpe"
+      },
+      "carTransmission": {
+        "ariaLabel": "Interaktives 3D-Modell eines Automobilgetriebes"
+      },
+      "cdrTool": {
+        "ariaLabel": "Interaktives 3D-Modell eines CDR-Werkzeugs"
+      },
+      "colgateCase": {
+        "ariaLabel": "Interaktives 3D-Modell eines Colgate-Gehäuses"
       }
     }
   },

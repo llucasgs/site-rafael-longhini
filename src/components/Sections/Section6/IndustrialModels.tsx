@@ -26,6 +26,9 @@ type IndustrialModelCard = {
   modelPath: string;
   rotation?: Vector3Tuple;
   fitMargin?: number;
+  minDistance?: number;
+  maxDistance?: number;
+  cameraPosition?: Vector3Tuple;
 };
 
 function Model3DCard({
@@ -33,11 +36,17 @@ function Model3DCard({
   modelPath,
   rotation,
   fitMargin,
+  minDistance,
+  maxDistance,
+  cameraPosition,
 }: {
   ariaLabel: string;
   modelPath: string;
   rotation?: Vector3Tuple;
   fitMargin?: number;
+  minDistance?: number;
+  maxDistance?: number;
+  cameraPosition?: Vector3Tuple;
 }) {
   const cardRef = useRef<HTMLElement>(null);
   const [shouldRenderModel, setShouldRenderModel] = useState(false);
@@ -80,7 +89,7 @@ function Model3DCard({
       <div
         aria-hidden="true"
         className="
-          absolute inset-0
+          pointer-events absolute inset-0
           bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)]
           bg-[size:42px_42px]
           opacity-70
@@ -91,7 +100,7 @@ function Model3DCard({
       <div
         aria-hidden="true"
         className="
-          absolute left-[-6rem] top-[-6rem]
+          pointer-events-none absolute left-[-6rem] top-[-6rem]
           h-56 w-56 rounded-full bg-orange-500/10 blur-3xl
         "
       />
@@ -119,6 +128,9 @@ function Model3DCard({
             modelPath={modelPath}
             rotation={rotation}
             fitMargin={fitMargin}
+            minDistance={minDistance}
+            maxDistance={maxDistance}
+            cameraPosition={cameraPosition}
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center">
@@ -135,22 +147,40 @@ export function IndustrialModels() {
 
   const modelCards: IndustrialModelCard[] = [
     {
-      ariaLabelKey: "industrialModels.models.robot.ariaLabel",
-      modelPath: "/Models/Robot/robot-optimized.glb",
-      rotation: [0, -Math.PI / 4, 0],
-      fitMargin: 1.1,
+      ariaLabelKey: "industrialModels.models.tablet.ariaLabel",
+      modelPath: "/Models/Tablet/tablet-optimized.glb",
+      rotation: [Math.PI / 5, -Math.PI / 5, 0],
+      fitMargin: 0.8,
     },
     {
-      ariaLabelKey: "industrialModels.models.chassis.ariaLabel",
-      modelPath: "/Models/Chassis/chassis-optimized.glb",
+      ariaLabelKey: "industrialModels.models.glasses.ariaLabel",
+      modelPath: "/Models/Glasses/glasses-optimized.glb",
+      rotation: [0, -Math.PI / 1.5, 0],
+      fitMargin: 0.8,
+    },
+    {
+      ariaLabelKey: "industrialModels.models.bombaRkp.ariaLabel",
+      modelPath: "/Models/BombaRkp/bomba-rkp-optimized.glb",
+      rotation: [0, -Math.PI / 5, 0],
+      fitMargin: 0.8,
+    },
+    {
+      ariaLabelKey: "industrialModels.models.carTransmission.ariaLabel",
+      modelPath: "/Models/CarTransmission/car-transmission-optimized.glb",
       rotation: [0, -Math.PI / 8, 0],
       fitMargin: 0.9,
     },
     {
-      ariaLabelKey: "industrialModels.models.oculus.ariaLabel",
-      modelPath: "/Models/Oculus/oculus-optimized.glb",
-      rotation: [0, -Math.PI / 6, 0],
-      fitMargin: 1,
+      ariaLabelKey: "industrialModels.models.cdrTool.ariaLabel",
+      modelPath: "/Models/CdrTool/cdr-tool-optimized.glb",
+      rotation: [-Math.PI / 5, -Math.PI / 4, Math.PI / 5],
+      fitMargin: 0.8,
+    },
+    {
+      ariaLabelKey: "industrialModels.models.colgateCase.ariaLabel",
+      modelPath: "/Models/ColgateCase/colgate-case-optimized.glb",
+      rotation: [Math.PI / 2, -Math.PI / 1, -Math.PI / 1.2],
+      fitMargin: 0.8,
     },
   ];
 
@@ -169,7 +199,7 @@ export function IndustrialModels() {
       </div>
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {modelCards.map((model, index) => {
             const delay = index === 0 ? "none" : index === 1 ? "sm" : "md";
 
@@ -180,6 +210,9 @@ export function IndustrialModels() {
                   modelPath={model.modelPath}
                   rotation={model.rotation}
                   fitMargin={model.fitMargin}
+                  minDistance={model.minDistance}
+                  maxDistance={model.maxDistance}
+                  cameraPosition={model.cameraPosition}
                 />
               </ScrollReveal>
             );

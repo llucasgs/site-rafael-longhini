@@ -1,8 +1,0 @@
-Model Information:
-* title:	Robot character
-* source:	https://sketchfab.com/3d-models/robot-character-2fe59c8ef49547d2a1e0a65506701a7e
-* author:	assetfactory (https://sketchfab.com/assetfactory)
-
-Model License:
-* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
-* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

@@ -253,16 +253,24 @@
   },
   "industrialModels": {
     "sectionAriaLabel": "기술, 자동화 및 산업 개발과 관련된 인터랙티브 3D 모델 섹션",
-
     "models": {
-      "robot": {
-        "ariaLabel": "로봇의 인터랙티브 3D 모델"
+      "tablet": {
+        "ariaLabel": "산업용 태블릿의 인터랙티브 3D 모델"
       },
-      "chassis": {
-        "ariaLabel": "기계식 섀시의 인터랙티브 3D 모델"
+      "glasses": {
+        "ariaLabel": "안경의 인터랙티브 3D 모델"
       },
-      "oculus": {
-        "ariaLabel": "Oculus Quest 2 헤드셋의 인터랙티브 3D 모델"
+      "bombaRkp": {
+        "ariaLabel": "RKP 펌프의 인터랙티브 3D 모델"
+      },
+      "carTransmission": {
+        "ariaLabel": "자동차 변속기의 인터랙티브 3D 모델"
+      },
+      "cdrTool": {
+        "ariaLabel": "CDR 도구의 인터랙티브 3D 모델"
+      },
+      "colgateCase": {
+        "ariaLabel": "Colgate 케이스의 인터랙티브 3D 모델"
       }
     }
   },
