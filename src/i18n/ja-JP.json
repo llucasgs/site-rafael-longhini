@@ -252,7 +252,9 @@
     }
   },
   "industrialModels": {
-    "sectionAriaLabel": "技術、自動化、産業開発に関連するインタラクティブ3Dモデルのセクション",
+    "sectionAriaLabel": "Rafael Longhini Lopes が専門的に制作した、技術・自動化・産業開発に関連するインタラクティブ3Dモデルのセクションです。",
+    "title": "経験",
+    "description": "機械工学、工具・治具製作、産業自動化、製品開発、そして製造現場でのチーム管理を通じて築かれた経歴です。",
     "models": {
       "tablet": {
         "ariaLabel": "産業用タブレットのインタラクティブ3Dモデル"

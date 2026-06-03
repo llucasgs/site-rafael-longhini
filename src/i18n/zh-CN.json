@@ -252,7 +252,9 @@
     }
   },
   "industrialModels": {
-    "sectionAriaLabel": "与技术、自动化和工业开发相关的交互式3D模型区域",
+    "sectionAriaLabel": "由 Rafael Longhini Lopes 专业创作的交互式3D模型区域，相关内容涵盖技术、自动化和工业开发。",
+    "title": "经验",
+    "description": "其职业经历建立在机械工程、工装制造、工业自动化、产品开发以及工厂现场团队管理之上。",
     "models": {
       "tablet": {
         "ariaLabel": "工业平板电脑的交互式3D模型"

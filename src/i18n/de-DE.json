@@ -252,7 +252,9 @@
     }
   },
   "industrialModels": {
-    "sectionAriaLabel": "Sektion mit interaktiven 3D-Modellen zu Technologie, Automatisierung und industrieller Entwicklung",
+    "sectionAriaLabel": "Sektion mit interaktiven 3D-Modellen zu Technologie, Automatisierung und industrieller Entwicklung, professionell erstellt von Rafael Longhini Lopes.",
+    "title": "ERFAHRUNG",
+    "description": "Eine Laufbahn, aufgebaut in Maschinenbau, Werkzeugbau, industrieller Automatisierung, Produktentwicklung und Teamführung in der Fertigung.",
     "models": {
       "tablet": {
         "ariaLabel": "Interaktives 3D-Modell eines industriellen Tablets"

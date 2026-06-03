@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const ModelCanvas = dynamic(
@@ -89,7 +90,7 @@ function Model3DCard({
       <div
         aria-hidden="true"
         className="
-          pointer-events absolute inset-0
+          pointer-events-none absolute inset-0
           bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)]
           bg-[size:42px_42px]
           opacity-70
@@ -108,7 +109,7 @@ function Model3DCard({
       <div
         aria-hidden="true"
         className="
-          absolute bottom-[-6rem] right-[-6rem]
+          pointer-events-none absolute bottom-[-6rem] right-[-6rem]
           h-56 w-56 rounded-full bg-sky-500/10 blur-3xl
         "
       />
@@ -117,7 +118,8 @@ function Model3DCard({
         role="img"
         aria-label={ariaLabel}
         className="
-          relative z-10 h-[18rem] w-full touch-none
+          relative z-10 h-[18rem] w-full cursor-grab touch-none
+          active:cursor-grabbing
           sm:h-[20rem]
           md:h-[22rem]
           lg:h-[24rem]
@@ -186,7 +188,7 @@ export function IndustrialModels() {
 
   return (
     <section
-      id="industrial-models"
+      id="experience"
       aria-label={t("industrialModels.sectionAriaLabel")}
       className="relative overflow-hidden py-10 md:py-14 lg:py-18"
     >
@@ -199,6 +201,13 @@ export function IndustrialModels() {
       </div>
 
       <Container className="relative z-10">
+        <ScrollReveal>
+          <SectionTitle
+            title={t("industrialModels.title")}
+            description={t("industrialModels.description")}
+          />
+        </ScrollReveal>
+
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {modelCards.map((model, index) => {
             const delay = index === 0 ? "none" : index === 1 ? "sm" : "md";

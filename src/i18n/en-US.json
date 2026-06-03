@@ -252,7 +252,9 @@
     }
   },
   "industrialModels": {
-    "sectionAriaLabel": "Section with interactive 3D models related to technology, automation and industrial development",
+    "sectionAriaLabel": "Section with interactive 3D models related to technology, automation and industrial development, professionally authored by Rafael Longhini Lopes.",
+    "title": "EXPERIENCE",
+    "description": "A career built in mechanical engineering, tooling, industrial automation, product development and team management on the factory floor.",
     "models": {
       "tablet": {
         "ariaLabel": "Interactive 3D model of an industrial tablet"
