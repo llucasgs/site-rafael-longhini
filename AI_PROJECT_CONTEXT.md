@@ -207,6 +207,8 @@ public/
       glasses-optimized.glb
     Tablet/
       tablet-optimized.glb
+  og/
+    longhini-og.jpg
 ```
 
 ## Arquivos omitidos deste contexto
@@ -267,14 +269,19 @@ Ponto de atencao: existe um `{" "}` apos `<Contact />`. Nao parece necessario fu
 - Envolve a aplicacao com `LanguageProvider`.
 - Define `html lang="pt-BR"` inicialmente.
 - Define `metadata` usando `site.seo` de `src/constants/site.ts`.
-- Define `title.default`, `title.template`, `description`, `keywords`, `authors`, `robots`, Open Graph e Twitter card.
+- Define `metadataBase` com `new URL(site.seo.url)`.
+- Define `title.default`, `title.template`, `description`, `keywords`, `authors`, `creator`, `publisher`, `robots`, canonical, Open Graph e Twitter card.
+- Define `alternates.canonical` como `/`.
+- Define Open Graph com `url: "/"`, `type: "website"`, `locale: "pt_BR"`, `siteName: site.name` e imagem vinda de `site.seo.ogImage`.
+- Define Twitter card como `summary_large_image`, usando a mesma imagem de `site.seo.ogImage`.
+- A imagem de preview usada por WhatsApp/redes sociais esta configurada como `/og/longhini-og.jpg`, com dimensoes `1200x630`.
 
 Pontos de atencao:
 
 | Ponto | Impacto | Recomendacao |
 | --- | --- | --- |
-| Metadata sem `metadataBase`, canonical e URL OG explicita | Compartilhamento social e canonicalizacao menos fortes | Adicionar quando houver dominio oficial e imagem social |
 | Textos acentuados aparecem com mojibake em leituras de terminal | Risco de editar conteudo corrompido por engano | Validar encoding real antes de alterar textos |
+| Cache do WhatsApp/LinkedIn pode manter imagem antiga | Preview pode demorar para refletir alteracoes de `og:image` | Usar ferramentas de debug/refresh de cache das plataformas apos deploy |
 
 ## Estilo global
 
@@ -641,11 +648,18 @@ export const site = {
     }
   ],
   seo: {
+    url: "https://longhinieng.com.br",
     title: "Longhini Desenvolvimento Industrial | Solucoes Industriais",
     titleTemplate: "%s | Longhini Desenvolvimento Industrial",
     description: "...",
     openGraphDescription: "...",
     twitterDescription: "...",
+    ogImage: {
+      url: "/og/longhini-og.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Longhini Desenvolvimento Industrial - Solucoes industriais personalizadas",
+    },
     keywords: ["..."],
   },
 } as const;
@@ -657,6 +671,8 @@ Pontos de atencao:
 | --- | --- | --- |
 | Leituras no terminal exibiram alguns textos acentuados como mojibake | Risco de alterar conteudo corrompido por engano | Confirmar o conteudo real no editor antes de alterar textos |
 | `site.modelCredits` lista apenas a impressora 3D | Novos modelos da Section6 podem precisar de creditos/licencas | Validar origem/licenca dos modelos Tablet, Glasses, BombaRkp, CarTransmission, CdrTool e ColgateCase |
+
+Observacao sobre preview de links: WhatsApp, LinkedIn e outras plataformas leem as tags Open Graph renderizadas a partir de `src/app/layout.tsx`. A imagem compartilhada esta centralizada em `site.seo.ogImage` e aponta para `public/og/longhini-og.jpg`.
 
 ## Utilitario de scroll
 
@@ -782,7 +798,8 @@ Pontos positivos:
 
 - `metadata` definido no layout a partir de `site.seo`.
 - `robots.index` e `robots.follow`.
-- Open Graph e Twitter card basicos.
+- `metadataBase`, canonical, Open Graph e Twitter card configurados.
+- Imagem OG/Twitter configurada em `site.seo.ogImage` como `/og/longhini-og.jpg` (`1200x630`).
 - `alt` em imagens relevantes.
 - `aria-label` em navegacao, hero, menu mobile, accordions, clientes, modelos 3D, contato, footer e botoes flutuantes.
 - `focus-visible:ring` em controles interativos.
@@ -799,7 +816,6 @@ Pontos de melhoria:
 | --- | --- | --- |
 | `industrial-models` nao aparece no menu | Secao pode ser descoberta apenas por rolagem | Decidir se deve entrar no menu ou permanecer como bloco visual de apoio |
 | Section5 e Section6 com `id="experience"` | IDs duplicados prejudicam navegacao por ancora, acessibilidade e semantica | Ajustar Section6 para um id unico, como `industrial-models`, se ela deve ser uma secao independente |
-| Metadata sem URL/imagem OG explicita | Compartilhamento social menos forte | Adicionar `metadataBase`, canonical, `openGraph.url` e `openGraph.images` quando houver dominio/imagem |
 | Modelos 3D em secoes principais | Pode pesar em mobile | Validar performance real em dispositivos fracos |
 | Mojibake em terminal | Pode causar edicao incorreta de textos | Confirmar encoding/conteudo no editor antes de alterar copy |
 | `<Contact />{" "}` em `page.tsx` | Pequena sujeira de markup | Remover em limpeza futura |
@@ -835,7 +851,6 @@ Esses erros devem ser tratados separadamente antes de considerar o lint limpo. O
 | Alta | Resolver erros atuais de lint | Mantem qualidade e reduz regressao |
 | Alta | Corrigir id duplicado da Section6 se ela deve ser independente | Evita conflito com navegacao e acessibilidade |
 | Media | Validar performance dos modelos 3D em mobile | Three.js pode impactar celulares |
-| Media | Adicionar metadata canonica/OG completa quando houver dominio | Melhora SEO e compartilhamento |
 | Media | Decidir se `industrial-models` deve entrar na navegacao | Melhora descoberta da secao, se ela for estrategica |
 | Baixa | Remover `{" "}` apos `<Contact />` | Limpeza simples de JSX |
 
@@ -880,7 +895,8 @@ Regras:
 16. Considere que `FloatingButtons` renderiza botao de voltar ao topo e WhatsApp.
 17. Considere que todos os 13 arquivos de idioma possuem 213 chaves sincronizadas.
 18. Considere que a Section6 esta salva com `id="experience"`, duplicando a Section5; validar antes de mexer em navegacao.
-19. Valide APIs de Next.js na documentacao local antes de alteracoes estruturais.
+19. Considere que a imagem de preview de links/WhatsApp esta em `site.seo.ogImage`, apontando para `/og/longhini-og.jpg`.
+20. Valide APIs de Next.js na documentacao local antes de alteracoes estruturais.
 
 Minha tarefa e:
 [descreva a tarefa]
