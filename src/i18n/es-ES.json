@@ -342,7 +342,11 @@
       "title": "Créditos de los modelos 3D",
       "by": "por",
       "license": "Licencia:",
-      "source": "Ver fuente"
+      "source": "Ver fuente",
+      "allOtherModels": {
+        "title": "Todos los demás modelos",
+        "author": "longhini"
+      }
     }
   }
 }

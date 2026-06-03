@@ -342,7 +342,11 @@
       "title": "3D 모델 크레딧",
       "by": "제작자",
       "license": "라이선스:",
-      "source": "출처 보기"
+      "source": "출처 보기",
+      "allOtherModels": {
+        "title": "기타 모든 모델",
+        "author": "longhini"
+      }
     }
   }
 }

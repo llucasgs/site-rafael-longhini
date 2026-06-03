@@ -342,7 +342,11 @@
       "title": "3D模型鸣谢",
       "by": "作者",
       "license": "许可证:",
-      "source": "查看来源"
+      "source": "查看来源",
+      "allOtherModels": {
+        "title": "所有其他模型",
+        "author": "longhini"
+      }
     }
   }
 }

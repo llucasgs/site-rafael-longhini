@@ -342,7 +342,11 @@
       "title": "3D मॉडल क्रेडिट",
       "by": "द्वारा",
       "license": "लाइसेंस:",
-      "source": "स्रोत देखें"
+      "source": "स्रोत देखें",
+      "allOtherModels": {
+        "title": "अन्य सभी मॉडल",
+        "author": "longhini"
+      }
     }
   }
 }

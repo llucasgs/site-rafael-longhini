@@ -46,22 +46,22 @@ function ModelCredits() {
     <details
       className="
         group overflow-hidden rounded-[1.75rem]
-        border border-white/10 bg-white/[0.028]
-        shadow-[0_8px_40px_rgba(0,0,0,0.28)]
-        backdrop-blur-xl
+        border border-white/5 bg-white/[0.012]
+        backdrop-blur-sm
         transition-all duration-300
-        open:bg-white/[0.038]
+        open:border-white/10 open:bg-white/[0.024]
+        open:shadow-[0_8px_40px_rgba(0,0,0,0.22)]
       "
     >
       <summary
         className="
           flex w-full cursor-pointer list-none items-center
           justify-between gap-4 px-6 py-4
-          text-[0.68rem] font-bold uppercase tracking-[0.22em]
-          text-orange-300 transition-colors duration-300
-          hover:text-orange-200
+          text-[0.64rem] font-bold uppercase tracking-[0.22em]
+          text-slate-600 transition-colors duration-300
+          hover:text-slate-500
           focus:outline-none focus-visible:ring-2
-          focus-visible:ring-orange-400/70
+          focus-visible:ring-orange-400/50
           [&::-webkit-details-marker]:hidden
         "
       >
@@ -70,14 +70,16 @@ function ModelCredits() {
         <ChevronDown
           size={15}
           aria-hidden="true"
-          className="shrink-0 text-orange-300/70 transition-transform duration-300 group-open:rotate-180"
+          className="
+            shrink-0 text-slate-700 transition-transform duration-300
+            group-hover:text-slate-500 group-open:rotate-180
+          "
         />
       </summary>
 
-      {/* Divisor interno */}
       <div
         aria-hidden="true"
-        className="mx-6 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent"
+        className="mx-6 h-px bg-gradient-to-r from-transparent via-white/6 to-transparent"
       />
 
       <div className="grid gap-2.5 p-4">
@@ -89,7 +91,6 @@ function ModelCredits() {
               border border-white/8 bg-black/20 p-4
             "
           >
-            {/* Linha de brilho superior — detalhe premium */}
             <span
               aria-hidden="true"
               className="
@@ -145,6 +146,32 @@ function ModelCredits() {
             </a>
           </div>
         ))}
+
+        <div
+          className="
+            relative overflow-hidden rounded-2xl
+            border border-white/8 bg-black/20 p-4
+          "
+        >
+          <span
+            aria-hidden="true"
+            className="
+              pointer-events-none absolute inset-x-0 top-0 h-px
+              bg-gradient-to-r from-transparent via-white/10 to-transparent
+            "
+          />
+
+          <p className="text-sm font-bold text-slate-200">
+            {t("footer.modelCredits.allOtherModels.title")}
+          </p>
+
+          <p className="mt-1.5 text-xs leading-5 text-slate-400">
+            {t("footer.modelCredits.by")}{" "}
+            <span className="text-orange-300">
+              {t("footer.modelCredits.allOtherModels.author")}
+            </span>
+          </p>
+        </div>
       </div>
     </details>
   );

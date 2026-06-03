@@ -342,7 +342,11 @@
       "title": "3Dモデルのクレジット",
       "by": "作者",
       "license": "ライセンス:",
-      "source": "出典を見る"
+      "source": "出典を見る",
+      "allOtherModels": {
+        "title": "その他すべてのモデル",
+        "author": "longhini"
+      }
     }
   }
 }
