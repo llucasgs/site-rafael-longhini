@@ -97,14 +97,9 @@ Interpretacao pratica: antes de mudancas em APIs, convencoes, metadata, roteamen
 
 ```text
  M AI_PROJECT_CONTEXT.md
- M src/components/Sections/Section3/Expertise.tsx
- M src/components/Three/ModelCanvas.tsx
- M src/components/Three/PrinterCanvas.tsx
- M src/i18n/pt-BR.json
-?? public/Sections/Section3/
 ```
 
-Leitura: antes desta atualizacao do proprio contexto, havia alteracoes locais nesses arquivos. Este documento deve ser tratado como um retrato do estado salvo em disco no momento da atualizacao; alteracoes nao salvas no editor podem nao estar refletidas aqui.
+Leitura: antes desta atualizacao do proprio contexto, `git status --short` nao retornava alteracoes. A unica alteracao esperada apos este pedido e o proprio `AI_PROJECT_CONTEXT.md`.
 
 ## Estrutura relevante
 
@@ -327,9 +322,9 @@ Estado atual das chaves:
 | Arquivo | Chaves |
 | --- | --- |
 | `pt-BR.json` | 213 chaves |
-| Demais JSONs | 212 chaves |
+| Demais JSONs | 213 chaves |
 
-Validacao feita no momento desta atualizacao: os 12 JSONs nao portugueses estao sem a chave `expertise.noarGlassAlt`, adicionada em `pt-BR.json`. Isso nao quebra a funcao `t()` porque existe fallback para `pt-BR`, mas deixa as traducoes incompletas.
+Validacao feita no momento desta atualizacao: todos os 13 JSONs possuem a mesma estrutura do `pt-BR.json`, com 213 chaves, sem chaves faltando ou extras.
 
 ## Header e navegacao
 
@@ -808,16 +803,14 @@ Pontos de melhoria:
 | Modelos 3D em secoes principais | Pode pesar em mobile | Validar performance real em dispositivos fracos |
 | Mojibake em terminal | Pode causar edicao incorreta de textos | Confirmar encoding/conteudo no editor antes de alterar copy |
 | `<Contact />{" "}` em `page.tsx` | Pequena sujeira de markup | Remover em limpeza futura |
-| Chave `expertise.noarGlassAlt` ausente em 12 idiomas | Fallback para pt-BR funciona, mas traducoes ficam incompletas | Adicionar a chave aos demais JSONs |
 
 ## Validacao conhecida
 
 Validacao executada nesta atualizacao:
 
 ```text
-pt-BR.json possui 213 chaves.
-Os demais 12 JSONs possuem 212 chaves.
-Chave faltante nos demais idiomas: expertise.noarGlassAlt.
+Todos os arquivos src/i18n/*.json possuem 213 chaves.
+Nao ha chaves faltando ou extras em relacao ao pt-BR.json.
 ```
 
 Validacao anterior registrada:
@@ -840,7 +833,6 @@ Esses erros devem ser tratados separadamente antes de considerar o lint limpo. O
 | --- | --- | --- |
 | Alta | Validar encoding dos textos acentuados | Evita corromper conteudo em `site.ts` e JSONs |
 | Alta | Resolver erros atuais de lint | Mantem qualidade e reduz regressao |
-| Alta | Sincronizar `expertise.noarGlassAlt` nos 12 JSONs nao portugueses | Mantem i18n completo e evita fallback indesejado |
 | Alta | Corrigir id duplicado da Section6 se ela deve ser independente | Evita conflito com navegacao e acessibilidade |
 | Media | Validar performance dos modelos 3D em mobile | Three.js pode impactar celulares |
 | Media | Adicionar metadata canonica/OG completa quando houver dominio | Melhora SEO e compartilhamento |
@@ -886,7 +878,7 @@ Regras:
 14. Considere que `Contact` existe como Section7, com WhatsApp, e-mail, LinkedIn e imagem institucional.
 15. Considere que `Footer` existe, usa `site.modelCredits`, `site.developer`, SVGs manuais para LinkedIn/Instagram e asset `/Footer/devSignature.svg`.
 16. Considere que `FloatingButtons` renderiza botao de voltar ao topo e WhatsApp.
-17. Considere que `pt-BR.json` tem 213 chaves e os demais idiomas tem 212, faltando `expertise.noarGlassAlt`.
+17. Considere que todos os 13 arquivos de idioma possuem 213 chaves sincronizadas.
 18. Considere que a Section6 esta salva com `id="experience"`, duplicando a Section5; validar antes de mexer em navegacao.
 19. Valide APIs de Next.js na documentacao local antes de alteracoes estruturais.
 

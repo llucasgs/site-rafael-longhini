@@ -14,6 +14,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.seo.url),
   title: {
     default: site.seo.title,
     template: site.seo.titleTemplate,
@@ -21,21 +22,36 @@ export const metadata: Metadata = {
   description: site.seo.description,
   keywords: [...site.seo.keywords],
   authors: [{ name: site.owner }],
+  creator: site.owner,
+  publisher: site.name,
   robots: {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: site.name,
     description: site.seo.openGraphDescription,
+    url: "/",
     type: "website",
     locale: "pt_BR",
     siteName: site.name,
+    images: [
+      {
+        url: site.seo.ogImage.url,
+        width: site.seo.ogImage.width,
+        height: site.seo.ogImage.height,
+        alt: site.seo.ogImage.alt,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: site.name,
     description: site.seo.twitterDescription,
+    images: [site.seo.ogImage.url],
   },
 };
 

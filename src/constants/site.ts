@@ -45,6 +45,7 @@ export const site = {
   ],
 
   seo: {
+    url: "https://longhinieng.com.br",
     title: "Longhini Desenvolvimento Industrial | Soluções Industriais",
     titleTemplate: "%s | Longhini Desenvolvimento Industrial",
     description:
@@ -53,6 +54,12 @@ export const site = {
       "Transformando ideias em produtos reais, eficientes e inovadores com engenharia, tecnologia e experiência industrial.",
     twitterDescription:
       "Projetos mecânicos, engenharia reversa, prototipagem 3D e soluções industriais personalizadas.",
+    ogImage: {
+      url: "/og/longhini-og.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Longhini Desenvolvimento Industrial - Soluções industriais personalizadas",
+    },
     keywords: [
       "Longhini Desenvolvimento Industrial",
       "Rafael Longhini Lopes",
