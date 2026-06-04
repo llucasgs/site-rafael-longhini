@@ -2,8 +2,8 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useRef, useState, type PointerEvent } from "react";
+import { ChevronLeft, ChevronRight, Rotate3D } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -72,6 +72,47 @@ const industrialMediaItems: IndustrialMediaItem[] = [
     altKey: "industrialModels.gallery.items.video01.alt",
   },
 ];
+
+function Interactive3DSeal() {
+  const { t } = useLanguage();
+
+  return (
+    <div
+      aria-label={t("industrialModels.interactiveSeal.ariaLabel")}
+      className="
+        pointer-events-none absolute bottom-4 right-4 z-20
+        inline-flex items-center gap-1.5 rounded-full
+        border border-white/10 bg-black/30
+        px-3 py-1.5
+        text-slate-400 backdrop-blur-md
+        transition-colors duration-300
+        group-hover:border-white/15 group-hover:text-slate-300
+        sm:bottom-5 sm:right-5
+      "
+    >
+      <Rotate3D
+        size={15}
+        aria-hidden="true"
+        className="
+          shrink-0 text-slate-400
+          transition-colors duration-300
+          group-hover:text-sky-300
+        "
+      />
+
+      <span
+        className="
+          text-[0.68rem] font-bold uppercase
+          tracking-[0.14em] text-slate-400
+          transition-colors duration-300
+          group-hover:text-orange-300
+        "
+      >
+        {t("industrialModels.interactiveSeal.label")}
+      </span>
+    </div>
+  );
+}
 
 function Model3DCard({
   ariaLabel,
@@ -181,6 +222,8 @@ function Model3DCard({
           </div>
         )}
       </div>
+
+      <Interactive3DSeal />
     </article>
   );
 }
@@ -257,14 +300,12 @@ function IndustrialMediaCarousel() {
     }
   }
 
-  function handlePointerDown(event: React.PointerEvent<HTMLDivElement>) {
+  function handlePointerDown(event: PointerEvent<HTMLDivElement>) {
     if (isSliderAnimating) return;
 
     const target = event.target as HTMLElement;
 
-    if (target.closest("button")) {
-      return;
-    }
+    if (target.closest("button")) return;
 
     dragStartXRef.current = event.clientX;
     dragCurrentXRef.current = event.clientX;
@@ -276,7 +317,7 @@ function IndustrialMediaCarousel() {
     event.currentTarget.setPointerCapture(event.pointerId);
   }
 
-  function handlePointerMove(event: React.PointerEvent<HTMLDivElement>) {
+  function handlePointerMove(event: PointerEvent<HTMLDivElement>) {
     if (!isDragging || isSliderAnimating) return;
 
     dragCurrentXRef.current = event.clientX;
@@ -286,7 +327,7 @@ function IndustrialMediaCarousel() {
     setDragOffset(nextDragOffset);
   }
 
-  function handlePointerUp(event: React.PointerEvent<HTMLDivElement>) {
+  function handlePointerUp(event: PointerEvent<HTMLDivElement>) {
     if (!isDragging) return;
 
     const viewportWidth = sliderViewportRef.current?.offsetWidth ?? 1;
@@ -421,15 +462,15 @@ function IndustrialMediaCarousel() {
           onPointerDown={(event) => event.stopPropagation()}
           aria-label={t("industrialModels.gallery.previousAriaLabel")}
           className="
-    absolute left-3 top-1/2 z-30 inline-flex h-10 w-10
-    -translate-y-1/2 items-center justify-center rounded-full
-    border border-white/10 bg-black/35 text-white
-    backdrop-blur-md transition-all duration-300
-    hover:border-orange-400/35 hover:bg-orange-400/15
-    focus:outline-none focus-visible:ring-2
-    focus-visible:ring-orange-400/70
-    md:left-5 md:h-11 md:w-11
-  "
+            absolute left-3 top-1/2 z-30 inline-flex h-10 w-10
+            -translate-y-1/2 items-center justify-center rounded-full
+            border border-white/10 bg-black/35 text-white
+            backdrop-blur-md transition-all duration-300
+            hover:border-orange-400/35 hover:bg-orange-400/15
+            focus:outline-none focus-visible:ring-2
+            focus-visible:ring-orange-400/70
+            md:left-5 md:h-11 md:w-11
+          "
         >
           <ChevronLeft size={22} aria-hidden="true" />
         </button>
@@ -440,15 +481,15 @@ function IndustrialMediaCarousel() {
           onPointerDown={(event) => event.stopPropagation()}
           aria-label={t("industrialModels.gallery.nextAriaLabel")}
           className="
-    absolute right-3 top-1/2 z-30 inline-flex h-10 w-10
-    -translate-y-1/2 items-center justify-center rounded-full
-    border border-white/10 bg-black/35 text-white
-    backdrop-blur-md transition-all duration-300
-    hover:border-orange-400/35 hover:bg-orange-400/15
-    focus:outline-none focus-visible:ring-2
-    focus-visible:ring-orange-400/70
-    md:right-5 md:h-11 md:w-11
-  "
+            absolute right-3 top-1/2 z-30 inline-flex h-10 w-10
+            -translate-y-1/2 items-center justify-center rounded-full
+            border border-white/10 bg-black/35 text-white
+            backdrop-blur-md transition-all duration-300
+            hover:border-orange-400/35 hover:bg-orange-400/15
+            focus:outline-none focus-visible:ring-2
+            focus-visible:ring-orange-400/70
+            md:right-5 md:h-11 md:w-11
+          "
         >
           <ChevronRight size={22} aria-hidden="true" />
         </button>

@@ -131,6 +131,10 @@
     "description": "Experience built on the shop floor, combining engineering, continuous improvement, quality, safety, and productivity to turn projects into concrete results.",
     "modelAriaLabel": "Interactive 3D model of an industrial 3D printer",
     "noarGlassAlt": "Transparent industrial part developed for a technical project",
+    "interactiveSeal": {
+      "label": "3D",
+      "ariaLabel": "Badge indicating that the 3D model is interactive"
+    },
     "card": {
       "toggleAria": "Toggle details for {{item}}"
     },
@@ -256,6 +260,10 @@
     "sectionAriaLabel": "Section with interactive 3D models related to technology, automation and industrial development, professionally authored by Rafael Longhini Lopes.",
     "title": "EXPERIENCE",
     "description": "A career built in mechanical engineering, tooling, industrial automation, product development and team management on the factory floor.",
+    "interactiveSeal": {
+      "label": "3D",
+      "ariaLabel": "Badge indicating that the 3D model is interactive"
+    },
     "models": {
       "tablet": {
         "ariaLabel": "Interactive 3D model of an industrial tablet"

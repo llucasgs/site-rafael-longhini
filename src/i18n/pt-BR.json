@@ -140,6 +140,10 @@
     "description": "Experiência construída no chão de fábrica, aliando engenharia, melhoria contínua, qualidade, segurança e produtividade para transformar projeto em resultado concreto.",
     "modelAriaLabel": "Modelo 3D interativo de uma impressora 3D industrial",
     "noarGlassAlt": "Peça industrial transparente desenvolvida para projeto técnico",
+    "interactiveSeal": {
+      "label": "3D",
+      "ariaLabel": "Selo indicando que o modelo 3D é interativo"
+    },
     "card": {
       "toggleAria": "Alternar detalhes de {{item}}"
     },
@@ -266,6 +270,10 @@
     "sectionAriaLabel": "Seção com modelos 3D interativos relacionados a tecnologia, automação e desenvolvimento industrial de autoria profissional de Rafael Longhini Lopes.",
     "title": "EXPERIÊNCIA",
     "description": "Trajetória construída em engenharia mecânica, ferramentaria, automação industrial, desenvolvimento de produtos e gestão de equipes no chão de fábrica.",
+    "interactiveSeal": {
+      "label": "3D",
+      "ariaLabel": "Selo indicando que o modelo 3D é interativo"
+    },
     "models": {
       "tablet": {
         "ariaLabel": "Modelo 3D interativo de um tablet industrial"

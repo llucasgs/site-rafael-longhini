@@ -131,6 +131,10 @@
     "description": "基于生产现场积累的经验，结合工程、持续改进、质量、安全和生产效率，将项目转化为具体成果。",
     "modelAriaLabel": "工业3D打印机的交互式3D模型",
     "noarGlassAlt": "为技术项目开发的透明工业部件",
+    "interactiveSeal": {
+      "label": "3D",
+      "ariaLabel": "表示该3D模型可交互的标识"
+    },
     "card": {
       "toggleAria": "切换 {{item}} 的详情"
     },
@@ -256,6 +260,10 @@
     "sectionAriaLabel": "由 Rafael Longhini Lopes 专业创作的交互式3D模型区域，相关内容涵盖技术、自动化和工业开发。",
     "title": "经验",
     "description": "其职业经历建立在机械工程、工装制造、工业自动化、产品开发以及工厂现场团队管理之上。",
+    "interactiveSeal": {
+      "label": "3D",
+      "ariaLabel": "表示该3D模型可交互的标识"
+    },
     "models": {
       "tablet": {
         "ariaLabel": "工业平板电脑的交互式3D模型"

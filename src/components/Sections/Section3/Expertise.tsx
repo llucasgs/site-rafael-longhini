@@ -9,6 +9,7 @@ import {
   ChevronDown,
   ClipboardCheck,
   Factory,
+  Rotate3D,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
@@ -54,6 +55,47 @@ function Pill({ children }: { children: React.ReactNode }) {
     >
       {children}
     </li>
+  );
+}
+
+function Interactive3DSeal() {
+  const { t } = useLanguage();
+
+  return (
+    <div
+      aria-label={t("expertise.interactiveSeal.ariaLabel")}
+      className="
+        pointer-events-none absolute bottom-4 right-4 z-20
+        inline-flex items-center gap-1.5 rounded-full
+        border border-white/10 bg-black/30
+        px-3 py-1.5
+        text-slate-400 backdrop-blur-md
+        transition-colors duration-300
+        group-hover:border-white/15 group-hover:text-slate-300
+        sm:bottom-5 sm:right-5
+      "
+    >
+      <Rotate3D
+        size={15}
+        aria-hidden="true"
+        className="
+          shrink-0 text-slate-400
+          transition-colors duration-300
+          group-hover:text-sky-300
+        "
+      />
+
+      <span
+        className="
+          text-[0.68rem] font-bold uppercase
+          tracking-[0.14em] text-slate-400
+          transition-colors duration-300
+          group-hover:text-orange-300
+        "
+      >
+        {t("expertise.interactiveSeal.label")}
+      </span>
+    </div>
   );
 }
 
@@ -302,7 +344,7 @@ export function Expertise() {
               role="img"
               aria-label={t("expertise.modelAriaLabel")}
               className="
-                relative h-[22rem] overflow-hidden rounded-[2rem]
+                group relative h-[22rem] overflow-hidden rounded-[2rem]
                 border border-white/10 bg-white/[0.035]
                 shadow-[0_24px_90px_rgba(0,0,0,0.42)]
                 backdrop-blur-xl
@@ -341,19 +383,22 @@ export function Expertise() {
               <div className="relative z-10 h-full w-full touch-none">
                 {shouldRenderCanvas && <PrinterCanvas />}
               </div>
+
+              <Interactive3DSeal />
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay="md">
             <figure
               className="
-              relative h-[21.875rem] overflow-hidden rounded-[2rem]
-              border border-white/10 bg-white/[0.035]
-              shadow-[0_24px_90px_rgba(0,0,0,0.42)]
-              backdrop-blur-xl
-              md:h-[29.875rem]
-              lg:h-full lg:min-h-[36rem]
-            "
+                relative h-[21.875rem] overflow-hidden rounded-[2rem]
+                border border-sky-200/10
+                bg-[linear-gradient(135deg,rgba(15,23,42,0.9),rgba(8,47,73,0.34),rgba(2,6,23,0.92))]
+                shadow-[0_24px_90px_rgba(0,0,0,0.42)]
+                backdrop-blur-xl
+                md:h-[29.875rem]
+                lg:h-full lg:min-h-[36rem]
+              "
             >
               <div
                 aria-hidden="true"
@@ -367,7 +412,7 @@ export function Expertise() {
                 aria-hidden="true"
                 className="
                   pointer-events-none absolute right-[-6rem] top-[-6rem] z-10
-                  h-56 w-56 rounded-full bg-sky-500/10 blur-3xl
+                  h-56 w-56 rounded-full bg-cyan-300/12 blur-3xl
                 "
               />
 
@@ -377,10 +422,7 @@ export function Expertise() {
                   alt={t("expertise.noarGlassAlt")}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="
-                    object-contain
-                    
-                  "
+                  className="object-contain"
                 />
               </div>
             </figure>

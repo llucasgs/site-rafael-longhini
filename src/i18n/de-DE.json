@@ -131,6 +131,10 @@
     "description": "Erfahrung aus der Fertigungspraxis, die Ingenieurwesen, kontinuierliche Verbesserung, Qualität, Sicherheit und Produktivität verbindet, um Projekte in konkrete Ergebnisse zu verwandeln.",
     "modelAriaLabel": "Interaktives 3D-Modell eines industriellen 3D-Druckers",
     "noarGlassAlt": "Transparentes Industriebauteil, das für ein technisches Projekt entwickelt wurde",
+    "interactiveSeal": {
+      "label": "3D",
+      "ariaLabel": "Hinweis, dass das 3D-Modell interaktiv ist"
+    },
     "card": {
       "toggleAria": "Details zu {{item}} umschalten"
     },
@@ -256,6 +260,10 @@
     "sectionAriaLabel": "Sektion mit interaktiven 3D-Modellen zu Technologie, Automatisierung und industrieller Entwicklung, professionell erstellt von Rafael Longhini Lopes.",
     "title": "ERFAHRUNG",
     "description": "Eine Laufbahn, aufgebaut in Maschinenbau, Werkzeugbau, industrieller Automatisierung, Produktentwicklung und Teamführung in der Fertigung.",
+    "interactiveSeal": {
+      "label": "3D",
+      "ariaLabel": "Hinweis, dass das 3D-Modell interaktiv ist"
+    },
     "models": {
       "tablet": {
         "ariaLabel": "Interaktives 3D-Modell eines industriellen Tablets"

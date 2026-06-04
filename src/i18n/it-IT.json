@@ -131,6 +131,10 @@
     "description": "Esperienza maturata sul campo in produzione, unendo ingegneria, miglioramento continuo, qualità, sicurezza e produttività per trasformare i progetti in risultati concreti.",
     "modelAriaLabel": "Modello 3D interattivo di una stampante 3D industriale",
     "noarGlassAlt": "Componente industriale trasparente sviluppato per un progetto tecnico",
+    "interactiveSeal": {
+      "label": "3D",
+      "ariaLabel": "Badge che indica che il modello 3D è interattivo"
+    },
     "card": {
       "toggleAria": "Mostra o nascondi i dettagli di {{item}}"
     },
@@ -256,6 +260,10 @@
     "sectionAriaLabel": "Sezione con modelli 3D interattivi legati a tecnologia, automazione e sviluppo industriale, realizzati professionalmente da Rafael Longhini Lopes.",
     "title": "ESPERIENZA",
     "description": "Percorso costruito nell’ingegneria meccanica, attrezzeria, automazione industriale, sviluppo di prodotti e gestione di team in produzione.",
+    "interactiveSeal": {
+      "label": "3D",
+      "ariaLabel": "Badge che indica che il modello 3D è interattivo"
+    },
     "models": {
       "tablet": {
         "ariaLabel": "Modello 3D interattivo di un tablet industriale"
