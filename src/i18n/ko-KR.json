@@ -275,6 +275,31 @@
       "colgateCase": {
         "ariaLabel": "Colgate 케이스의 인터랙티브 3D 모델"
       }
+    },
+    "gallery": {
+      "ariaLabel": "산업 프로젝트 이미지 및 비디오 갤러리",
+      "previousAriaLabel": "갤러리의 이전 미디어 표시",
+      "nextAriaLabel": "갤러리의 다음 미디어 표시",
+      "items": {
+        "image01": {
+          "alt": "Longhini가 Volkswagen을 위해 개발 중인 기술 프로젝트 이미지"
+        },
+        "image02": {
+          "alt": "Longhini가 Volkswagen을 위해 개발한 기술 프로젝트 이미지"
+        },
+        "image03": {
+          "alt": "전자 제품 개발에 적용된 기술 솔루션 이미지"
+        },
+        "image04": {
+          "alt": "Volvo용 전기 기어박스를 위해 개발된 기술 부품 이미지"
+        },
+        "image05": {
+          "alt": "엔지니어링 및 산업 개발에 적용된 산업 프로젝트 이미지"
+        },
+        "video01": {
+          "alt": "Longhini가 개발한 기술 프로젝트를 보여주는 무음 산업 비디오"
+        }
+      }
     }
   },
   "contact": {

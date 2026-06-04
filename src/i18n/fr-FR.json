@@ -275,6 +275,31 @@
       "colgateCase": {
         "ariaLabel": "Modèle 3D interactif d’un boîtier Colgate"
       }
+    },
+    "gallery": {
+      "ariaLabel": "Galerie d’images et de vidéo de projets industriels",
+      "previousAriaLabel": "Afficher le média précédent de la galerie",
+      "nextAriaLabel": "Afficher le média suivant de la galerie",
+      "items": {
+        "image01": {
+          "alt": "Image d’un projet technique en développement par Longhini pour Volkswagen"
+        },
+        "image02": {
+          "alt": "Image d’un projet technique développé par Longhini pour Volkswagen"
+        },
+        "image03": {
+          "alt": "Image d’une solution technique appliquée au développement de produits électroniques"
+        },
+        "image04": {
+          "alt": "Image de composants techniques développés pour une boîte de vitesses électrique pour Volvo"
+        },
+        "image05": {
+          "alt": "Image industrielle d’un projet appliqué à l’ingénierie et au développement industriel"
+        },
+        "video01": {
+          "alt": "Vidéo industrielle sans audio montrant un projet technique développé par Longhini"
+        }
+      }
     }
   },
   "contact": {

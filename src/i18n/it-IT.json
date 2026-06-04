@@ -275,6 +275,31 @@
       "colgateCase": {
         "ariaLabel": "Modello 3D interattivo di un case Colgate"
       }
+    },
+    "gallery": {
+      "ariaLabel": "Galleria di immagini e video di progetti industriali",
+      "previousAriaLabel": "Mostra il media precedente della galleria",
+      "nextAriaLabel": "Mostra il media successivo della galleria",
+      "items": {
+        "image01": {
+          "alt": "Immagine di un progetto tecnico in sviluppo da Longhini per Volkswagen"
+        },
+        "image02": {
+          "alt": "Immagine di un progetto tecnico sviluppato da Longhini per Volkswagen"
+        },
+        "image03": {
+          "alt": "Immagine di una soluzione tecnica applicata allo sviluppo di prodotti elettronici"
+        },
+        "image04": {
+          "alt": "Immagine di componenti tecnici sviluppati per un cambio elettrico per Volvo"
+        },
+        "image05": {
+          "alt": "Immagine industriale di un progetto applicato all’ingegneria e allo sviluppo industriale"
+        },
+        "video01": {
+          "alt": "Video industriale senza audio che mostra un progetto tecnico sviluppato da Longhini"
+        }
+      }
     }
   },
   "contact": {

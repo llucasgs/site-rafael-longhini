@@ -275,6 +275,31 @@
       "colgateCase": {
         "ariaLabel": "Interactive 3D model of a Colgate case"
       }
+    },
+    "gallery": {
+      "ariaLabel": "Gallery of images and video from industrial projects",
+      "previousAriaLabel": "Show previous gallery media",
+      "nextAriaLabel": "Show next gallery media",
+      "items": {
+        "image01": {
+          "alt": "Image of a technical project under development by Longhini for Volkswagen"
+        },
+        "image02": {
+          "alt": "Image of a technical project developed by Longhini for Volkswagen"
+        },
+        "image03": {
+          "alt": "Image of a technical solution applied to the development of electronic products"
+        },
+        "image04": {
+          "alt": "Image of technical components developed for an electric gearbox for Volvo"
+        },
+        "image05": {
+          "alt": "Industrial image of a project applied to engineering and industrial development"
+        },
+        "video01": {
+          "alt": "Muted industrial video showing a technical project developed by Longhini"
+        }
+      }
     }
   },
   "contact": {

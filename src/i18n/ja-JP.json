@@ -275,6 +275,31 @@
       "colgateCase": {
         "ariaLabel": "Colgateケースのインタラクティブ3Dモデル"
       }
+    },
+    "gallery": {
+      "ariaLabel": "産業プロジェクトの画像と動画のギャラリー",
+      "previousAriaLabel": "ギャラリーの前のメディアを表示",
+      "nextAriaLabel": "ギャラリーの次のメディアを表示",
+      "items": {
+        "image01": {
+          "alt": "Longhini が Volkswagen 向けに開発中の技術プロジェクトの画像"
+        },
+        "image02": {
+          "alt": "Longhini が Volkswagen 向けに開発した技術プロジェクトの画像"
+        },
+        "image03": {
+          "alt": "電子製品開発に応用された技術ソリューションの画像"
+        },
+        "image04": {
+          "alt": "Volvo 向け電動ギアボックス用に開発された技術部品の画像"
+        },
+        "image05": {
+          "alt": "エンジニアリングと産業開発に応用された産業プロジェクトの画像"
+        },
+        "video01": {
+          "alt": "Longhini が開発した技術プロジェクトを示す音声なしの産業動画"
+        }
+      }
     }
   },
   "contact": {

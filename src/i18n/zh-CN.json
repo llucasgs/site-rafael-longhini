@@ -275,6 +275,31 @@
       "colgateCase": {
         "ariaLabel": "Colgate外壳的交互式3D模型"
       }
+    },
+    "gallery": {
+      "ariaLabel": "工业项目图片和视频图库",
+      "previousAriaLabel": "显示图库中的上一个媒体",
+      "nextAriaLabel": "显示图库中的下一个媒体",
+      "items": {
+        "image01": {
+          "alt": "Longhini 为 Volkswagen 正在开发的技术项目图片"
+        },
+        "image02": {
+          "alt": "Longhini 为 Volkswagen 开发的技术项目图片"
+        },
+        "image03": {
+          "alt": "应用于电子产品开发的技术解决方案图片"
+        },
+        "image04": {
+          "alt": "为 Volvo 电动变速箱开发的技术部件图片"
+        },
+        "image05": {
+          "alt": "应用于工程和工业开发的工业项目图片"
+        },
+        "video01": {
+          "alt": "无声工业视频，展示 Longhini 开发的技术项目"
+        }
+      }
     }
   },
   "contact": {

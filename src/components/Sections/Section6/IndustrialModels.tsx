@@ -1,7 +1,9 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -31,6 +33,45 @@ type IndustrialModelCard = {
   maxDistance?: number;
   cameraPosition?: Vector3Tuple;
 };
+
+type IndustrialMediaItem = {
+  type: "image" | "video";
+  src: string;
+  altKey: string;
+};
+
+const industrialMediaItems: IndustrialMediaItem[] = [
+  {
+    type: "image",
+    src: "/Sections/Section6/img01.jpg",
+    altKey: "industrialModels.gallery.items.image01.alt",
+  },
+  {
+    type: "image",
+    src: "/Sections/Section6/img02.jpg",
+    altKey: "industrialModels.gallery.items.image02.alt",
+  },
+  {
+    type: "image",
+    src: "/Sections/Section6/img03.jpg",
+    altKey: "industrialModels.gallery.items.image03.alt",
+  },
+  {
+    type: "image",
+    src: "/Sections/Section6/img04.jpg",
+    altKey: "industrialModels.gallery.items.image04.alt",
+  },
+  {
+    type: "image",
+    src: "/Sections/Section6/img05.jpg",
+    altKey: "industrialModels.gallery.items.image05.alt",
+  },
+  {
+    type: "video",
+    src: "/Sections/Section6/vd01.mp4",
+    altKey: "industrialModels.gallery.items.video01.alt",
+  },
+];
 
 function Model3DCard({
   ariaLabel,
@@ -144,6 +185,278 @@ function Model3DCard({
   );
 }
 
+function IndustrialMediaCarousel() {
+  const { t } = useLanguage();
+
+  const totalMediaItems = industrialMediaItems.length;
+
+  const sliderMediaItems = [
+    industrialMediaItems[totalMediaItems - 1],
+    ...industrialMediaItems,
+    industrialMediaItems[0],
+  ];
+
+  const [activeMediaIndex, setActiveMediaIndex] = useState(0);
+  const [sliderIndex, setSliderIndex] = useState(1);
+  const [isSliderAnimating, setIsSliderAnimating] = useState(false);
+  const [isSliderTransitionEnabled, setIsSliderTransitionEnabled] =
+    useState(true);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const dragStartXRef = useRef(0);
+  const dragCurrentXRef = useRef(0);
+  const sliderViewportRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isSliderTransitionEnabled) return;
+
+    const animationFrameId = requestAnimationFrame(() => {
+      setIsSliderTransitionEnabled(true);
+    });
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isSliderTransitionEnabled]);
+
+  function showPreviousMedia() {
+    if (isSliderAnimating) return;
+
+    setIsSliderAnimating(true);
+    setIsSliderTransitionEnabled(true);
+    setSliderIndex((currentIndex) => currentIndex - 1);
+
+    setActiveMediaIndex((currentIndex) =>
+      currentIndex === 0 ? totalMediaItems - 1 : currentIndex - 1,
+    );
+  }
+
+  function showNextMedia() {
+    if (isSliderAnimating) return;
+
+    setIsSliderAnimating(true);
+    setIsSliderTransitionEnabled(true);
+    setSliderIndex((currentIndex) => currentIndex + 1);
+
+    setActiveMediaIndex((currentIndex) =>
+      currentIndex === totalMediaItems - 1 ? 0 : currentIndex + 1,
+    );
+  }
+
+  function handleSliderTransitionEnd() {
+    setIsSliderAnimating(false);
+
+    if (sliderIndex === totalMediaItems + 1) {
+      setIsSliderTransitionEnabled(false);
+      setSliderIndex(1);
+      return;
+    }
+
+    if (sliderIndex === 0) {
+      setIsSliderTransitionEnabled(false);
+      setSliderIndex(totalMediaItems);
+    }
+  }
+
+  function handlePointerDown(event: React.PointerEvent<HTMLDivElement>) {
+    if (isSliderAnimating) return;
+
+    const target = event.target as HTMLElement;
+
+    if (target.closest("button")) {
+      return;
+    }
+
+    dragStartXRef.current = event.clientX;
+    dragCurrentXRef.current = event.clientX;
+
+    setIsDragging(true);
+    setDragOffset(0);
+    setIsSliderTransitionEnabled(false);
+
+    event.currentTarget.setPointerCapture(event.pointerId);
+  }
+
+  function handlePointerMove(event: React.PointerEvent<HTMLDivElement>) {
+    if (!isDragging || isSliderAnimating) return;
+
+    dragCurrentXRef.current = event.clientX;
+
+    const nextDragOffset = dragCurrentXRef.current - dragStartXRef.current;
+
+    setDragOffset(nextDragOffset);
+  }
+
+  function handlePointerUp(event: React.PointerEvent<HTMLDivElement>) {
+    if (!isDragging) return;
+
+    const viewportWidth = sliderViewportRef.current?.offsetWidth ?? 1;
+    const dragDistance = dragCurrentXRef.current - dragStartXRef.current;
+    const dragThreshold = Math.min(viewportWidth * 0.18, 90);
+
+    setIsDragging(false);
+    setDragOffset(0);
+    setIsSliderTransitionEnabled(true);
+
+    event.currentTarget.releasePointerCapture(event.pointerId);
+
+    if (dragDistance <= -dragThreshold) {
+      showNextMedia();
+      return;
+    }
+
+    if (dragDistance >= dragThreshold) {
+      showPreviousMedia();
+    }
+  }
+
+  function handlePointerCancel() {
+    if (!isDragging) return;
+
+    setIsDragging(false);
+    setDragOffset(0);
+    setIsSliderTransitionEnabled(true);
+  }
+
+  return (
+    <div
+      className="
+        relative overflow-hidden rounded-[2rem]
+        border border-white/10 bg-white/[0.035]
+        shadow-[0_24px_90px_rgba(0,0,0,0.42)]
+        backdrop-blur-xl
+      "
+    >
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none absolute inset-0 z-10
+          bg-[linear-gradient(rgba(255,255,255,0.022)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)]
+          bg-[size:42px_42px]
+          opacity-30
+          [mask-image:radial-gradient(circle_at_center,black,transparent_85%)]
+        "
+      />
+
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none absolute inset-x-0 top-0 z-20 h-px
+          bg-gradient-to-r from-transparent via-white/25 to-transparent
+        "
+      />
+
+      <div
+        ref={sliderViewportRef}
+        aria-label={t("industrialModels.gallery.ariaLabel")}
+        aria-live="polite"
+        className="
+          relative aspect-[1272/720] w-full cursor-grab overflow-hidden
+          touch-pan-y select-none active:cursor-grabbing
+        "
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
+        onLostPointerCapture={handlePointerCancel}
+      >
+        <div
+          className={`
+            flex h-full w-full
+            ${
+              isSliderTransitionEnabled
+                ? "transition-transform duration-500 ease-out"
+                : ""
+            }
+          `}
+          style={{
+            transform: `translateX(calc(-${sliderIndex * 100}% + ${dragOffset}px))`,
+          }}
+          onTransitionEnd={handleSliderTransitionEnd}
+        >
+          {sliderMediaItems.map((media, index) => {
+            const realIndex =
+              index === 0
+                ? totalMediaItems - 1
+                : index === totalMediaItems + 1
+                  ? 0
+                  : index - 1;
+
+            const isActive = realIndex === activeMediaIndex;
+
+            return (
+              <div
+                key={`${media.src}-${index}`}
+                aria-hidden={!isActive}
+                className="relative h-full w-full min-w-full overflow-hidden"
+              >
+                {media.type === "image" ? (
+                  <Image
+                    src={media.src}
+                    alt={t(media.altKey)}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1280px"
+                    className="pointer-events-none object-cover"
+                    draggable={false}
+                  />
+                ) : (
+                  <video
+                    src={media.src}
+                    aria-label={t(media.altKey)}
+                    className="pointer-events-none h-full w-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        <button
+          type="button"
+          onClick={showPreviousMedia}
+          onPointerDown={(event) => event.stopPropagation()}
+          aria-label={t("industrialModels.gallery.previousAriaLabel")}
+          className="
+    absolute left-3 top-1/2 z-30 inline-flex h-10 w-10
+    -translate-y-1/2 items-center justify-center rounded-full
+    border border-white/10 bg-black/35 text-white
+    backdrop-blur-md transition-all duration-300
+    hover:border-orange-400/35 hover:bg-orange-400/15
+    focus:outline-none focus-visible:ring-2
+    focus-visible:ring-orange-400/70
+    md:left-5 md:h-11 md:w-11
+  "
+        >
+          <ChevronLeft size={22} aria-hidden="true" />
+        </button>
+
+        <button
+          type="button"
+          onClick={showNextMedia}
+          onPointerDown={(event) => event.stopPropagation()}
+          aria-label={t("industrialModels.gallery.nextAriaLabel")}
+          className="
+    absolute right-3 top-1/2 z-30 inline-flex h-10 w-10
+    -translate-y-1/2 items-center justify-center rounded-full
+    border border-white/10 bg-black/35 text-white
+    backdrop-blur-md transition-all duration-300
+    hover:border-orange-400/35 hover:bg-orange-400/15
+    focus:outline-none focus-visible:ring-2
+    focus-visible:ring-orange-400/70
+    md:right-5 md:h-11 md:w-11
+  "
+        >
+          <ChevronRight size={22} aria-hidden="true" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export function IndustrialModels() {
   const { t } = useLanguage();
 
@@ -227,6 +540,12 @@ export function IndustrialModels() {
             );
           })}
         </div>
+
+        <ScrollReveal delay="sm">
+          <div className="mt-6">
+            <IndustrialMediaCarousel />
+          </div>
+        </ScrollReveal>
       </Container>
     </section>
   );

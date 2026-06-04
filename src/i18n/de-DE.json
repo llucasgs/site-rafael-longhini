@@ -275,6 +275,31 @@
       "colgateCase": {
         "ariaLabel": "Interaktives 3D-Modell eines Colgate-Gehäuses"
       }
+    },
+    "gallery": {
+      "ariaLabel": "Galerie mit Bildern und Video von Industrieprojekten",
+      "previousAriaLabel": "Vorheriges Medium der Galerie anzeigen",
+      "nextAriaLabel": "Nächstes Medium der Galerie anzeigen",
+      "items": {
+        "image01": {
+          "alt": "Bild eines technischen Projekts, das von Longhini für Volkswagen entwickelt wird"
+        },
+        "image02": {
+          "alt": "Bild eines technischen Projekts, das von Longhini für Volkswagen entwickelt wurde"
+        },
+        "image03": {
+          "alt": "Bild einer technischen Lösung für die Entwicklung elektronischer Produkte"
+        },
+        "image04": {
+          "alt": "Bild technischer Komponenten, die für ein elektrisches Getriebe für Volvo entwickelt wurden"
+        },
+        "image05": {
+          "alt": "Industriebild eines Projekts, das auf Engineering und industrielle Entwicklung angewendet wurde"
+        },
+        "video01": {
+          "alt": "Stummes Industrievideo, das ein von Longhini entwickeltes technisches Projekt zeigt"
+        }
+      }
     }
   },
   "contact": {
