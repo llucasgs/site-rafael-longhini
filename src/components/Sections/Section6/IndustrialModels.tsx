@@ -232,16 +232,16 @@ function IndustrialMediaCarousel() {
   const { t } = useLanguage();
 
   const totalMediaItems = industrialMediaItems.length;
+  const repeatCount = 5;
+  const middleRepeatIndex = Math.floor(repeatCount / 2);
+  const initialSliderIndex = totalMediaItems * middleRepeatIndex;
 
-  const sliderMediaItems = [
-    industrialMediaItems[totalMediaItems - 1],
-    ...industrialMediaItems,
-    industrialMediaItems[0],
-  ];
+  const sliderMediaItems = Array.from({ length: repeatCount }).flatMap(
+    () => industrialMediaItems,
+  );
 
   const [activeMediaIndex, setActiveMediaIndex] = useState(0);
-  const [sliderIndex, setSliderIndex] = useState(1);
-  const [isSliderAnimating, setIsSliderAnimating] = useState(false);
+  const [sliderIndex, setSliderIndex] = useState(initialSliderIndex);
   const [isSliderTransitionEnabled, setIsSliderTransitionEnabled] =
     useState(true);
   const [dragOffset, setDragOffset] = useState(0);
@@ -262,10 +262,8 @@ function IndustrialMediaCarousel() {
   }, [isSliderTransitionEnabled]);
 
   function showPreviousMedia() {
-    if (isSliderAnimating) return;
-
-    setIsSliderAnimating(true);
     setIsSliderTransitionEnabled(true);
+
     setSliderIndex((currentIndex) => currentIndex - 1);
 
     setActiveMediaIndex((currentIndex) =>
@@ -274,10 +272,8 @@ function IndustrialMediaCarousel() {
   }
 
   function showNextMedia() {
-    if (isSliderAnimating) return;
-
-    setIsSliderAnimating(true);
     setIsSliderTransitionEnabled(true);
+
     setSliderIndex((currentIndex) => currentIndex + 1);
 
     setActiveMediaIndex((currentIndex) =>
@@ -286,23 +282,19 @@ function IndustrialMediaCarousel() {
   }
 
   function handleSliderTransitionEnd() {
-    setIsSliderAnimating(false);
+    const minSafeIndex = totalMediaItems;
+    const maxSafeIndex = totalMediaItems * (repeatCount - 1);
 
-    if (sliderIndex === totalMediaItems + 1) {
-      setIsSliderTransitionEnabled(false);
-      setSliderIndex(1);
-      return;
-    }
+    if (sliderIndex > minSafeIndex && sliderIndex < maxSafeIndex) return;
 
-    if (sliderIndex === 0) {
-      setIsSliderTransitionEnabled(false);
-      setSliderIndex(totalMediaItems);
-    }
+    const normalizedIndex =
+      ((sliderIndex % totalMediaItems) + totalMediaItems) % totalMediaItems;
+
+    setIsSliderTransitionEnabled(false);
+    setSliderIndex(initialSliderIndex + normalizedIndex);
   }
 
   function handlePointerDown(event: PointerEvent<HTMLDivElement>) {
-    if (isSliderAnimating) return;
-
     const target = event.target as HTMLElement;
 
     if (target.closest("button")) return;
@@ -318,7 +310,7 @@ function IndustrialMediaCarousel() {
   }
 
   function handlePointerMove(event: PointerEvent<HTMLDivElement>) {
-    if (!isDragging || isSliderAnimating) return;
+    if (!isDragging) return;
 
     dragCurrentXRef.current = event.clientX;
 
@@ -415,13 +407,7 @@ function IndustrialMediaCarousel() {
           onTransitionEnd={handleSliderTransitionEnd}
         >
           {sliderMediaItems.map((media, index) => {
-            const realIndex =
-              index === 0
-                ? totalMediaItems - 1
-                : index === totalMediaItems + 1
-                  ? 0
-                  : index - 1;
-
+            const realIndex = index % totalMediaItems;
             const isActive = realIndex === activeMediaIndex;
 
             return (

@@ -188,6 +188,13 @@ public/
       logoArteres.svg
       logoCardenas.svg
       logoAmemiya.svg
+    Section6/
+      img01.jpg
+      img02.jpg
+      img03.jpg
+      img04.jpg
+      img05.jpg
+      vd01.mp4
     Section7/
       longhiniSpace.webp
   Models/
@@ -234,7 +241,7 @@ import { Hero } from "@/components/Sections/Section1/Hero";
 import { Services } from "@/components/Sections/Section2/Services";
 import { Expertise } from "@/components/Sections/Section3/Expertise";
 import { Customers } from "@/components/Sections/Section4/Customers";
-import { Experience } from "@/components/Sections/Section5/Experience";
+// import { Experience } from "@/components/Sections/Section5/Experience";
 import { IndustrialModels } from "@/components/Sections/Section6/IndustrialModels";
 import { Contact } from "@/components/Sections/Section7/Contact";
 
@@ -248,7 +255,7 @@ export default function Home() {
         <Services />
         <Expertise />
         <Customers />
-        <Experience />
+        {/* <Experience /> */}
         <IndustrialModels />
         <Contact />{" "}
       </main>
@@ -259,7 +266,12 @@ export default function Home() {
 }
 ```
 
-Ponto de atencao: existe um `{" "}` apos `<Contact />`. Nao parece necessario funcionalmente; pode ser removido em limpeza futura.
+Pontos de atencao:
+
+| Ponto | Impacto | Recomendacao |
+| --- | --- | --- |
+| `Experience` esta importada e renderizada apenas como comentario | A Section5 existe no projeto, mas nao aparece na pagina atual | Decidir se a timeline deve voltar para a home ou permanecer fora |
+| Existe um `{" "}` apos `<Contact />` | Pequena sujeira de JSX | Remover em limpeza futura |
 
 ## Layout global e SEO
 
@@ -328,10 +340,10 @@ Estado atual das chaves:
 
 | Arquivo | Chaves |
 | --- | --- |
-| `pt-BR.json` | 213 chaves |
-| Demais JSONs | 213 chaves |
+| `pt-BR.json` | 226 chaves |
+| Demais JSONs | 226 chaves |
 
-Validacao feita no momento desta atualizacao: todos os 13 JSONs possuem a mesma estrutura do `pt-BR.json`, com 213 chaves, sem chaves faltando ou extras.
+Validacao feita no momento desta atualizacao: todos os 13 JSONs possuem a mesma estrutura do `pt-BR.json`, com 226 chaves, sem chaves faltando ou extras.
 
 ## Header e navegacao
 
@@ -363,7 +375,7 @@ Observacoes:
 | --- | --- |
 | `about` | Aponta para o `id="about"` do Hero |
 | `contact` | Aponta para a Section7 real de contato |
-| `experience` | Aponta para o primeiro elemento com `id="experience"`; atualmente ha risco porque Section5 e Section6 usam o mesmo id no estado salvo |
+| `experience` | Aponta atualmente para a Section6, porque `Experience`/Section5 esta comentada na home e `IndustrialModels` usa `id="experience"` |
 | `industrial-models` | Nao existe como id salvo atual na Section6; o componente Section6 esta com `id="experience"` |
 
 ## FloatingButtons
@@ -443,6 +455,8 @@ Servicos:
 - Usa cards em formato accordion com pills.
 - Usa tres cards de resumo tambem em accordion.
 - A imagem `noarGlass.webp` usa `Image` do Next.js com `fill`, `sizes="(max-width: 1024px) 100vw, 50vw"` e `alt` via `expertise.noarGlassAlt`.
+- O canvas 3D da impressora exibe um selo visual `Interactive3DSeal` com icone `Rotate3D` e textos `expertise.interactiveSeal.*` para deixar claro que e interativo.
+- O bloco da imagem `noarGlass.webp` usa fundo proprio em gradiente azulado/ciano para diferenciar visualmente de um modelo 3D interativo.
 
 `src/components/Three/PrinterCanvas.tsx` e `PrinterModel.tsx`:
 
@@ -486,6 +500,7 @@ Clientes/logos atuais:
 
 - Client component.
 - Renderiza a secao `id="experience"`.
+- Existe no projeto, mas esta comentada em `src/app/page.tsx` e nao aparece na home atual.
 - Usa `SectionTitle` com `experience.title` e `experience.description`.
 - Renderiza uma timeline de experiencia profissional.
 - Usa `ExperienceCard`, um card accordion com logo, cargo, periodo, local e descricao.
@@ -519,10 +534,14 @@ Experiencias atuais:
 - Usa `dynamic()` com `ssr: false` para carregar `ModelCanvas`.
 - Cada card usa `IntersectionObserver` proprio para renderizar o modelo apenas quando o card se aproxima da viewport (`rootMargin: "280px 0px"`).
 - Cada card usa `role="img"` e `aria-label` vindo de i18n.
+- Cada card 3D exibe um selo visual `Interactive3DSeal` com icone `Rotate3D` e textos `industrialModels.interactiveSeal.*`.
 - Usa `ScrollReveal`.
 - O tipo `IndustrialModelCard` aceita `rotation`, `fitMargin`, `minDistance`, `maxDistance` e `cameraPosition`, mas no estado salvo atual os seis cards usam apenas `rotation` e `fitMargin`.
+- Abaixo da grid de modelos ha um carrossel `IndustrialMediaCarousel` com cinco imagens e um video sem audio, todos em proporcao `1272x720`.
+- O carrossel usa `Image` do Next.js para imagens, `<video>` para o MP4, botoes `ChevronLeft`/`ChevronRight`, navegacao circular e suporte a arrastar/swipe via pointer events.
+- O carrossel usa chaves i18n em `industrialModels.gallery.*`, incluindo labels dos botoes e alt/aria de cada arquivo.
 
-Ponto de atencao importante: a Section6 esta com `id="experience"`, duplicando a Section5. Isso pode quebrar navegacao por ancora, SEO semantico e acessibilidade. Se a intencao for secao propria, o id recomendado e voltar para algo como `industrial-models` e ajustar qualquer navegacao relacionada.
+Ponto de atencao importante: a Section6 esta com `id="experience"`. Como a Section5 esta comentada na home, nao ha duplicidade renderizada atualmente, mas o id continua semanticamente confuso. Se a intencao for secao propria, o id recomendado e voltar para algo como `industrial-models` e ajustar a navegacao relacionada.
 
 Modelos:
 
@@ -534,6 +553,17 @@ Modelos:
 | Car Transmission | `/Models/CarTransmission/car-transmission-optimized.glb` | `industrialModels.models.carTransmission.ariaLabel` | `rotation: [0, -Math.PI / 8, 0]`, `fitMargin: 0.9` |
 | CDR Tool | `/Models/CdrTool/cdr-tool-optimized.glb` | `industrialModels.models.cdrTool.ariaLabel` | `rotation: [-Math.PI / 5, -Math.PI / 4, Math.PI / 5]`, `fitMargin: 0.8` |
 | Colgate Case | `/Models/ColgateCase/colgate-case-optimized.glb` | `industrialModels.models.colgateCase.ariaLabel` | `rotation: [Math.PI / 2, -Math.PI / 1, -Math.PI / 1.2]`, `fitMargin: 0.8` |
+
+Galeria/carrossel:
+
+| Tipo | Caminho | Chave i18n |
+| --- | --- | --- |
+| Imagem | `/Sections/Section6/img01.jpg` | `industrialModels.gallery.items.image01.alt` |
+| Imagem | `/Sections/Section6/img02.jpg` | `industrialModels.gallery.items.image02.alt` |
+| Imagem | `/Sections/Section6/img03.jpg` | `industrialModels.gallery.items.image03.alt` |
+| Imagem | `/Sections/Section6/img04.jpg` | `industrialModels.gallery.items.image04.alt` |
+| Imagem | `/Sections/Section6/img05.jpg` | `industrialModels.gallery.items.image05.alt` |
+| Video sem audio | `/Sections/Section6/vd01.mp4` | `industrialModels.gallery.items.video01.alt` |
 
 ## ModelCanvas
 
@@ -815,7 +845,7 @@ Pontos de melhoria:
 | Ponto | Impacto | Recomendacao |
 | --- | --- | --- |
 | `industrial-models` nao aparece no menu | Secao pode ser descoberta apenas por rolagem | Decidir se deve entrar no menu ou permanecer como bloco visual de apoio |
-| Section5 e Section6 com `id="experience"` | IDs duplicados prejudicam navegacao por ancora, acessibilidade e semantica | Ajustar Section6 para um id unico, como `industrial-models`, se ela deve ser uma secao independente |
+| Section6 usa `id="experience"` enquanto Section5 esta comentada | A navegacao `experience` leva para os modelos industriais, nao para a timeline | Decidir se a Section5 volta ou se Section6 deve receber id/nome proprio, como `industrial-models` |
 | Modelos 3D em secoes principais | Pode pesar em mobile | Validar performance real em dispositivos fracos |
 | Mojibake em terminal | Pode causar edicao incorreta de textos | Confirmar encoding/conteudo no editor antes de alterar copy |
 | `<Contact />{" "}` em `page.tsx` | Pequena sujeira de markup | Remover em limpeza futura |
@@ -825,7 +855,7 @@ Pontos de melhoria:
 Validacao executada nesta atualizacao:
 
 ```text
-Todos os arquivos src/i18n/*.json possuem 213 chaves.
+Todos os arquivos src/i18n/*.json possuem 226 chaves.
 Nao ha chaves faltando ou extras em relacao ao pt-BR.json.
 ```
 
@@ -849,7 +879,7 @@ Esses erros devem ser tratados separadamente antes de considerar o lint limpo. O
 | --- | --- | --- |
 | Alta | Validar encoding dos textos acentuados | Evita corromper conteudo em `site.ts` e JSONs |
 | Alta | Resolver erros atuais de lint | Mantem qualidade e reduz regressao |
-| Alta | Corrigir id duplicado da Section6 se ela deve ser independente | Evita conflito com navegacao e acessibilidade |
+| Alta | Decidir relacao entre Section5 comentada e Section6 com `id="experience"` | Evita confusao de navegacao, semantica e conteudo |
 | Media | Validar performance dos modelos 3D em mobile | Three.js pode impactar celulares |
 | Media | Decidir se `industrial-models` deve entrar na navegacao | Melhora descoberta da secao, se ela for estrategica |
 | Baixa | Remover `{" "}` apos `<Contact />` | Limpeza simples de JSX |
@@ -888,13 +918,13 @@ Regras:
 9. Considere que `Services` e um accordion com imagem `/Sections/Section2/3Dprinter.png`.
 10. Considere que `Expertise` contem o canvas 3D da impressora carregado sob demanda.
 11. Considere que `Customers` existe como Section4, tem logos SVG coloridos e esta no menu.
-12. Considere que `Experience` existe como Section5, com timeline, accordions e logos.
-13. Considere que `IndustrialModels` existe como Section6, com seis modelos 3D carregados sob demanda.
+12. Considere que `Experience` existe como Section5, com timeline, accordions e logos, mas esta comentada em `src/app/page.tsx`.
+13. Considere que `IndustrialModels` existe como Section6, com seis modelos 3D carregados sob demanda e carrossel de midia ao final.
 14. Considere que `Contact` existe como Section7, com WhatsApp, e-mail, LinkedIn e imagem institucional.
 15. Considere que `Footer` existe, usa `site.modelCredits`, `site.developer`, SVGs manuais para LinkedIn/Instagram e asset `/Footer/devSignature.svg`.
 16. Considere que `FloatingButtons` renderiza botao de voltar ao topo e WhatsApp.
-17. Considere que todos os 13 arquivos de idioma possuem 213 chaves sincronizadas.
-18. Considere que a Section6 esta salva com `id="experience"`, duplicando a Section5; validar antes de mexer em navegacao.
+17. Considere que todos os 13 arquivos de idioma possuem 226 chaves sincronizadas.
+18. Considere que a Section6 esta salva com `id="experience"` e a Section5 esta comentada na home; validar antes de mexer em navegacao.
 19. Considere que a imagem de preview de links/WhatsApp esta em `site.seo.ogImage`, apontando para `/og/longhini-og.jpg`.
 20. Valide APIs de Next.js na documentacao local antes de alteracoes estruturais.
 
