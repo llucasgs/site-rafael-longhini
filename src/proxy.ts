@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const MAINTENANCE_ENABLED = true;
+const MAINTENANCE_ENABLED = false;
 const MAINTENANCE_PATH = "/manutencao";
 const RETRY_AFTER_SECONDS = 60 * 60 * 24 * 7;
 
